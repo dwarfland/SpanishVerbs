@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Verbs", "Verbs.elements", "{8802D620-0230-4D83-A106-DFC77D8A1066}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8802D620-0230-4D83-A106-DFC77D8A1066}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{8802D620-0230-4D83-A106-DFC77D8A1066}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{8802D620-0230-4D83-A106-DFC77D8A1066}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{8802D620-0230-4D83-A106-DFC77D8A1066}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

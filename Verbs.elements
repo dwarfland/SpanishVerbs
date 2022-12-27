@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <RootNamespace>Verbs</RootNamespace>
+    <ProjectGuid>{8802D620-0230-4D83-A106-DFC77D8A1066}</ProjectGuid>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>Verbs</AssemblyName>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <SDK>macOS</SDK>
+    <MangleTypeNames>True</MangleTypeNames>
+    <CreateAppBundle>True</CreateAppBundle>
+    <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
+    <EntitlementsFile>Resources\Entitlements.entitlements</EntitlementsFile>
+    <MacIconFile>.\Resources\App.icns</MacIconFile>
+    <DefaultUses>AppKit;Foundation;RemObjects.Elements.RTL</DefaultUses>
+    <BundleIdentifier>com.dwarfland.verbs</BundleIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>False</Optimize>
+    <OutputPath>.\Bin\Debug</OutputPath>
+    <ConditionalDefines>DEBUG;TRACE;</ConditionalDefines>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+    <EnableAsserts>True</EnableAsserts>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>.\Bin\Release</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cocoa" />
+    <Reference Include="rtl" />
+    <Reference Include="libToffee" />
+    <Reference Include="libElements" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDelegate.pas" />
+    <Compile Include="MainWindowController.pas" />
+    <None Include="Resources\Entitlements.entitlements" />
+    <Content Include="Resources\Info.plist" />
+    <Content Include="Resources\App.icns" />
+    <Xib Include="MainWindow.xib">
+      <DependentUpon>MainWindowController.pas</DependentUpon>
+    </Xib>
+    <Xib Include="Resources\MainMenu.xib" />
+    <Compile Include="Verb.pas" />
+    <Compile Include="String+Extensions.pas" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets" />
+</Project>
