@@ -1,0 +1,266 @@
+﻿<Verbs>
+  <Verb Infinitive="abrir">
+    <Translation.English>to open</Translation.English>
+  </Verb>
+  <Verb Infinitive="almorzar" StemChange="UE">
+    <Imperative.Usted>almuerce</Imperative.Usted>
+    <Translation.English>to (eat) lunch</Translation.English>
+  </Verb>
+  <Verb Infinitive="amar">
+    <Translation.English>to love</Translation.English>
+  </Verb>
+  <Verb Infinitive="aprender">
+    <Translation.English>to learn</Translation.English>
+  </Verb>
+  <Verb Infinitive="bailar">
+    <Translation.English>to dance</Translation.English>
+  </Verb>
+  <Verb Infinitive="beber">
+    <Translation.English>to drink</Translation.English>
+  </Verb>
+  <Verb Infinitive="buscar">
+    <Translation.English>to look (for)</Translation.English>
+  </Verb>
+  <Verb Infinitive="cabellar">
+    <Translation.English>to brush</Translation.English>
+  </Verb>
+  <Verb Infinitive="cambiar">
+    <Translation.English>to change</Translation.English>
+  </Verb>
+  <Verb Infinitive="caminar">
+    <Translation.English>to walk</Translation.English>
+  </Verb>
+  <Verb Infinitive="cantar">
+    <Translation.English>to sing</Translation.English>
+  </Verb>
+  <Verb Infinitive="cenar">
+    <Translation.English>to (eat) dinner</Translation.English>
+  </Verb>
+  <Verb Infinitive="cerrar">
+    <Translation.English>to close</Translation.English>
+  </Verb>
+  <Verb Infinitive="cocinar">
+    <Translation.English>to cook</Translation.English>
+  </Verb>
+  <Verb Infinitive="comer">
+    <Translation.English>to eat</Translation.English>
+  </Verb>
+  <Verb Infinitive="comprar">
+    <Translation.English>to buy</Translation.English>
+  </Verb>
+  <Verb Infinitive="conocer">
+    <Indicativo.Present.Singular.1>conozco</Indicativo.Present.Singular.1>
+    <Translation.English>to know/meet</Translation.English>
+  </Verb>
+  <Verb Infinitive="correr">
+    <Translation.English>to run</Translation.English>
+  </Verb>
+  <Verb Infinitive="dar">
+    <Indicativo.Present.Singular.1>doy</Indicativo.Present.Singular.1>
+    <Indicativo.Preterite.Plural.1>dimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>disteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.2.V>disteis</Indicativo.Preterite.Plural.2.V>
+    <Indicativo.Preterite.Plural.3>dieron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.1>di</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>diste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>dio</Indicativo.Preterite.Singular.3>
+    <Translation.English>to give</Translation.English>
+  </Verb>
+  <Verb Infinitive="decir" StemChange="I">
+    <Imperative.Tu>di</Imperative.Tu>
+    <Imperative.Usted>diga</Imperative.Usted>
+    <Indicativo.Present.Singular.1>digo</Indicativo.Present.Singular.1>
+    <Translation.English>to say</Translation.English>
+  </Verb>
+  <Verb Infinitive="desayunar">
+    <Translation.English>to (eat) breakfast</Translation.English>
+  </Verb>
+  <Verb Infinitive="dibujar">
+    <Translation.English>to draw</Translation.English>
+  </Verb>
+  <Verb Infinitive="dirigir">
+    <Translation.English>to direct</Translation.English>
+  </Verb>
+  <Verb Infinitive="dormir" StemChange="UE">
+    <Translation.English>to sleep</Translation.English>
+  </Verb>
+  <Verb Infinitive="duchar">
+    <Translation.English>to shower</Translation.English>
+  </Verb>
+  <Verb Infinitive="empezar">
+    <Translation.English>to start</Translation.English>
+  </Verb>
+  <Verb Infinitive="encantar">
+    <Translation.English>to enchant</Translation.English>
+  </Verb>
+  <Verb Infinitive="encontrar">
+    <Translation.English>to find</Translation.English>
+  </Verb>
+  <Verb Infinitive="enseñar">
+    <Translation.English>to teach</Translation.English>
+  </Verb>
+  <Verb Infinitive="entender" StemChange="IE">
+    <Translation.English>to understand</Translation.English>
+  </Verb>
+  <Verb Infinitive="escribir">
+    <Translation.English>to write</Translation.English>
+  </Verb>
+  <Verb Infinitive="escuchar">
+    <Translation.English>to listen</Translation.English>
+  </Verb>
+  <Verb Infinitive="esperar">
+    <Translation.English>to start</Translation.English>
+  </Verb>
+  <Verb Infinitive="estar">
+    <Indicativo.Present.Plural.3>están</Indicativo.Present.Plural.3>
+    <Indicativo.Present.Singular.1>estoy</Indicativo.Present.Singular.1>
+    <Indicativo.Present.Singular.3>está</Indicativo.Present.Singular.3>
+    <Translation.English>to be</Translation.English>
+  </Verb>
+  <Verb Infinitive="estudiar">
+    <Translation.English>to study</Translation.English>
+  </Verb>
+  <Verb Infinitive="girar">
+    <Translation.English>to turn</Translation.English>
+  </Verb>
+  <Verb Infinitive="gustar">
+    <Translation.English>'to be liked'</Translation.English>
+  </Verb>
+  <Verb Infinitive="haber">
+    <Indicativo.Present.Plural.1>hemos</Indicativo.Present.Plural.1>
+    <Indicativo.Present.Plural.3>han</Indicativo.Present.Plural.3>
+    <Indicativo.Present.Singular.1>he</Indicativo.Present.Singular.1>
+    <Indicativo.Present.Singular.2>has</Indicativo.Present.Singular.2>
+    <Indicativo.Present.Singular.3>ha</Indicativo.Present.Singular.3>
+    <Translation.English>to have</Translation.English>
+  </Verb>
+  <Verb Infinitive="hablar">
+    <Translation.English>to talk</Translation.English>
+  </Verb>
+  <Verb Infinitive="hacer">
+    <Imperative.Tu>haz</Imperative.Tu>
+    <Indicativo.Present.Singular.1>hago</Indicativo.Present.Singular.1>
+    <Translation.English>to do</Translation.English>
+  </Verb>
+  <Verb Infinitive="interesar">
+    <Translation.English>to interest</Translation.English>
+  </Verb>
+  <Verb Infinitive="invitar">
+    <Translation.English>to invite</Translation.English>
+  </Verb>
+  <Verb Infinitive="ir" Declination="Irregular">
+    <Imperative.Tu>ve</Imperative.Tu>
+    <Indicativo.Imperfect.Plural.1>íbamos</Indicativo.Imperfect.Plural.1>
+    <Indicativo.Imperfect.Plural.2>ibais</Indicativo.Imperfect.Plural.2>
+    <Indicativo.Imperfect.Plural.3>iban</Indicativo.Imperfect.Plural.3>
+    <Indicativo.Imperfect.Singular.1>iba</Indicativo.Imperfect.Singular.1>
+    <Indicativo.Imperfect.Singular.2>ibas</Indicativo.Imperfect.Singular.2>
+    <Indicativo.Imperfect.Singular.3>iba</Indicativo.Imperfect.Singular.3>
+    <Indicativo.Present.Plural.1>vamos</Indicativo.Present.Plural.1>
+    <Indicativo.Present.Plural.2>vais</Indicativo.Present.Plural.2>
+    <Indicativo.Present.Plural.3>van</Indicativo.Present.Plural.3>
+    <Indicativo.Present.Singular.1>voy</Indicativo.Present.Singular.1>
+    <Indicativo.Present.Singular.2>vas</Indicativo.Present.Singular.2>
+    <Indicativo.Present.Singular.3>va</Indicativo.Present.Singular.3>
+    <Indicativo.Preterite.Plural.1>fuimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>fuisteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.2.V>fuisteis</Indicativo.Preterite.Plural.2.V>
+    <Indicativo.Preterite.Plural.3>fueron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.1>fui</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>fuiste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>fue</Indicativo.Preterite.Singular.3>
+    <Translation.English>to go</Translation.English>
+  </Verb>
+  <Verb Infinitive="jugar" StemChange="UE">
+    <Translation.English>to play</Translation.English>
+  </Verb>
+  <Verb Infinitive="leer">
+    <Translation.English>to read</Translation.English>
+  </Verb>
+  <Verb Infinitive="oler" StemChange="UE">
+    <Indicativo.Present.Plural.3>huelen</Indicativo.Present.Plural.3>
+    <Indicativo.Present.Singular.1>huelo</Indicativo.Present.Singular.1>
+    <Indicativo.Present.Singular.2>hueles</Indicativo.Present.Singular.2>
+    <Indicativo.Present.Singular.3>huele</Indicativo.Present.Singular.3>
+    <Translation.English>to smell</Translation.English>
+  </Verb>
+  <Verb Infinitive="poder" StemChange="UE">
+    <Participle.Present>pudiendo</Participle.Present>
+    <Translation.English>to be able to</Translation.English>
+  </Verb>
+  <Verb Infinitive="poner">
+    <Imperative.Tu>pon</Imperative.Tu>
+    <Indicativo.Present.Singular.1>pongo</Indicativo.Present.Singular.1>
+    <Translation.English>to put (on)</Translation.English>
+  </Verb>
+  <Verb Infinitive="querer" StemChange="IE">
+    <Translation.English>to want</Translation.English>
+  </Verb>
+  <Verb Infinitive="saber">
+    <Indicativo.Present.Singular.3>sé</Indicativo.Present.Singular.3>
+    <Translation.English>to know (how)</Translation.English>
+  </Verb>
+  <Verb Infinitive="salir">
+    <Imperative.Tu>sal</Imperative.Tu>
+    <Indicativo.Present.Singular.1>salgo</Indicativo.Present.Singular.1>
+    <Translation.English>to leave</Translation.English>
+  </Verb>
+  <Verb Infinitive="seguir" StemChange="I">
+    <Translation.English>to continue</Translation.English>
+  </Verb>
+  <Verb Infinitive="ser" Declination="Irregular">
+    <Indicativo.Imperfect.Plural.1>éramos</Indicativo.Imperfect.Plural.1>
+    <Indicativo.Imperfect.Plural.2>erais</Indicativo.Imperfect.Plural.2>
+    <Indicativo.Imperfect.Plural.3>eran</Indicativo.Imperfect.Plural.3>
+    <Indicativo.Imperfect.Singular.1>era</Indicativo.Imperfect.Singular.1>
+    <Indicativo.Imperfect.Singular.2>eras</Indicativo.Imperfect.Singular.2>
+    <Indicativo.Imperfect.Singular.3>era</Indicativo.Imperfect.Singular.3>
+    <Indicativo.Present.Plural.1>sabemos</Indicativo.Present.Plural.1>
+    <Indicativo.Present.Plural.2>sois</Indicativo.Present.Plural.2>
+    <Indicativo.Present.Plural.3>son</Indicativo.Present.Plural.3>
+    <Indicativo.Present.Singular.1>se</Indicativo.Present.Singular.1>
+    <Indicativo.Present.Singular.2>sabes</Indicativo.Present.Singular.2>
+    <Indicativo.Present.Singular.3>sabe</Indicativo.Present.Singular.3>
+    <Indicativo.Preterite.Plural.1>fuimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>fuisteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.2.V>fuisteis</Indicativo.Preterite.Plural.2.V>
+    <Indicativo.Preterite.Plural.3>fueron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.1>fui</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>fuiste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>fue</Indicativo.Preterite.Singular.3>
+    <Participle.Present>sindo</Participle.Present>
+    <Translation.English>to be</Translation.English>
+  </Verb>
+  <Verb Infinitive="tener" StemChange="IE">
+    <Imperative.Tu>ten</Imperative.Tu>
+    <Indicativo.Present.Singular.1>tengo</Indicativo.Present.Singular.1>
+    <Translation.English>to have</Translation.English>
+  </Verb>
+  <Verb Infinitive="traer">
+    <Indicativo.Present.Singular.1>traigo</Indicativo.Present.Singular.1>
+    <Translation.English>to bring</Translation.English>
+  </Verb>
+  <Verb Infinitive="venir">
+    <Imperative.Tu>ven</Imperative.Tu>
+    <Translation.English>to come</Translation.English>
+  </Verb>
+  <Verb Infinitive="ver">
+    <Indicativo.Imperfect.Plural.1>veíamos</Indicativo.Imperfect.Plural.1>
+    <Indicativo.Imperfect.Plural.2>vaíais</Indicativo.Imperfect.Plural.2>
+    <Indicativo.Imperfect.Plural.3>veían</Indicativo.Imperfect.Plural.3>
+    <Indicativo.Imperfect.Singular.1>veía</Indicativo.Imperfect.Singular.1>
+    <Indicativo.Imperfect.Singular.2>veías</Indicativo.Imperfect.Singular.2>
+    <Indicativo.Imperfect.Singular.3>veía</Indicativo.Imperfect.Singular.3>
+    <Indicativo.Present.Singular.1>veo</Indicativo.Present.Singular.1>
+    <Indicativo.Preterite.Plural.1>vimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Singular.1>vi</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.3>vio</Indicativo.Preterite.Singular.3>
+    <Translation.English>to see</Translation.English>
+  </Verb>
+  <Verb Infinitive="vivir">
+    <Translation.English>to live</Translation.English>
+  </Verb>
+  <Verb Infinitive="volver" StemChange="UE">
+    <Translation.English>to return/come (back)</Translation.English>
+  </Verb>
+</Verbs>

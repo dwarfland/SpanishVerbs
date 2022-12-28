@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="Search Toolbar Item" minToolsVersion="12.0" minSystemVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -91,9 +92,27 @@
                     <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="tdy-8f-g5m"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="EXJ-I8-Xtj"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="4mq-kx-t1D"/>
+                    <searchToolbarItem implicitItemIdentifier="50F8D6ED-A6E6-483C-817B-3443E6DBE724" label="Search" paletteLabel="Search" visibilityPriority="1001" id="2cG-wp-1Pn">
+                        <nil key="toolTip"/>
+                        <searchField key="view" verticalHuggingPriority="750" textCompletion="NO" id="JtU-4M-fid">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="21"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" sendsSearchStringImmediately="YES" id="u3L-6r-Vrv">
+                                <font key="font" usesAppearanceFont="YES"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </searchFieldCell>
+                            <connections>
+                                <action selector="filterChanged:" target="-2" id="s1y-HN-oew"/>
+                                <binding destination="-2" name="value" keyPath="self.searchString" id="UF5-DZ-dT6"/>
+                                <outlet property="delegate" destination="-2" id="Duu-KX-YPd"/>
+                            </connections>
+                        </searchField>
+                    </searchToolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="4mq-kx-t1D"/>
+                    <searchToolbarItem reference="2cG-wp-1Pn"/>
                 </defaultToolbarItems>
             </toolbar>
             <connections>

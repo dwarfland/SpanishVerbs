@@ -11,16 +11,14 @@ type
 
       dataFileName := Path.Combine(Environment.UserApplicationSupportFolder, "Dwarfland", "Verbs.Spanish.xml");
       Log($"dataFileName {dataFileName}");
-      if dataFileName.FileExists then
+      if dataFileName.FileExists then begin
         Load;
-
-      //verbs := new List<Verb>(new Verb withInfinitive("ir"),
-                              //new Verb withInfinitive("leer"),
-                              //new Verb withInfinitive("hablar"),
-                              //new Verb withInfinitive("comer"),
-                              //new Verb withInfinitive("vivir"),
-                              //new Verb withInfinitive("volver", VerbStemChange.UE),
-                              //new Verb withInfinitive("querer", VerbStemChange.IE));
+      end
+      else begin
+        var defaultDataFile := NSBundle.mainBundle.URLForResource("DefaultVerbs.Spanish") withExtension("xml") as Url;
+        if defaultDataFile:FileExists then
+          Load(defaultDataFile.FilePath);
+      end;
 
     end;
 
@@ -30,10 +28,10 @@ type
       UpdateColumns();
     end;
 
-    method Load;
+    method Load(aFilenameOverride: nullable String := nil);
     begin
       verbs := new List<Verb>;
-      var xml := XmlDocument.TryFromFile(dataFileName);
+      var xml := XmlDocument.TryFromFile(coalesce(aFilenameOverride, dataFileName));
       for each e in xml.Root.ElementsWithName("Verb") do
         verbs.Add(new Verb fromXml(e));
       Sort();
@@ -59,17 +57,19 @@ type
       xml.SaveToFile(dataFileName, XmlStyleVisualStudio);
     end;
 
-
-
     method Sort;
     begin
-      verbs := verbs.OrderBy(v -> v.Infinitive).ToList;
+      var temp := verbs.OrderBy(v -> v.Infinitive);
+      if length(searchString) > 0 then
+        temp := temp.Where(v -> columns.Any(c -> v.conjugationsByName[c]:Contains(searchString)));
+      visibleVerbs := temp.ToList;
       tableView:reloadData();
     end;
 
     [IBOutlet]
     property tableView: NSTableView;
     property verbs: List<Verb>;
+    property visibleVerbs: List<Verb>;
     property dataFileName: String;
 
     //
@@ -78,18 +78,18 @@ type
 
     method numberOfRowsInTableView(aTableView: NSTableView): NSInteger;
     begin
-      result := verbs:Count+1;
+      result := visibleVerbs:Count+1;
     end;
 
     method tableView(aTableView: NSTableView) objectValueForTableColumn(aTableColumn: nullable NSTableColumn) row(aRow: NSInteger): nullable id;
     begin
-      if aRow = verbs:Count then begin
+      if aRow = visibleVerbs:Count then begin
         if aTableColumn.identifier ≠ "Infinitive" then
           exit;
         exit "Add...";
       end;
 
-      var verb := verbs[aRow];
+      var verb := visibleVerbs[aRow];
       result := verb.conjugationsByName[aTableColumn.identifier];
 
       if aTableColumn.identifier = "Infinitive" then
@@ -101,19 +101,19 @@ type
     begin
       var value := (object as String):ToLowerInvariant;
 
-      if aRow = verbs:Count then begin
+      if aRow = visibleVerbs:Count then begin
         if aTableColumn.identifier ≠ "Infinitive" then
           exit;
 
-        if (length(value) > 0) and not value.Contains(".") and not verbs.Any(v -> v.Infinitive = value) then begin
-          verbs.Add(new Verb withInfinitive(value));
+        if (length(value) > 0) and not value.Contains(".") and not visibleVerbs.Any(v -> v.Infinitive = value) then begin
+          visibleVerbs.Add(new Verb withInfinitive(value));
           Sort();
           Save();
         end;
         exit;
       end;
 
-      var verb := verbs[aRow];
+      var verb := visibleVerbs[aRow];
       if length(value) = 0 then
         value := nil;
       verb.conjugationsByName[aTableColumn.identifier] := value;
@@ -145,7 +145,7 @@ type
       cell.font := NSFont.systemFontOfSize(11.0);
       cell.textColor := NSColor.textColor;
 
-      if aRow = verbs:Count then begin
+      if aRow = visibleVerbs:Count then begin
         if tableView.selectedRowIndexes.containsIndex(aRow) then
           cell.textColor := NSColor.selectedControlTextColor
         else
@@ -161,7 +161,7 @@ type
       end
       else begin
         cell.editable := true;
-        var verb := verbs[aRow];
+        var verb := visibleVerbs[aRow];
         if verb.conjugationsIsStandard[aTableColumn.identifier] then begin
           cell.textColor := NSColor.grayColor;
         end
@@ -172,6 +172,11 @@ type
 
       if tableView.selectedRowIndexes.containsIndex(aRow) then
         cell.textColor := NSColor.selectedControlTextColor;
+
+      var verb := visibleVerbs[aRow];
+      var value := verb.conjugationsByName[aTableColumn.identifier];
+      if (length(searchString) > 0) and value.Contains(searchString) then
+        cell.textColor := NSColor.redColor;
     end;
 
     method tableView(aTableView: NSTableView) toolTipForCell(cell: NSCell) rect(rect: NSRectPointer) tableColumn(tableColumn: nullable NSTableColumn) row(row: NSInteger) mouseLocation(mouseLocation: NSPoint): NSString;
@@ -181,7 +186,7 @@ type
 
     method tableView(aTableView: NSTableView) shouldEditTableColumn(aTableColumn: nullable NSTableColumn) row(aRow: NSInteger): Boolean;
     begin
-      if aRow = verbs:Count then
+      if aRow = visibleVerbs:Count then
         exit aTableColumn.identifier = "Infinitive";
 
       result := aTableColumn.identifier ≠ "Infinitive";
@@ -219,6 +224,15 @@ type
         UpdateColumns();
       end;
     end;
+
+    [IBAction]
+    method filterChanged(aSender: id); public;
+    begin
+      Sort();
+    end;
+
+    [Notify]
+    property searchString: String;
 
     //
     //

@@ -43,6 +43,7 @@
     <Xib Include="Resources\MainMenu.xib" />
     <Compile Include="Verb.pas" />
     <Compile Include="String+Extensions.pas" />
+    <AppResource Include="Resources\DefaultVerbs.Spanish.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources" />
