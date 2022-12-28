@@ -24,6 +24,8 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <OutputPath>.\Bin\Release</OutputPath>
+    <HardenedRuntime>True</HardenedRuntime>
+    <CodeSignCertificateName>Developer ID Application: RemObjects Software (24G43Y5373)</CodeSignCertificateName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cocoa" />
@@ -44,6 +46,7 @@
     <Compile Include="Verb.pas" />
     <Compile Include="String+Extensions.pas" />
     <AppResource Include="Resources\DefaultVerbs.Spanish.xml" />
+    <Compile Include="TableViewWithContextMenu.pas" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources" />

@@ -106,9 +106,10 @@ type
           exit;
 
         if (length(value) > 0) and not value.Contains(".") and not visibleVerbs.Any(v -> v.Infinitive = value) then begin
-          visibleVerbs.Add(new Verb withInfinitive(value));
+          verbs.Add(new Verb withInfinitive(value));
           Sort();
           Save();
+          tableView.selectRowIndexes(NSIndexSet.indexSetWithIndex(visibleVerbs:Count)) byExtendingSelection(false);
         end;
         exit;
       end;
@@ -206,6 +207,68 @@ type
     begin
 
     end;
+
+    method tableView(aTableView: NSTableView) menuForTableColumn(aTableColumn: nullable NSTableColumn) row(aRow: NSInteger): NSMenu;
+    begin
+      if aRow = visibleVerbs:Count then
+        exit;
+
+      if aTableColumn.identifier = "Infinitive" then begin
+
+        var verb := visibleVerbs[aRow];
+
+        result := new NSMenu;
+
+        var lStemChangesMenu := new NSMenu;
+        lStemChangesMenu.addItemWithTitle("None") action(selector(setStemChange:)) keyEquivalent("");
+        lStemChangesMenu.addItemWithTitle("-> i") action(selector(setStemChange:)) keyEquivalent("");
+        lStemChangesMenu.addItemWithTitle("-> ie") action(selector(setStemChange:)) keyEquivalent("");
+        lStemChangesMenu.addItemWithTitle("-> ue") action(selector(setStemChange:)) keyEquivalent("");
+        for each i in lStemChangesMenu.itemArray do begin
+          i.representedObject := verb;
+          if (verb.StemChange ≠ VerbStemChange.None) and (i.title.hasSuffix(StemChangeToString(verb.StemChange))) then
+            i.state := NSOnState;
+        end;
+        if verb.StemChange = VerbStemChange.None then
+          lStemChangesMenu.itemArray[0].state := NSOnState;
+
+
+        //var lStemChangesItem := new NSMenuItem withTitle() action("Stem Change") keyEquivalent("");
+        var lStemChangesItem := new NSMenuItem withTitle("Stem Change") action(nil) keyEquivalent("");
+        lStemChangesItem.submenu := lStemChangesMenu;
+        result.addItem(lStemChangesItem);
+
+        result.addItem(NSMenuItem.separatorItem);
+        result.addItemWithTitle($"Remove '{verb.Infinitive}'") action(selector(setDeleteVerb:)) keyEquivalent("");
+        for each i in result.itemArray do
+          i.representedObject := verb;
+      end
+
+    end;
+
+    [IBAction]
+    method setStemChange(aSender: id); public;
+    begin
+      case aSender.title of
+        "-> i": (aSender.representedObject as Verb).StemChange := VerbStemChange.I;
+        "-> ie": (aSender.representedObject as Verb).StemChange := VerbStemChange.IE;
+        "-> ue": (aSender.representedObject as Verb).StemChange := VerbStemChange.UE;
+        else (aSender.representedObject as Verb).StemChange := VerbStemChange.None;
+      end;
+
+
+      Sort();
+      Save();
+    end;
+
+    [IBAction]
+    method setDeleteVerb(aSender: id); public;
+    begin
+      verbs.Remove(aSender.representedObject as Verb);
+      Sort();
+      Save();
+    end;
+
 
     //
     //
