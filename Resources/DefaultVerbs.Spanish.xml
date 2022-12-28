@@ -36,7 +36,7 @@
   <Verb Infinitive="cenar">
     <Translation.English>to (eat) dinner</Translation.English>
   </Verb>
-  <Verb Infinitive="cerrar">
+  <Verb Infinitive="cerrar" StemChange="IE">
     <Translation.English>to close</Translation.English>
   </Verb>
   <Verb Infinitive="cocinar">
@@ -87,7 +87,7 @@
   <Verb Infinitive="duchar">
     <Translation.English>to shower</Translation.English>
   </Verb>
-  <Verb Infinitive="empezar">
+  <Verb Infinitive="empezar" StemChange="IE">
     <Translation.English>to start</Translation.English>
   </Verb>
   <Verb Infinitive="encantar">
@@ -262,5 +262,74 @@
   </Verb>
   <Verb Infinitive="volver" StemChange="UE">
     <Translation.English>to return/come (back)</Translation.English>
+  </Verb>
+  <Verb Infinitive="lavar">
+    <Translation.English>to wash</Translation.English>
+  </Verb>
+  <Verb Infinitive="llegar">
+    <Translation.English>to arrive</Translation.English>
+  </Verb>
+  <Verb Infinitive="llevar">
+    <Translation.English>to carry</Translation.English>
+  </Verb>
+  <Verb Infinitive="mandar">
+    <Translation.English>to send</Translation.English>
+  </Verb>
+  <Verb Infinitive="manejar">
+    <Translation.English>to drive</Translation.English>
+  </Verb>
+  <Verb Infinitive="mirar">
+    <Translation.English>to watch</Translation.English>
+  </Verb>
+  <Verb Infinitive="montar">
+    <Translation.English>to ride</Translation.English>
+  </Verb>
+  <Verb Infinitive="nadar">
+    <Translation.English>to swim</Translation.English>
+  </Verb>
+  <Verb Infinitive="nececitar">
+    <Translation.English>to need</Translation.English>
+  </Verb>
+  <Verb Infinitive="pensar" StemChange="IE">
+    <Translation.English>to think</Translation.English>
+  </Verb>
+  <Verb Infinitive="perder">
+    <Translation.English>to lose</Translation.English>
+  </Verb>
+  <Verb Infinitive="preguntar">
+    <Translation.English>to ask</Translation.English>
+  </Verb>
+  <Verb Infinitive="probar" StemChange="UE">
+    <Translation.English>to try</Translation.English>
+  </Verb>
+  <Verb Infinitive="quedar">
+    <Translation.English>tu stay</Translation.English>
+  </Verb>
+  <Verb Infinitive="recordar" StemChange="UE">
+    <Translation.English>to remember</Translation.English>
+  </Verb>
+  <Verb Infinitive="sentir">
+    <Translation.English>to feel</Translation.English>
+  </Verb>
+  <Verb Infinitive="sentar" StemChange="IE">
+    <Translation.English>to sit</Translation.English>
+  </Verb>
+  <Verb Infinitive="tocar">
+    <Translation.English>to play</Translation.English>
+  </Verb>
+  <Verb Infinitive="tomar">
+    <Translation.English>to take</Translation.English>
+  </Verb>
+  <Verb Infinitive="trabejar">
+    <Translation.English>to work</Translation.English>
+  </Verb>
+  <Verb Infinitive="usar">
+    <Translation.English>to use/wear</Translation.English>
+  </Verb>
+  <Verb Infinitive="viajar">
+    <Translation.English>to travel</Translation.English>
+  </Verb>
+  <Verb Infinitive="volar">
+    <Translation.English>to fly</Translation.English>
   </Verb>
 </Verbs>
