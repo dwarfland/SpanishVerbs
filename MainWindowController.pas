@@ -27,23 +27,10 @@ type
     method windowDidLoad; override;
     begin
       inherited windowDidLoad();
-
-      for each c in tableView.tableColumns.copy do
-        tableView.removeTableColumn(c);
-
-      for each c in /*verb_*/columns do begin
-        var column := new NSTableColumn();
-        column.identifier := c;
-        column.headerCell.title := c;
-        column.title := c;
-        column.editable := true;//c ≠ "Infinitive";
-        //column.dataCell := new ProjectSettingsCell();
-        tableView.addTableColumn(column);
-      end;
-
+      UpdateColumns();
     end;
 
-    method Load();
+    method Load;
     begin
       verbs := new List<Verb>;
       var xml := XmlDocument.TryFromFile(dataFileName);
@@ -52,7 +39,7 @@ type
       Sort();
     end;
 
-    method Save();
+    method Save;
     begin
       var XmlStyleVisualStudio := new XmlFormattingOptions();
       XmlStyleVisualStudio.WhitespaceStyle := XmlWhitespaceStyle.PreserveWhitespaceAroundText;
@@ -72,9 +59,12 @@ type
       xml.SaveToFile(dataFileName, XmlStyleVisualStudio);
     end;
 
-    method Sort();
+
+
+    method Sort;
     begin
       verbs := verbs.OrderBy(v -> v.Infinitive).ToList;
+      tableView:reloadData();
     end;
 
     [IBOutlet]
@@ -119,7 +109,6 @@ type
           verbs.Add(new Verb withInfinitive(value));
           Sort();
           Save();
-          tableView.reloadData();
         end;
         exit;
       end;
@@ -167,6 +156,9 @@ type
       if aTableColumn.identifier = "Infinitive" then begin
         cell.font := NSFont.boldSystemFontOfSize(11.0);
       end
+      else if aTableColumn.identifier:hasPrefix("Translation.") then begin
+        cell.textColor := NSColor.systemBlueColor;
+      end
       else begin
         cell.editable := true;
         var verb := verbs[aRow];
@@ -211,24 +203,138 @@ type
     end;
 
     //
+    //
+    //
+
+    [IBAction]
+    method reload(aSender: id); public;
+    begin
+      Load();
+    end;
+
+    [IBAction]
+    method columnsChanged(aSender: id); public;
+    begin
+      dispatch_async(dispatch_get_main_queue) begin
+        UpdateColumns();
+      end;
+    end;
+
+    //
+    //
+    //
+
+    method UpdateColumns;
+    begin
+      for each c in tableView.tableColumns.copy do
+        tableView.removeTableColumn(c);
+
+      var newColumns := columns as sequence of String;
+      if not AppDelegate.sharedInstance.ShowTranslation then
+        newColumns := newColumns.Where(c -> not c.StartsWith("Translation."));
+      if not AppDelegate.sharedInstance.ShowParticiples then
+        newColumns := newColumns.Where(c -> not c.StartsWith("Participle."));
+      if not AppDelegate.sharedInstance.ShowImperatives then
+        newColumns := newColumns.Where(c -> not c.StartsWith("Imperative."));
+
+      if not AppDelegate.sharedInstance.ShowIndicativo then
+        newColumns := newColumns.Where(c -> not c.StartsWith("Indicativo."));
+      if not AppDelegate.sharedInstance.ShowSubjuntivo then
+        newColumns := newColumns.Where(c -> not c.StartsWith("Subjuntivo."));
+
+      if not AppDelegate.sharedInstance.ShowPresentTense then
+        newColumns := newColumns.Where(c -> not c.Contains(".Present."));
+      if not AppDelegate.sharedInstance.ShowPreteriteTense then
+        newColumns := newColumns.Where(c -> not c.Contains(".Preterite."));
+      if not AppDelegate.sharedInstance.ShowImperfectTense then
+        newColumns := newColumns.Where(c -> not c.Contains(".Imperfect."));
+      if not AppDelegate.sharedInstance.ShowSimpleFutureTense then
+        newColumns := newColumns.Where(c -> not c.Contains(".SimpleFuture."));
+
+      if not AppDelegate.sharedInstance.ShowVosAndVosotros then
+        newColumns := newColumns.Where(c -> not c.EndsWith(".Plural.2") and not c.Contains("Vos"));
+
+      for each c in newColumns do begin
+        var column := new NSTableColumn();
+        column.identifier := c;
+        column.headerCell.title := FixHeader(c);
+        column.title := FixHeader(c);
+        column.editable := true;//c ≠ "Infinitive";
+        //column.dataCell := new ProjectSettingsCell();
+        tableView.addTableColumn(column);
+      end;
+    end;
+
+    method FixHeader(aConfugation: String): String;
+    begin
+      result := aConfugation;
+      if result.StartsWith("Translation.") then
+        exit result.SubstringFromFirstOccurrenceOf(".");
+
+      result := result.Replace("Indicativo.", ""); // for now; all we support
+      result := result.Replace("Simple", "");
+      result := result.Replace("Singular", "Sg").Replace("Plural", "Pl").Replace("Vos", " Vos");
+      result := result.Replace("1", "1st").Replace("2", "2nd").Replace("3", "3rd");
+      var lSplit := result.Split(".");
+      if lSplit.Count = 3 then begin
+        result := lSplit[2]+" "+lSplit[1]+" "+lSplit[0];
+      end;
+      if lSplit.Count = 2 then begin
+        result := lSplit[1]+" "+lSplit[0];
+      end;
+    end;
 
     const /*verb_*/columns : array of String = [
       "Infinitive",
+      "Translation.English",
       "Participle.Present",
-      "Imperative.Singular",
-      "Imperative.Plural",
+      "Imperative.Tu",
+      "Imperative.Usted",
+      "Imperative.Ustedes",
+      "Imperative.Nosotros",
+      "Imperative.AffirmativeVosotros",
+      "Imperative.NegativeVosotros",
+      "Imperative.AffirmativeVos",
+      "Imperative.NegativeVos",
+
       "Indicativo.Present.Singular.1",
       "Indicativo.Present.Singular.2",
       "Indicativo.Present.Singular.3",
       "Indicativo.Present.Plural.1",
       "Indicativo.Present.Plural.2",
       "Indicativo.Present.Plural.3",
-      "Indicativo.Past.Singular.1",
-      "Indicativo.Past.Singular.2",
-      "Indicativo.Past.Singular.3",
-      "Indicativo.Past.Plural.1",
-      "Indicativo.Past.Plural.2",
-      "Indicativo.Past.Plural.3",
+      "Indicativo.Preterite.Singular.1",
+      "Indicativo.Preterite.Singular.2",
+      "Indicativo.Preterite.Singular.3",
+      "Indicativo.Preterite.Plural.1",
+      "Indicativo.Preterite.Plural.2",
+      "Indicativo.Preterite.Plural.3",
+      "Indicativo.Imperfect.Singular.1",
+      "Indicativo.Imperfect.Singular.2",
+      "Indicativo.Imperfect.Singular.3",
+      "Indicativo.Imperfect.Plural.1",
+      "Indicativo.Imperfect.Plural.2",
+      "Indicativo.Imperfect.Plural.3",
+
+      "Indicativo.SimpleFuture.Singular.1",
+      "Indicativo.SimpleFuture.Singular.2",
+      "Indicativo.SimpleFuture.Singular.3",
+      "Indicativo.SimpleFuture.Plural.1",
+      "Indicativo.SimpleFuture.Plural.2",
+      "Indicativo.SimpleFuture.Plural.3",
+
+      "Subjuntivo.Present.Singular.1",
+      "Subjuntivo.Present.Singular.2",
+      "Subjuntivo.Present.Singular.3",
+      "Subjuntivo.Present.Plural.1",
+      "Subjuntivo.Present.Plural.2",
+      "Subjuntivo.Present.Plural.3",
+      "Subjuntivo.Imperfect.Singular.1",
+      "Subjuntivo.Imperfect.Singular.2",
+      "Subjuntivo.Imperfect.Singular.3",
+      "Subjuntivo.Imperfect.Plural.1",
+      "Subjuntivo.Imperfect.Plural.2",
+      "Subjuntivo.Imperfect.Plural.3",
       ];
   end;
 
