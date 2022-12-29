@@ -70,6 +70,13 @@
                                     <action selector="reload:" target="-1" id="IO5-Us-bco"/>
                                 </connections>
                             </menuItem>
+                            <menuItem isSeparatorItem="YES" id="Jvr-XQ-7gf"/>
+                            <menuItem title="Export as .html" id="2xO-ee-ZyR">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="exportAsHtml:" target="-1" id="sAB-zN-IJz"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>

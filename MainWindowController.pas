@@ -70,6 +70,7 @@ type
     property tableView: NSTableView;
     property verbs: List<Verb>;
     property visibleVerbs: List<Verb>;
+    property visibleColumns: List<String>;
     property dataFileName: String;
 
     //
@@ -281,6 +282,70 @@ type
     end;
 
     [IBAction]
+    method exportAsHtml(aSender: id); public;
+    begin
+      var s := NSSavePanel.savePanel;
+      s.allowedFileTypes := new List<String>("html");
+      s.allowsOtherFileTypes := false;
+      s.nameFieldStringValue := "Spanish Verbs.html";
+      //var lResult := await s.beginSheetModalForWindow(window) completionHandler();
+      s.beginSheetModalForWindow(window) completionHandler( (r) -> begin
+
+        if r = NSModalResponseOK then begin
+
+          var sb := new StringBuilder;
+          sb.AppendLine('<html>');
+          sb.AppendLine('<head>');
+          sb.AppendLine('  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />');
+          sb.AppendLine('  <style>');
+          sb.AppendLine('    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" }');
+          sb.AppendLine('    .irregular { font-weight: bold; }');
+          sb.AppendLine('    .infinitive { font-weight: bold; color: green; }');
+          sb.AppendLine('    .translation { color: blue; }');
+          sb.AppendLine('  </style>');
+          sb.AppendLine('</head>');
+          sb.AppendLine('<body>');
+          sb.AppendLine('  <table>');
+
+          sb.AppendLine('    <tr>');
+          for each c in visibleColumns do
+            sb.AppendLine($'      <th class="title">{if c.StartsWith("Indicativo.") then "Indicativo" else if c.StartsWith("Subjuntivo.") then "Subjuntivo" else ""}</td>');
+          sb.AppendLine('    </tr>');
+
+          sb.AppendLine('    <tr>');
+          for each c in visibleColumns do
+            sb.AppendLine($'      <th class="title">{FixHeader(c)}</td>');
+          sb.AppendLine('    </tr>');
+
+          for each v in visibleVerbs do begin
+            sb.AppendLine('    <tr>');
+            for each c in visibleColumns do begin
+              var lCssClassName := c.ToLowerInvariant.Replace(".", "-");
+              if c = "Infinitive" then
+                sb.AppendLine($'      <td class="verb {lCssClassName}">{v.conjugationsByName[c]}</td>')
+              else if c.StartsWith("Translation.") then
+                sb.AppendLine($'      <td class="verb translation {lCssClassName}">{v.conjugationsByName[c]}</td>')
+              else if v.conjugationsIsStandard[c] then
+                sb.AppendLine($'      <td class="verb {lCssClassName}">{v.conjugationsByName[c]}</td>')
+              else
+                sb.AppendLine($'      <td class="verb irregular {lCssClassName}">{v.conjugationsByName[c]}</td>');
+            end;
+            sb.AppendLine('    </tr>');
+          end;
+
+          sb.AppendLine('  <table>');
+          sb.AppendLine('</body>');
+          sb.AppendLine('</html>');
+
+          File.WriteText(s.URL.path, sb.ToString);
+          NSWorkspace.sharedWorkspace.openURL(s.URL)
+
+        end;
+
+      end);
+    end;
+
+    [IBAction]
     method columnsChanged(aSender: id); public;
     begin
       dispatch_async(dispatch_get_main_queue) begin
@@ -303,9 +368,6 @@ type
 
     method UpdateColumns;
     begin
-      for each c in tableView.tableColumns.copy do
-        tableView.removeTableColumn(c);
-
       var newColumns := columns as sequence of String;
       if not AppDelegate.sharedInstance.ShowTranslation then
         newColumns := newColumns.Where(c -> not c.StartsWith("Translation."));
@@ -331,7 +393,12 @@ type
       if not AppDelegate.sharedInstance.ShowVosAndVosotros then
         newColumns := newColumns.Where(c -> not c.EndsWith(".Plural.2") and not c.Contains("Vos"));
 
-      for each c in newColumns do begin
+      visibleColumns := newColumns.ToList;
+
+      for each c in tableView.tableColumns.copy do
+        tableView.removeTableColumn(c);
+
+      for each c in visibleColumns do begin
         var column := new NSTableColumn();
         column.identifier := c;
         column.headerCell.title := FixHeader(c);
@@ -348,7 +415,7 @@ type
       if result.StartsWith("Translation.") then
         exit result.SubstringFromFirstOccurrenceOf(".");
 
-      result := result.Replace("Indicativo.", ""); // for now; all we support
+      result := result.Replace("Indicativo.", "").Replace("Subjuntivo.", ""); // for now
       result := result.Replace("Simple", "");
       result := result.Replace("Singular", "Sg").Replace("Plural", "Pl").Replace("Vos", " Vos");
       result := result.Replace("1", "1st").Replace("2", "2nd").Replace("3", "3rd");
