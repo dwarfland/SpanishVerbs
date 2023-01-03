@@ -100,13 +100,13 @@ type
 
     method tableView(aTableView: NSTableView) setObjectValue(object: nullable id) forTableColumn(aTableColumn: nullable NSTableColumn) row(aRow: NSInteger);
     begin
-      var value := (object as String):ToLowerInvariant;
+      var value := (object as String):ToLowerInvariant:Trim;
 
       if aRow = visibleVerbs:Count then begin
         if aTableColumn.identifier ≠ "Infinitive" then
           exit;
 
-        if (length(value) > 0) and not value.Contains(".") and not visibleVerbs.Any(v -> v.Infinitive = value) then begin
+        if (length(value) ≥ 2) and value.EndsWith("r") and not value.Contains(".") and not visibleVerbs.Any(v -> v.Infinitive = value) then begin
           verbs.Add(new Verb withInfinitive(value));
           Sort();
           Save();
@@ -301,6 +301,7 @@ type
           sb.AppendLine('    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" }');
           sb.AppendLine('    .irregular { font-weight: bold; }');
           sb.AppendLine('    .infinitive { font-weight: bold; color: green; }');
+          sb.AppendLine('    .regular { font-weight: bold; color: gray; }');
           sb.AppendLine('    .translation { color: blue; }');
           sb.AppendLine('  </style>');
           sb.AppendLine('</head>');
@@ -326,7 +327,7 @@ type
               else if c.StartsWith("Translation.") then
                 sb.AppendLine($'      <td class="verb translation {lCssClassName}">{v.conjugationsByName[c]}</td>')
               else if v.conjugationsIsStandard[c] then
-                sb.AppendLine($'      <td class="verb {lCssClassName}">{v.conjugationsByName[c]}</td>')
+                sb.AppendLine($'      <td class="verb regular {lCssClassName}">{v.conjugationsByName[c]}</td>')
               else
                 sb.AppendLine($'      <td class="verb irregular {lCssClassName}">{v.conjugationsByName[c]}</td>');
             end;
@@ -403,8 +404,8 @@ type
         column.identifier := c;
         column.headerCell.title := FixHeader(c);
         column.title := FixHeader(c);
-        column.editable := true;//c ≠ "Infinitive";
-        //column.dataCell := new ProjectSettingsCell();
+        column.editable := true;
+        column.minWidth := 100;
         tableView.addTableColumn(column);
       end;
     end;
