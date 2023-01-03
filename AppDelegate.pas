@@ -22,26 +22,38 @@ type
       fMainWindowController.showWindow(nil);
     end;
 
-    [Notify] property ShowTranslation: Boolean := true;
-    [Notify] property ShowParticiples: Boolean := false;
-    [Notify] property ShowImperatives: Boolean := false;
+    property ShowTranslation: Boolean read boolForKey("ShowTranslation") withDefault(true) write begin setBool(value) forKey("ShowTranslation") end;
+    property ShowParticiples: Boolean read boolForKey("ShowParticiples") withDefault(false) write begin setBool(value) forKey("ShowParticiples") end;
+    property ShowImperatives: Boolean read boolForKey("ShowImperatives") withDefault(false) write begin setBool(value) forKey("ShowImperatives") end;
 
-    [Notify] property ShowIndicativo: Boolean := true;
-    [Notify] property ShowSubjuntivo: Boolean := false;
+    property ShowIndicativo: Boolean read boolForKey("ShowIndicativo") withDefault(true) write begin setBool(value) forKey("ShowIndicativo") end;
+    property ShowSubjuntivo: Boolean read boolForKey("ShowSubjuntivo") withDefault(false) write begin setBool(value) forKey("ShowSubjuntivo") end;
 
     property ShowIndicativeOrSubjunctive: Boolean read ShowIndicativo or ShowSubjuntivo;
 
-    [Notify] property ShowPresentTense: Boolean := true;
-    [Notify] property ShowPreteriteTense: Boolean := false;
-    [Notify] property ShowImperfectTense: Boolean := false;
-    [Notify] property ShowPerfectTense: Boolean := false;
-    [Notify] property ShowSimpleFutureTense: Boolean := true;
+    property ShowPresentTense: Boolean read boolForKey("ShowPresentTense") withDefault(true) write begin setBool(value) forKey("ShowPresentTense") end;
+    property ShowPreteriteTense: Boolean read boolForKey("ShowPreteriteTense") withDefault(false) write begin setBool(value) forKey("ShowPreteriteTense") end;
+    property ShowImperfectTense: Boolean read boolForKey("ShowImperfectTense") withDefault(false) write begin setBool(value) forKey("ShowImperfectTense") end;
+    property ShowPerfectTense: Boolean read boolForKey("ShowPerfectTense") withDefault(false) write begin setBool(value) forKey("ShowPerfectTense") end;
+    property ShowSimpleFutureTense: Boolean read boolForKey("ShowSimpleFutureTense") withDefault(true) write begin setBool(value) forKey("ShowSimpleFutureTense") end;
 
-    [Notify] property ShowVosAndVosotros: Boolean := true;
+    property ShowVosAndVosotros: Boolean read boolForKey("ShowVosAndVosotros") withDefault(true) write begin setBool(value) forKey("ShowVosAndVosotros") end;
 
   private
 
     fMainWindowController: MainWindowController;
+
+    method boolForKey(aKey: String) withDefault(aDefault: Boolean := false): Boolean;
+    begin
+      result := aDefault;
+      if assigned(NSUserDefaults.standardUserDefaults.objectForKey(aKey)) then
+        result := NSUserDefaults.standardUserDefaults.boolForKey(aKey)
+    end;
+
+    method setBool(aValue: Boolean) forKey(aKey: String);
+    begin
+      NSUserDefaults.standardUserDefaults.setBool(aValue) forKey(aKey);
+    end;
 
   end;
 
