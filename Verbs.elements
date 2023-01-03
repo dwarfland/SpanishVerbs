@@ -10,10 +10,12 @@
     <MangleTypeNames>True</MangleTypeNames>
     <CreateAppBundle>True</CreateAppBundle>
     <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
-    <EntitlementsFile>Resources\Entitlements.entitlements</EntitlementsFile>
     <MacIconFile>.\Resources\App.icns</MacIconFile>
     <DefaultUses>AppKit;Foundation;RemObjects.Elements.RTL</DefaultUses>
-    <BundleIdentifier>com.dwarfland.verbs</BundleIdentifier>
+    <BundleIdentifier>com.dwarfland.verbs.spanish</BundleIdentifier>
+    <DeploymentTargetVersion>12.0</DeploymentTargetVersion>
+    <EntitlementsFile>.\Resources\Entitlements.entitlements</EntitlementsFile>
+    <BundleVersion>1.1</BundleVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>False</Optimize>
@@ -25,7 +27,12 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <OutputPath>.\Bin\Release</OutputPath>
     <HardenedRuntime>True</HardenedRuntime>
-    <CodeSignCertificateName>Developer ID Application: RemObjects Software (24G43Y5373)</CodeSignCertificateName>
+    <CreatePackage>True</CreatePackage>
+    <CodeSignCertificateName>Apple Distribution: RemObjects Software (24G43Y5373)</CodeSignCertificateName>
+    <InstallerCertificateName>3rd Party Mac Developer Installer: RemObjects Software (24G43Y5373)</InstallerCertificateName>
+    <Architecture>x86_64;arm64</Architecture>
+    <ProvisioningProfileName>Spanish Verbs 2022A</ProvisioningProfileName>
+    <ProvisioningProfile>b9d318c9-bd97-4fc6-b81d-4ce4f7aaa5ec</ProvisioningProfile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cocoa" />
