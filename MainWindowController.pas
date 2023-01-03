@@ -301,7 +301,7 @@ type
           sb.AppendLine('    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" }');
           sb.AppendLine('    .irregular { font-weight: bold; }');
           sb.AppendLine('    .infinitive { font-weight: bold; color: green; }');
-          sb.AppendLine('    .regular { font-weight: bold; color: gray; }');
+          sb.AppendLine('    .regular { color: gray; }');
           sb.AppendLine('    .translation { color: blue; }');
           sb.AppendLine('  </style>');
           sb.AppendLine('</head>');
