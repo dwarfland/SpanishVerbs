@@ -21,9 +21,6 @@
   <Verb Infinitive="buscar">
     <Translation.English>to look (for)</Translation.English>
   </Verb>
-  <Verb Infinitive="cabellar">
-    <Translation.English>to brush</Translation.English>
-  </Verb>
   <Verb Infinitive="cambiar">
     <Translation.English>to change</Translation.English>
   </Verb>
@@ -169,6 +166,13 @@
     <Indicativo.Preterite.Singular.1>fui</Indicativo.Preterite.Singular.1>
     <Indicativo.Preterite.Singular.2>fuiste</Indicativo.Preterite.Singular.2>
     <Indicativo.Preterite.Singular.3>fue</Indicativo.Preterite.Singular.3>
+    <Participle.Present>yendo</Participle.Present>
+    <Subjuntivo.Present.Plural.1>vayamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>vayáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>vayan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>vaya</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>vayas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>vaya</Subjuntivo.Present.Singular.3>
     <Translation.English>to go</Translation.English>
   </Verb>
   <Verb Infinitive="jugar" StemChange="UE">
@@ -177,11 +181,13 @@
   <Verb Infinitive="leer">
     <Translation.English>to read</Translation.English>
   </Verb>
-  <Verb Infinitive="oler" StemChange="UE">
+  <Verb Infinitive="oler">
     <Indicativo.Present.Plural.3>huelen</Indicativo.Present.Plural.3>
     <Indicativo.Present.Singular.1>huelo</Indicativo.Present.Singular.1>
     <Indicativo.Present.Singular.2>hueles</Indicativo.Present.Singular.2>
     <Indicativo.Present.Singular.3>huele</Indicativo.Present.Singular.3>
+    <Subjuntivo.Present.Plural.1>olamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>oláis</Subjuntivo.Present.Plural.2>
     <Translation.English>to smell</Translation.English>
   </Verb>
   <Verb Infinitive="poder" StemChange="UE">
@@ -308,7 +314,7 @@
   <Verb Infinitive="recordar" StemChange="UE">
     <Translation.English>to remember</Translation.English>
   </Verb>
-  <Verb Infinitive="sentir">
+  <Verb Infinitive="sentir" StemChange="IE">
     <Translation.English>to feel</Translation.English>
   </Verb>
   <Verb Infinitive="sentar" StemChange="IE">
@@ -331,5 +337,8 @@
   </Verb>
   <Verb Infinitive="volar">
     <Translation.English>to fly</Translation.English>
+  </Verb>
+  <Verb Infinitive="cepillar">
+    <Translation.English>to brush</Translation.English>
   </Verb>
 </Verbs>
