@@ -415,6 +415,8 @@ type
         newColumns := newColumns.Where(c -> not c.Contains(".Preterite."));
       if not AppDelegate.sharedInstance.ShowImperfectTense then
         newColumns := newColumns.Where(c -> not c.Contains(".Imperfect."));
+      if not AppDelegate.sharedInstance.ShowConditionalTense then
+        newColumns := newColumns.Where(c -> not c.Contains(".Conditional."));
       if not AppDelegate.sharedInstance.ShowFutureTense then
         newColumns := newColumns.Where(c -> not c.Contains(".Future."));
 
@@ -492,6 +494,13 @@ type
       "Indicativo.Imperfect.Plural.1",
       "Indicativo.Imperfect.Plural.2",
       "Indicativo.Imperfect.Plural.3",
+
+      "Indicativo.Conditional.Singular.1",
+      "Indicativo.Conditional.Singular.2",
+      "Indicativo.Conditional.Singular.3",
+      "Indicativo.Conditional.Plural.1",
+      "Indicativo.Conditional.Plural.2",
+      "Indicativo.Conditional.Plural.3",
 
       "Indicativo.Future.Singular.1",
       "Indicativo.Future.Singular.2",

@@ -352,20 +352,20 @@
                                     <binding destination="494" name="enabled" keyPath="self.ShowIndicativeOrSubjunctive" id="fYh-g1-RSp"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Present Progressive Tense" id="MwO-kC-clY">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="columnsChanged:" target="-1" id="n1P-8Q-5KN"/>
-                                    <binding destination="494" name="enabled" keyPath="self.ShowIndicativo" id="U2P-FJ-UcZ"/>
-                                    <binding destination="494" name="value" keyPath="self.ShowPerfectTense" id="Wsy-84-8ne"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Future Tense" id="hLO-8O-2fx">
+                            <menuItem title="Conditional Tense" id="hLO-8O-2fx">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="columnsChanged:" target="-1" id="A96-dj-Bpc"/>
-                                    <binding destination="494" name="enabled" keyPath="self.ShowIndicativeOrSubjunctive" id="cQi-tt-ocd"/>
-                                    <binding destination="494" name="value" keyPath="self.ShowFutureTense" id="asw-Xh-uqP"/>
+                                    <binding destination="494" name="enabled" keyPath="self.ShowIndicativo" id="4pe-N6-3ym"/>
+                                    <binding destination="494" name="value" keyPath="self.ShowConditionalTense" id="NpA-md-sff"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Future Tense" id="Abe-gn-hKR">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="columnsChanged:" target="-1" id="fIP-RD-qUl"/>
+                                    <binding destination="494" name="enabled" keyPath="self.ShowIndicativeOrSubjunctive" id="puL-GI-lge"/>
+                                    <binding destination="494" name="value" keyPath="self.ShowFutureTense" id="Nrv-6p-VcP"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="tcG-tY-3cv"/>

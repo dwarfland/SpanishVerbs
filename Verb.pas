@@ -204,6 +204,7 @@ type
           "Present": getIndicativoPresent(aSplit.Skip(1).ToList);
           "Preterite": getIndicativoPreterite(aSplit.Skip(1).ToList);
           "Imperfect": getIndicativoImperfect(aSplit.Skip(1).ToList);
+          "Conditional": getIndicativoConditional(aSplit.Skip(1).ToList);
           "Future": getIndicativoSimpleFuture(aSplit.Skip(1).ToList);
           else nil;
         end;
@@ -341,6 +342,31 @@ type
               "2": result := Infinitive+"éis";
               "3": result := Infinitive+"án";
             end;
+        end;
+      end;
+    end;
+
+    // https://www.spanishdict.com/guide/conditional-tense
+
+    method getIndicativoConditional(aSplit: List<String>): String;
+    begin
+      var lStem := Infinitive;
+      if lStem in ["tener", "poner", "valer", "salir", "venir"] then
+        lStem := Stem+"dr";
+      if lStem in ["poder", "caber", "haber", "querer", "saber"] then
+        lStem := Stem+"r";
+      if (aSplit.Count = 2) then begin
+        case aSplit[0] of
+          "Singular": case aSplit[1] of
+            "1": result := lStem+"ía";
+            "2": result := lStem+"ías";
+            "3": result := lStem+"ía";
+          end;
+          "Plural": case aSplit[1] of
+            "1": result := lStem+"íamos";
+            "2": result := lStem+"íais";
+            "3": result := lStem+"ían";
+          end;
         end;
       end;
     end;
