@@ -25,6 +25,9 @@ type
     method windowDidLoad; override;
     begin
       inherited windowDidLoad();
+      var frame := tableView.headerView.frame;
+      frame.size.height := 3*16.0;
+      tableView.headerView.frame := frame;
       UpdateColumns();
     end;
 
@@ -282,6 +285,25 @@ type
     end;
 
     [IBAction]
+    method &copy(aSender: id); public;
+    begin
+      var sb := new StringBuilder;
+      tableView.selectedRowIndexes.enumerateIndexesUsingBlock( (idx, stop) -> begin
+        if idx < visibleVerbs.Count then begin
+          var verb := visibleVerbs[idx];
+          for each c in visibleColumns do begin
+            sb.Append(verb.conjugationsByName[c]);
+            sb.Append(", ");
+          end;
+        end;
+      end);
+      NSPasteboard.generalPasteboard.clearContents();
+      NSPasteboard.generalPasteboard.declareTypes(NSArray.arrayWithObject(NSPasteboardTypeString)) owner(nil);
+      NSPasteboard.generalPasteboard.setString(sb.ToString) forType(NSPasteboardTypeString);
+    end;
+
+
+    [IBAction]
     method exportAsHtml(aSender: id); public;
     begin
       var s := NSSavePanel.savePanel;
@@ -303,6 +325,7 @@ type
           sb.AppendLine('    .infinitive { font-weight: bold; color: green; }');
           sb.AppendLine('    .regular { color: gray; }');
           sb.AppendLine('    .translation { color: blue; }');
+          sb.AppendLine('    .stemchange { font-weight: normal; color: gray; }');
           sb.AppendLine('  </style>');
           sb.AppendLine('</head>');
           sb.AppendLine('<body>');
@@ -315,21 +338,25 @@ type
 
           sb.AppendLine('    <tr>');
           for each c in visibleColumns do
-            sb.AppendLine($'      <th class="title">{FixHeader(c)}</td>');
+            sb.AppendLine($'      <th class="title">{FixHeader(c).Replace(#10, "<br />")}</td>');
           sb.AppendLine('    </tr>');
 
           for each v in visibleVerbs do begin
             sb.AppendLine('    <tr>');
             for each c in visibleColumns do begin
               var lCssClassName := c.ToLowerInvariant.Replace(".", "-");
+              var conjugation := v.conjugationsByName[c];
+              if (c = "Infinitive") and (v.StemChange ≠ VerbStemChange.None) then
+                conjugation := conjugation+$' <span class="stemchange">({StemChangeToString(v.StemChange)})</span>';
+
               if c = "Infinitive" then
-                sb.AppendLine($'      <td class="verb {lCssClassName}">{v.conjugationsByName[c]}</td>')
+                sb.AppendLine($'      <td class="verb {lCssClassName}"><nobr>{conjugation}</nobr></td>')
               else if c.StartsWith("Translation.") then
-                sb.AppendLine($'      <td class="verb translation {lCssClassName}">{v.conjugationsByName[c]}</td>')
+                sb.AppendLine($'      <td class="verb translation {conjugation}">{conjugation}</td>')
               else if v.conjugationsIsStandard[c] then
-                sb.AppendLine($'      <td class="verb regular {lCssClassName}">{v.conjugationsByName[c]}</td>')
+                sb.AppendLine($'      <td class="verb regular {conjugation}">{conjugation}</td>')
               else
-                sb.AppendLine($'      <td class="verb irregular {lCssClassName}">{v.conjugationsByName[c]}</td>');
+                sb.AppendLine($'      <td class="verb irregular {conjugation}">{conjugation}</td>');
             end;
             sb.AppendLine('    </tr>');
           end;
@@ -402,6 +429,7 @@ type
       for each c in visibleColumns do begin
         var column := new NSTableColumn();
         column.identifier := c;
+        column.headerCell := new TallTableHeaderCell;
         column.headerCell.title := FixHeader(c);
         column.title := FixHeader(c);
         column.editable := true;
@@ -414,19 +442,25 @@ type
     begin
       result := aConfugation;
       if result.StartsWith("Translation.") then
-        exit result.SubstringFromFirstOccurrenceOf(".");
+        exit #10#10+result.SubstringFromFirstOccurrenceOf(".");
 
-      result := result.Replace("Indicativo.", "").Replace("Subjuntivo.", ""); // for now
+      //result := result.Replace("Indicativo.", "").Replace("Subjuntivo.", ""); // for now
       result := result.Replace("Simple", "");
-      result := result.Replace("Singular", "Sg").Replace("Plural", "Pl").Replace("Vos", " Vos");
+      //result := result.Replace("Singular", "Sg").Replace("Plural", "Pl").Replace("Vos", " Vos");
+      result := result.Replace("Affirmative", "Affirmative.").Replace("Negative", "Negative.");
       result := result.Replace("1", "1st").Replace("2", "2nd").Replace("3", "3rd");
       var lSplit := result.Split(".");
-      if lSplit.Count = 3 then begin
-        result := lSplit[2]+" "+lSplit[1]+" "+lSplit[0];
+      if lSplit.First = "Imperative" then case lSplit.Count of
+        3: exit lSplit.Reverse.JoinedString(#10);
+        2: exit #10+lSplit.Reverse.JoinedString(#10);
       end;
-      if lSplit.Count = 2 then begin
-        result := lSplit[1]+" "+lSplit[0];
+      result := case lSplit.Count of
+        4: lSplit[0]+"."+lSplit[3]+" "+lSplit[2]+"."+lSplit[1];
+        3: lSplit[2]+" "+lSplit[1]+"."+lSplit[0];
+        2: ".."+lSplit[1]+" "+lSplit[0];
+        1: ".."+lSplit[0]
       end;
+      result := result.Replace(".", #10);
     end;
 
     const /*verb_*/columns : array of String = [

@@ -17,4 +17,14 @@ type
 
   end;
 
+  TallTableHeaderCell = public class(NSTableHeaderCell)
+  public
+
+    method drawWithFrame(cellFrame: NSRect) inView(controlView: NSView); override;
+    begin
+      drawInteriorWithFrame(cellFrame) inView(controlView);
+    end;
+
+  end;
+
 end.
