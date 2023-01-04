@@ -25,8 +25,8 @@
                             <menuItem isSeparatorItem="YES" id="236">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Preferences…" keyEquivalent="," id="129"/>
-                            <menuItem isSeparatorItem="YES" id="143">
+                            <menuItem title="Preferences…" hidden="YES" keyEquivalent="," id="129"/>
+                            <menuItem isSeparatorItem="YES" hidden="YES" id="143">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
                             <menuItem title="Services" id="131">
@@ -107,7 +107,7 @@
                                     <action selector="copy:" target="-1" id="224"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Preteritee" keyEquivalent="v" id="203">
+                            <menuItem title="Paste" keyEquivalent="v" id="203">
                                 <connections>
                                     <action selector="Preteritee:" target="-1" id="226"/>
                                 </connections>
@@ -419,9 +419,9 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="491">
                         <items>
-                            <menuItem title="Verbs Help" keyEquivalent="?" id="492">
+                            <menuItem title="Verbs Website" keyEquivalent="?" id="492">
                                 <connections>
-                                    <action selector="showHelp:" target="-1" id="493"/>
+                                    <action selector="showWebsite:" target="494" id="4VJ-IQ-fPp"/>
                                 </connections>
                             </menuItem>
                         </items>

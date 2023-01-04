@@ -39,6 +39,12 @@ type
 
     property ShowVosAndVosotros: Boolean read boolForKey("ShowVosAndVosotros") withDefault(true) write begin setBool(value) forKey("ShowVosAndVosotros") end;
 
+    [IBAction]
+    method showWebsite(aSender: id); public;
+    begin
+      NSWorkspace.sharedWorkspace.openURL(NSURL.URLWithString("https://www.visionthing.co/verbs.html"));
+    end;
+
   private
 
     fMainWindowController: MainWindowController;
