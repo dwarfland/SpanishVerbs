@@ -15,7 +15,7 @@
     <BundleIdentifier>com.dwarfland.verbs.spanish</BundleIdentifier>
     <DeploymentTargetVersion>12.0</DeploymentTargetVersion>
     <EntitlementsFile>.\Resources\Entitlements.entitlements</EntitlementsFile>
-    <BundleVersion>1.1</BundleVersion>
+    <BundleVersion>1.2</BundleVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>False</Optimize>
