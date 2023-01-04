@@ -360,12 +360,12 @@
                                     <binding destination="494" name="value" keyPath="self.ShowPerfectTense" id="Wsy-84-8ne"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Simple Future Tense" id="hLO-8O-2fx">
+                            <menuItem title="Future Tense" id="hLO-8O-2fx">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="columnsChanged:" target="-1" id="A96-dj-Bpc"/>
-                                    <binding destination="494" name="enabled" keyPath="self.ShowIndicativo" id="9gC-VJ-MEO"/>
-                                    <binding destination="494" name="value" keyPath="self.ShowSimpleFutureTense" id="imY-5b-Cqy"/>
+                                    <binding destination="494" name="enabled" keyPath="self.ShowIndicativeOrSubjunctive" id="cQi-tt-ocd"/>
+                                    <binding destination="494" name="value" keyPath="self.ShowFutureTense" id="asw-Xh-uqP"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="tcG-tY-3cv"/>

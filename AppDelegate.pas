@@ -35,7 +35,7 @@ type
     property ShowPreteriteTense: Boolean read boolForKey("ShowPreteriteTense") withDefault(false) write begin setBool(value) forKey("ShowPreteriteTense") end;
     property ShowImperfectTense: Boolean read boolForKey("ShowImperfectTense") withDefault(false) write begin setBool(value) forKey("ShowImperfectTense") end;
     property ShowPerfectTense: Boolean read boolForKey("ShowPerfectTense") withDefault(false) write begin setBool(value) forKey("ShowPerfectTense") end;
-    property ShowSimpleFutureTense: Boolean read boolForKey("ShowSimpleFutureTense") withDefault(true) write begin setBool(value) forKey("ShowSimpleFutureTense") end;
+    property ShowFutureTense: Boolean read boolForKey("ShowFutureTense") withDefault(true) write begin setBool(value) forKey("ShowFutureTense") end;
 
     property ShowVosAndVosotros: Boolean read boolForKey("ShowVosAndVosotros") withDefault(true) write begin setBool(value) forKey("ShowVosAndVosotros") end;
 

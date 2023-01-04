@@ -204,7 +204,7 @@ type
           "Present": getIndicativoPresent(aSplit.Skip(1).ToList);
           "Preterite": getIndicativoPreterite(aSplit.Skip(1).ToList);
           "Imperfect": getIndicativoImperfect(aSplit.Skip(1).ToList);
-          "SimpleFuture": getIndicativoSimpleFuture(aSplit.Skip(1).ToList);
+          "Future": getIndicativoSimpleFuture(aSplit.Skip(1).ToList);
           else nil;
         end;
       end;
@@ -355,6 +355,7 @@ type
         result := case aSplit[0] of
           "Present": getSubjuntivoPresent(aSplit.Skip(1).ToList);
           "Imperfect": getSubjuntivo1Imperfect(aSplit.Skip(1).ToList); // we only use Subjuntivo 1, for now
+          "Future": getSubjuntivoFuture(aSplit.Skip(1).ToList);
           else nil;
         end;
       end;
@@ -422,6 +423,27 @@ type
       end;
 
     end;
+
+    // https://www.spanishdict.com/guide/spanish-future-subjunctive
+
+    method getSubjuntivoFuture(aSplit: List<String>): String;
+    begin
+      if (aSplit.Count = 2) then begin
+        case aSplit[0] of
+          "Singular": case aSplit[1] of
+            "1": result := SubjuntivoImperfectStem+"re";
+            "2": result := SubjuntivoImperfectStem+"res";
+            "3": result := SubjuntivoImperfectStem+"re";
+          end;
+          "Plural": case aSplit[1] of
+            "1": result := SubjuntivoImperfectStem.AddAccentToLastChar+"remos";
+            "2": result := SubjuntivoImperfectStem+"eais";
+            "3": result := SubjuntivoImperfectStem+"ren";
+          end;
+        end;
+      end;
+    end;
+
   end;
 
 method StemChangeToString(aStemChange: VerbStemChange): String;

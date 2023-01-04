@@ -415,8 +415,8 @@ type
         newColumns := newColumns.Where(c -> not c.Contains(".Preterite."));
       if not AppDelegate.sharedInstance.ShowImperfectTense then
         newColumns := newColumns.Where(c -> not c.Contains(".Imperfect."));
-      if not AppDelegate.sharedInstance.ShowSimpleFutureTense then
-        newColumns := newColumns.Where(c -> not c.Contains(".SimpleFuture."));
+      if not AppDelegate.sharedInstance.ShowFutureTense then
+        newColumns := newColumns.Where(c -> not c.Contains(".Future."));
 
       if not AppDelegate.sharedInstance.ShowVosAndVosotros then
         newColumns := newColumns.Where(c -> not c.EndsWith(".Plural.2") and not c.Contains("Vos"));
@@ -444,11 +444,9 @@ type
       if result.StartsWith("Translation.") then
         exit #10#10+result.SubstringFromFirstOccurrenceOf(".");
 
-      //result := result.Replace("Indicativo.", "").Replace("Subjuntivo.", ""); // for now
-      result := result.Replace("Simple", "");
-      //result := result.Replace("Singular", "Sg").Replace("Plural", "Pl").Replace("Vos", " Vos");
       result := result.Replace("Affirmative", "Affirmative.").Replace("Negative", "Negative.");
       result := result.Replace("1", "1st").Replace("2", "2nd").Replace("3", "3rd");
+
       var lSplit := result.Split(".");
       if lSplit.First = "Imperative" then case lSplit.Count of
         3: exit lSplit.Reverse.JoinedString(#10);
@@ -495,12 +493,12 @@ type
       "Indicativo.Imperfect.Plural.2",
       "Indicativo.Imperfect.Plural.3",
 
-      "Indicativo.SimpleFuture.Singular.1",
-      "Indicativo.SimpleFuture.Singular.2",
-      "Indicativo.SimpleFuture.Singular.3",
-      "Indicativo.SimpleFuture.Plural.1",
-      "Indicativo.SimpleFuture.Plural.2",
-      "Indicativo.SimpleFuture.Plural.3",
+      "Indicativo.Future.Singular.1",
+      "Indicativo.Future.Singular.2",
+      "Indicativo.Future.Singular.3",
+      "Indicativo.Future.Plural.1",
+      "Indicativo.Future.Plural.2",
+      "Indicativo.Future.Plural.3",
 
       "Subjuntivo.Present.Singular.1",
       "Subjuntivo.Present.Singular.2",
@@ -514,6 +512,13 @@ type
       "Subjuntivo.Imperfect.Plural.1",
       "Subjuntivo.Imperfect.Plural.2",
       "Subjuntivo.Imperfect.Plural.3",
+
+      "Subjuntivo.Future.Singular.1",
+      "Subjuntivo.Future.Singular.2",
+      "Subjuntivo.Future.Singular.3",
+      "Subjuntivo.Future.Plural.1",
+      "Subjuntivo.Future.Plural.2",
+      "Subjuntivo.Future.Plural.3",
       ];
   end;
 
