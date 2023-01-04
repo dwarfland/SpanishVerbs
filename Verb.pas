@@ -167,6 +167,11 @@ type
                 result := lStem+AdjustedVowel_Present+"ndo";
             end;
           "Past": begin
+              result := Stem+case Declination of
+                  Declination.A: "ado";
+                  Declination.E,
+                  Declination.I: "ido";
+                end;
             end;
         end;
       end;

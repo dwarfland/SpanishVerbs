@@ -467,6 +467,7 @@ type
       "Infinitive",
       "Translation.English",
       "Participle.Present",
+      "Participle.Past",
       "Imperative.Tu",
       "Imperative.Usted",
       "Imperative.Ustedes",
