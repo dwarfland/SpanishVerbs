@@ -75,8 +75,8 @@ type
     end;
 
     property SubjuntivoImperfectStem: String read begin
-      result := conjugationsByName["Indicativo.Preterite.Singular.3"];
-      if length(result) > 3 then // always will bem, but jic
+      result := conjugationsByName["Indicativo.Preterite.Plural.3"];
+      if length(result) > 3 then // always will be, but jic
         result := result.Substring(0, length(result)-3); // Instead of using the infinitive for a stem, the imperfect subjunctive uses the third person plural of the preterite (minus the -ron)
     end;
 
@@ -344,6 +344,7 @@ type
         end;
       end;
     end;
+
     //
     //
     //
