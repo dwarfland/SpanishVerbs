@@ -1,5 +1,6 @@
 ﻿<Verbs>
   <Verb Infinitive="abrir">
+    <Participle.Past>abierto</Participle.Past>
     <Translation.English>to open</Translation.English>
   </Verb>
   <Verb Infinitive="almorzar" StemChange="UE">
@@ -66,7 +67,14 @@
   <Verb Infinitive="decir" StemChange="I">
     <Imperative.Tu>di</Imperative.Tu>
     <Imperative.Usted>diga</Imperative.Usted>
+    <Indicativo.Conditional.Plural.1>diríamos</Indicativo.Conditional.Plural.1>
+    <Indicativo.Conditional.Plural.2>diríais</Indicativo.Conditional.Plural.2>
+    <Indicativo.Conditional.Plural.3>dirían</Indicativo.Conditional.Plural.3>
+    <Indicativo.Conditional.Singular.1>diría</Indicativo.Conditional.Singular.1>
+    <Indicativo.Conditional.Singular.2>dirías</Indicativo.Conditional.Singular.2>
+    <Indicativo.Conditional.Singular.3>diría</Indicativo.Conditional.Singular.3>
     <Indicativo.Present.Singular.1>digo</Indicativo.Present.Singular.1>
+    <Participle.Past>dicho</Participle.Past>
     <Translation.English>to say</Translation.English>
   </Verb>
   <Verb Infinitive="desayunar">
@@ -100,6 +108,7 @@
     <Translation.English>to understand</Translation.English>
   </Verb>
   <Verb Infinitive="escribir">
+    <Participle.Past>escrito</Participle.Past>
     <Translation.English>to write</Translation.English>
   </Verb>
   <Verb Infinitive="escuchar">
@@ -112,6 +121,17 @@
     <Indicativo.Present.Plural.3>están</Indicativo.Present.Plural.3>
     <Indicativo.Present.Singular.1>estoy</Indicativo.Present.Singular.1>
     <Indicativo.Present.Singular.3>está</Indicativo.Present.Singular.3>
+    <Indicativo.Preterite.Plural.1>estuvimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>estuvisteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>estuvieron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.1>estuve</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>estuviste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>estuvo</Indicativo.Preterite.Singular.3>
+    <Subjuntivo.Future.Plural.2>estuviereais</Subjuntivo.Future.Plural.2>
+    <Subjuntivo.Present.Plural.3>estén</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>esté</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>estés</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>esté</Subjuntivo.Present.Singular.3>
     <Translation.English>to be</Translation.English>
   </Verb>
   <Verb Infinitive="estudiar">
@@ -136,7 +156,14 @@
   </Verb>
   <Verb Infinitive="hacer">
     <Imperative.Tu>haz</Imperative.Tu>
+    <Indicativo.Conditional.Plural.1>haríamos</Indicativo.Conditional.Plural.1>
+    <Indicativo.Conditional.Plural.2>haríais</Indicativo.Conditional.Plural.2>
+    <Indicativo.Conditional.Plural.3>harían</Indicativo.Conditional.Plural.3>
+    <Indicativo.Conditional.Singular.1>haría</Indicativo.Conditional.Singular.1>
+    <Indicativo.Conditional.Singular.2>harías</Indicativo.Conditional.Singular.2>
+    <Indicativo.Conditional.Singular.3>haría</Indicativo.Conditional.Singular.3>
     <Indicativo.Present.Singular.1>hago</Indicativo.Present.Singular.1>
+    <Participle.Past>hecho</Participle.Past>
     <Translation.English>to do</Translation.English>
   </Verb>
   <Verb Infinitive="interesar">
@@ -166,6 +193,7 @@
     <Indicativo.Preterite.Singular.1>fui</Indicativo.Preterite.Singular.1>
     <Indicativo.Preterite.Singular.2>fuiste</Indicativo.Preterite.Singular.2>
     <Indicativo.Preterite.Singular.3>fue</Indicativo.Preterite.Singular.3>
+    <Participle.Past>ido</Participle.Past>
     <Participle.Present>yendo</Participle.Present>
     <Subjuntivo.Present.Plural.1>vayamos</Subjuntivo.Present.Plural.1>
     <Subjuntivo.Present.Plural.2>vayáis</Subjuntivo.Present.Plural.2>
@@ -197,6 +225,7 @@
   <Verb Infinitive="poner">
     <Imperative.Tu>pon</Imperative.Tu>
     <Indicativo.Present.Singular.1>pongo</Indicativo.Present.Singular.1>
+    <Participle.Past>puesto</Participle.Past>
     <Translation.English>to put (on)</Translation.English>
   </Verb>
   <Verb Infinitive="querer" StemChange="IE">
@@ -261,12 +290,14 @@
     <Indicativo.Preterite.Plural.1>vimos</Indicativo.Preterite.Plural.1>
     <Indicativo.Preterite.Singular.1>vi</Indicativo.Preterite.Singular.1>
     <Indicativo.Preterite.Singular.3>vio</Indicativo.Preterite.Singular.3>
+    <Participle.Past>visto</Participle.Past>
     <Translation.English>to see</Translation.English>
   </Verb>
   <Verb Infinitive="vivir">
     <Translation.English>to live</Translation.English>
   </Verb>
   <Verb Infinitive="volver" StemChange="UE">
+    <Participle.Past>vuelto</Participle.Past>
     <Translation.English>to return/come (back)</Translation.English>
   </Verb>
   <Verb Infinitive="lavar">
