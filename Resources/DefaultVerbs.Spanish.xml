@@ -86,7 +86,13 @@
   <Verb Infinitive="dirigir">
     <Translation.English>to direct</Translation.English>
   </Verb>
-  <Verb Infinitive="dormir" StemChange="UE">
+  <Verb Infinitive="dormir">
+    <Indicativo.Present.Plural.3>duermen</Indicativo.Present.Plural.3>
+    <Indicativo.Present.Singular.1>duermo</Indicativo.Present.Singular.1>
+    <Indicativo.Present.Singular.2>duermes</Indicativo.Present.Singular.2>
+    <Indicativo.Present.Singular.3>duerme</Indicativo.Present.Singular.3>
+    <Indicativo.Preterite.Singular.3>durmió</Indicativo.Preterite.Singular.3>
+    <Participle.Present>durmiendo</Participle.Present>
     <Translation.English>to sleep</Translation.English>
   </Verb>
   <Verb Infinitive="duchar">
@@ -371,5 +377,8 @@
   </Verb>
   <Verb Infinitive="cepillar">
     <Translation.English>to brush</Translation.English>
+  </Verb>
+  <Verb Infinitive="olvidar">
+    <Translation.English>to forget</Translation.English>
   </Verb>
 </Verbs>
