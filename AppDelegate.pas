@@ -42,7 +42,7 @@ type
     [IBAction]
     method showWebsite(aSender: id); public;
     begin
-      NSWorkspace.sharedWorkspace.openURL(NSURL.URLWithString("https://www.visionthing.co/verbs.html"));
+      NSWorkspace.sharedWorkspace.openURL(NSURL.URLWithString("https://www.visionthing.cw/verbs.html"));
     end;
 
   private
