@@ -168,7 +168,19 @@
     <Indicativo.Conditional.Singular.1>haría</Indicativo.Conditional.Singular.1>
     <Indicativo.Conditional.Singular.2>harías</Indicativo.Conditional.Singular.2>
     <Indicativo.Conditional.Singular.3>haría</Indicativo.Conditional.Singular.3>
+    <Indicativo.Future.Plural.1>haremos</Indicativo.Future.Plural.1>
+    <Indicativo.Future.Plural.2>haréis</Indicativo.Future.Plural.2>
+    <Indicativo.Future.Plural.3>harán</Indicativo.Future.Plural.3>
+    <Indicativo.Future.Singular.1>haré</Indicativo.Future.Singular.1>
+    <Indicativo.Future.Singular.2>harás</Indicativo.Future.Singular.2>
+    <Indicativo.Future.Singular.3>hará</Indicativo.Future.Singular.3>
     <Indicativo.Present.Singular.1>hago</Indicativo.Present.Singular.1>
+    <Indicativo.Preterite.Plural.1>hicimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>hicisteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>hicieron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.1>hice</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>hiciste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>hizo</Indicativo.Preterite.Singular.3>
     <Participle.Past>hecho</Participle.Past>
     <Translation.English>to do</Translation.English>
   </Verb>
@@ -346,7 +358,7 @@
     <Translation.English>to try</Translation.English>
   </Verb>
   <Verb Infinitive="quedar">
-    <Translation.English>tu stay</Translation.English>
+    <Translation.English>to stay</Translation.English>
   </Verb>
   <Verb Infinitive="recordar" StemChange="UE">
     <Translation.English>to remember</Translation.English>
@@ -380,5 +392,47 @@
   </Verb>
   <Verb Infinitive="olvidar">
     <Translation.English>to forget</Translation.English>
+  </Verb>
+  <Verb Infinitive="llover">
+    <Translation.English>to rain</Translation.English>
+  </Verb>
+  <Verb Infinitive="nevar">
+    <Translation.English>to rain</Translation.English>
+  </Verb>
+  <Verb Infinitive="comenzar">
+    <Translation.English>to start</Translation.English>
+  </Verb>
+  <Verb Infinitive="despertar" StemChange="IE">
+    <Translation.English>to wake up</Translation.English>
+  </Verb>
+  <Verb Infinitive="responder">
+    <Translation.English>to answer</Translation.English>
+  </Verb>
+  <Verb Infinitive="oir">
+    <Indicativo.Present.Plural.1>oímos</Indicativo.Present.Plural.1>
+    <Indicativo.Present.Plural.3>oyen</Indicativo.Present.Plural.3>
+    <Indicativo.Present.Singular.1>oigo</Indicativo.Present.Singular.1>
+    <Indicativo.Present.Singular.2>oyes</Indicativo.Present.Singular.2>
+    <Indicativo.Present.Singular.3>oye</Indicativo.Present.Singular.3>
+    <Indicativo.Preterite.Plural.1>oímos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>oísteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>oyeron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.3>oyo</Indicativo.Preterite.Singular.3>
+    <Translation.English>to hear</Translation.English>
+  </Verb>
+  <Verb Infinitive="fumar">
+    <Translation.English>to smoke</Translation.English>
+  </Verb>
+  <Verb Infinitive="acabar">
+    <Translation.English>to finish</Translation.English>
+  </Verb>
+  <Verb Infinitive="acordar">
+    <Translation.English>to remember</Translation.English>
+  </Verb>
+  <Verb Infinitive="preocupar">
+    <Translation.English>to worry</Translation.English>
+  </Verb>
+  <Verb Infinitive="soñar">
+    <Translation.English>to dream</Translation.English>
   </Verb>
 </Verbs>
