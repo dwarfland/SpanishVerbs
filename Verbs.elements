@@ -61,6 +61,7 @@
     <Compile Include="String+Extensions.pas" />
     <AppResource Include="Resources\DefaultVerbs.Spanish.xml" />
     <Compile Include="TableViewWithContextMenu.pas" />
+    <Compile Include="Data.pas" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources" />

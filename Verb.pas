@@ -31,6 +31,9 @@ type
       StemChange := aStemChange
     end;
 
+    property Local: Boolean;
+    property ChangedLOcally: Boolean;
+
     property Infinitive: String;
     property Declination: Declination := Declination.Irregular;
     property StemChange: VerbStemChange := VerbStemChange.None;

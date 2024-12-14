@@ -8,18 +8,8 @@ type
     constructor;
     begin
       inherited constructor withWindowNibName("MainWindow");
-
-      dataFileName := Path.Combine(Environment.UserApplicationSupportFolder, "Dwarfland", "Verbs.Spanish.xml");
-      Log($"dataFileName {dataFileName}");
-      if dataFileName.FileExists then begin
-        Load;
-      end
-      else begin
-        var defaultDataFile := NSBundle.mainBundle.URLForResource("DefaultVerbs.Spanish") withExtension("xml") as Url;
-        if defaultDataFile:FileExists then
-          Load(defaultDataFile.FilePath);
-      end;
-
+      Data.sharedInstance.ping;
+      Sort();
     end;
 
     method windowDidLoad; override;
@@ -28,36 +18,19 @@ type
       var frame := tableView.headerView.frame;
       frame.size.height := 3*16.0;
       tableView.headerView.frame := frame;
+      var (newCount, updatedCount) := Data.sharedInstance.updateFromDefault;
+      Log($"newCount {newCount}");
+      if (newCount > 0) or (updatedCount > 0) then begin
+        dispatch_async(dispatch_get_main_queue) begin
+          var alert := new NSAlert;
+          alert.messageText := "New verbs!";
+          alert.addButtonWithTitle("OK");
+          alert.informativeText := $"{newCount} new {"verb".PluralInvariant(newCount)} new verbs were added to your local list.";
+          alert.beginSheetModalForWindow(window) begin
+          end;
+        end;
+      end;
       UpdateColumns();
-    end;
-
-    method Load(aFilenameOverride: nullable String := nil);
-    begin
-      verbs := new List<Verb>;
-      var xml := XmlDocument.TryFromFile(coalesce(aFilenameOverride, dataFileName));
-      for each e in xml.Root.ElementsWithName("Verb") do
-        verbs.Add(new Verb fromXml(e));
-      Sort();
-    end;
-
-    method Save;
-    begin
-      var XmlStyleVisualStudio := new XmlFormattingOptions();
-      XmlStyleVisualStudio.WhitespaceStyle := XmlWhitespaceStyle.PreserveWhitespaceAroundText;
-      XmlStyleVisualStudio.EmptyTagSyle := XmlTagStyle.PreferSingleTag;
-      XmlStyleVisualStudio.Indentation := "  ";
-      XmlStyleVisualStudio.NewLineForElements := true;
-      XmlStyleVisualStudio.NewLineForAttributes := false;
-      XmlStyleVisualStudio.NewLineSymbol := XmlNewLineSymbol.CRLF;
-      XmlStyleVisualStudio.SpaceBeforeSlashInEmptyTags := true;
-      XmlStyleVisualStudio.WriteNewLineAtEnd := false;
-      XmlStyleVisualStudio.WriteBOM := true;
-
-      var xml := XmlDocument.WithRootElement("Verbs");
-      for each v in verbs do
-        xml.Root.Add(v.ToXml);
-      Folder.Create(dataFileName.ParentDirectory);
-      xml.SaveToFile(dataFileName, XmlStyleVisualStudio);
     end;
 
     method Sort;
@@ -71,7 +44,7 @@ type
 
     [IBOutlet]
     property tableView: NSTableView;
-    property verbs: List<Verb>;
+    property verbs: List<Verb> read Data.sharedInstance.verbs;
     property visibleVerbs: List<Verb>;
     property visibleColumns: List<String>;
     property dataFileName: String;
@@ -110,10 +83,15 @@ type
           exit;
 
         if (length(value) ≥ 2) and value.EndsWith("r") and not value.Contains(".") and not visibleVerbs.Any(v -> v.Infinitive = value) then begin
-          verbs.Add(new Verb withInfinitive(value));
-          Sort();
-          Save();
-          tableView.selectRowIndexes(NSIndexSet.indexSetWithIndex(visibleVerbs:Count)) byExtendingSelection(false);
+          var lNewVerb := new Verb withInfinitive(value);
+          Data.sharedInstance.addVerb(lNewVerb);
+          DataChanged;
+          var lIndex := visibleVerbs.IndexOf(lNewVerb);
+          Log($"lIndex {lIndex}");
+          if lIndex > -1 then begin
+            tableView.selectRowIndexes(NSIndexSet.indexSetWithIndex(lIndex)) byExtendingSelection(false);
+            tableView.scrollRowToVisible(lIndex);
+          end;
         end;
         exit;
       end;
@@ -123,7 +101,7 @@ type
         value := nil;
       verb.conjugationsByName[aTableColumn.identifier] := value;
       tableView.reloadData();
-      Save();
+      DataChanged;
     end;
 
     method tableView(aTableView: NSTableView) sortDescriptorsDidChange(oldDescriptors: NSArray<NSSortDescriptor>);
@@ -160,6 +138,8 @@ type
 
       if aTableColumn.identifier = "Infinitive" then begin
         cell.font := NSFont.boldSystemFontOfSize(11.0);
+        if visibleVerbs[aRow].Local then
+          cell.textColor := NSColor.systemPurpleColor;
       end
       else if aTableColumn.identifier:hasPrefix("Translation.") then begin
         cell.textColor := NSColor.systemBlueColor;
@@ -261,16 +241,14 @@ type
       end;
 
 
-      Sort();
-      Save();
+      DataChanged;
     end;
 
     [IBAction]
     method setDeleteVerb(aSender: id); public;
     begin
       verbs.Remove(aSender.representedObject as Verb);
-      Sort();
-      Save();
+      DataChanged;
     end;
 
 
@@ -281,7 +259,7 @@ type
     [IBAction]
     method reload(aSender: id); public;
     begin
-      Load();
+      Data.sharedInstance.reload();
     end;
 
     [IBAction]
@@ -461,6 +439,12 @@ type
         1: ".."+lSplit[0]
       end;
       result := result.Replace(".", #10);
+    end;
+
+    method DataChanged;
+    begin
+      Sort();
+      Data.sharedInstance.save();
     end;
 
     const /*verb_*/columns : array of String = [
