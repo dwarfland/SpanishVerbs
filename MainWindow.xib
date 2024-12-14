@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
         <capability name="Search Toolbar Item" minToolsVersion="12.0" minSystemVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,22 +23,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3n-WB-UQv">
-                        <rect key="frame" x="-1" y="-1" width="482" height="272"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3n-WB-UQv">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <clipView key="contentView" id="3Ic-Al-USx">
-                            <rect key="frame" x="1" y="1" width="480" height="270"/>
+                            <rect key="frame" x="1" y="1" width="478" height="268"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" headerView="Cat-ps-asp" id="bZb-0V-Pbc" customClass="TableViewWithContextMenu">
-                                    <rect key="frame" x="0.0" y="0.0" width="480" height="242"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="478" height="240"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="17" height="0.0"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <tableViewGridLines key="gridStyleMask" vertical="YES"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn identifier="AutomaticTableColumnIdentifier.0" width="116" minWidth="40" maxWidth="1000" id="KJN-6j-jFZ">
+                                        <tableColumn identifier="AutomaticTableColumnIdentifier.0" width="115" minWidth="40" maxWidth="1000" id="KJN-6j-jFZ">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -50,7 +49,7 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn identifier="AutomaticTableColumnIdentifier.1" width="335" minWidth="40" maxWidth="1000" id="GaV-Ch-f8Z">
+                                        <tableColumn identifier="AutomaticTableColumnIdentifier.1" width="334" minWidth="40" maxWidth="1000" id="GaV-Ch-f8Z">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -71,7 +70,7 @@
                             </subviews>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="LD8-aX-coR">
-                            <rect key="frame" x="1" y="118" width="238" height="16"/>
+                            <rect key="frame" x="1" y="253" width="478" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="JZi-LY-v8u">
@@ -79,13 +78,19 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" wantsLayer="YES" id="Cat-ps-asp">
-                            <rect key="frame" x="0.0" y="0.0" width="480" height="28"/>
+                            <rect key="frame" x="0.0" y="0.0" width="478" height="28"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="z3n-WB-UQv" secondAttribute="trailing" id="KD1-7X-FXg"/>
+                    <constraint firstItem="z3n-WB-UQv" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="US2-JR-DeC"/>
+                    <constraint firstAttribute="bottom" secondItem="z3n-WB-UQv" secondAttribute="bottom" id="hW9-le-o3B"/>
+                    <constraint firstItem="z3n-WB-UQv" firstAttribute="top" secondItem="2" secondAttribute="top" id="rFH-5z-wJN"/>
+                </constraints>
             </view>
-            <toolbar key="toolbar" implicitIdentifier="59443F57-CDA7-439F-BE93-B058387E9B24" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="Ydh-Ca-rc7">
+            <toolbar key="toolbar" implicitIdentifier="59443F57-CDA7-439F-BE93-B058387E9B24" autosavesConfiguration="NO" showsBaselineSeparator="NO" displayMode="iconAndLabel" sizeMode="regular" id="Ydh-Ca-rc7">
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="56n-V0-ezR"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="ugE-1N-8mM"/>

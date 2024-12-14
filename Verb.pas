@@ -32,7 +32,7 @@ type
     end;
 
     property Local: Boolean;
-    property ChangedLOcally: Boolean;
+    property ChangedLocally: Boolean;
 
     property Infinitive: String;
     property Declination: Declination := Declination.Irregular;

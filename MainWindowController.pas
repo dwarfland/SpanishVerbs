@@ -18,6 +18,9 @@ type
       var frame := tableView.headerView.frame;
       frame.size.height := 3*16.0;
       tableView.headerView.frame := frame;
+      tableView.doubleAction := selector(doubleClick:);
+      tableView.target := self;
+
       var (newCount, updatedCount) := Data.sharedInstance.updateFromDefault;
       Log($"newCount {newCount}");
       if (newCount > 0) or (updatedCount > 0) then begin
@@ -30,6 +33,8 @@ type
           end;
         end;
       end;
+      BroadcastManager.subscribe(self) toBroadcast(AppDelegate.NOTIFICATION_COLUMNS_CHANGED) &block(() -> UpdateColumns);
+      BroadcastManager.subscribe(self) toBroadcast(Data.NOTIFICATION_VERBS_CHANGED) &block(() -> DataChanged);
       UpdateColumns();
     end;
 
@@ -47,7 +52,6 @@ type
     property verbs: List<Verb> read Data.sharedInstance.verbs;
     property visibleVerbs: List<Verb>;
     property visibleColumns: List<String>;
-    property dataFileName: String;
 
     //
     // INSTableViewDataSource
@@ -100,8 +104,8 @@ type
       if length(value) = 0 then
         value := nil;
       verb.conjugationsByName[aTableColumn.identifier] := value;
-      tableView.reloadData();
-      DataChanged;
+      Data.sharedInstance.updateVerb(verb);
+      //DataChanged;
     end;
 
     method tableView(aTableView: NSTableView) sortDescriptorsDidChange(oldDescriptors: NSArray<NSSortDescriptor>);
@@ -230,6 +234,20 @@ type
 
     end;
 
+    method doubleClick(aSender: id); private;
+    begin
+      if (tableView.selectedRow < -1) or (tableView.selectedRow > visibleVerbs.Count) then
+        exit;
+
+      var lVerb := visibleVerbs[tableView.selectedRow];
+      var lWindow := verbWindows[lVerb.Infinitive];
+      if not assigned(lWindow) then begin
+        lWindow := new VerbWindowController withVerb(lVerb);
+        verbWindows[lVerb.Infinitive] := lWindow;
+      end;
+      lWindow.showWindow(nil);
+    end;
+
     [IBAction]
     method setStemChange(aSender: id); public;
     begin
@@ -352,29 +370,74 @@ type
     end;
 
     [IBAction]
-    method columnsChanged(aSender: id); public;
-    begin
-      dispatch_async(dispatch_get_main_queue) begin
-        UpdateColumns();
-      end;
-    end;
-
-    [IBAction]
     method filterChanged(aSender: id); public;
     begin
       Sort();
     end;
 
-    [Notify]
+    [&Notify]
     property searchString: String;
 
     //
     //
     //
 
+    class property verbWindows := new Dictionary<String,VerbWindowController>;
+
+  private
+
     method UpdateColumns;
     begin
-      var newColumns := columns as sequence of String;
+      visibleColumns := FilterColumns(columns.ToList);
+
+      for each c in tableView.tableColumns.copy do
+        tableView.removeTableColumn(c);
+
+      for each c in visibleColumns do begin
+        var column := new NSTableColumn();
+        column.identifier := c;
+        column.headerCell := new TallTableHeaderCell;
+        column.headerCell.title := FixHeader(c);
+        column.title := FixHeader(c);
+        column.editable := true;
+        column.minWidth := 100;
+        tableView.addTableColumn(column);
+      end;
+    end;
+
+    class method FixHeader(aConfugation: String): String; public;
+    begin
+      result := aConfugation;
+      if result.StartsWith("Translation.") then
+        exit #10#10+result.SubstringFromFirstOccurrenceOf(".");
+
+      result := result.Replace("Affirmative", "Affirmative.").Replace("Negative", "Negative.");
+      result := result.Replace("1", "1st").Replace("2", "2nd").Replace("3", "3rd");
+
+      var lSplit := result.Split(".");
+      if lSplit.First = "Imperative" then case lSplit.Count of
+        3: exit lSplit.Reverse.JoinedString(#10);
+        2: exit #10+lSplit.Reverse.JoinedString(#10);
+      end;
+      result := case lSplit.Count of
+        4: lSplit[0]+"."+lSplit[3]+" "+lSplit[2]+"."+lSplit[1];
+        3: lSplit[2]+" "+lSplit[1]+"."+lSplit[0];
+        2: ".."+lSplit[1]+" "+lSplit[0];
+        1: ".."+lSplit[0]
+      end;
+      result := result.Replace(".", #10).Trim;
+    end;
+
+    method DataChanged;
+    begin
+      Sort();
+      Data.sharedInstance.save();
+      tableView.reloadData;
+    end;
+
+    class method FilterColumns(aColumns: List<String>): List<String>; public;
+    begin
+      var newColumns := aColumns as sequence of String;
       if not AppDelegate.sharedInstance.ShowTranslation then
         newColumns := newColumns.Where(c -> not c.StartsWith("Translation."));
       if not AppDelegate.sharedInstance.ShowParticiples then
@@ -401,50 +464,16 @@ type
       if not AppDelegate.sharedInstance.ShowVosAndVosotros then
         newColumns := newColumns.Where(c -> not c.EndsWith(".Plural.2") and not c.Contains("Vos"));
 
-      visibleColumns := newColumns.ToList;
-
-      for each c in tableView.tableColumns.copy do
-        tableView.removeTableColumn(c);
-
-      for each c in visibleColumns do begin
-        var column := new NSTableColumn();
-        column.identifier := c;
-        column.headerCell := new TallTableHeaderCell;
-        column.headerCell.title := FixHeader(c);
-        column.title := FixHeader(c);
-        column.editable := true;
-        column.minWidth := 100;
-        tableView.addTableColumn(column);
-      end;
+      result := newColumns.Tolist;
     end;
 
-    method FixHeader(aConfugation: String): String;
+    class method FilterRows(aRows: List<String>): List<String>; public;
     begin
-      result := aConfugation;
-      if result.StartsWith("Translation.") then
-        exit #10#10+result.SubstringFromFirstOccurrenceOf(".");
+      var newRows := aRows as sequence of String;
+      if not AppDelegate.sharedInstance.ShowVosAndVosotros then
+        newRows := newRows.Where(c -> not c.EndsWith("Plural.2") and not c.Contains("Vos"));
 
-      result := result.Replace("Affirmative", "Affirmative.").Replace("Negative", "Negative.");
-      result := result.Replace("1", "1st").Replace("2", "2nd").Replace("3", "3rd");
-
-      var lSplit := result.Split(".");
-      if lSplit.First = "Imperative" then case lSplit.Count of
-        3: exit lSplit.Reverse.JoinedString(#10);
-        2: exit #10+lSplit.Reverse.JoinedString(#10);
-      end;
-      result := case lSplit.Count of
-        4: lSplit[0]+"."+lSplit[3]+" "+lSplit[2]+"."+lSplit[1];
-        3: lSplit[2]+" "+lSplit[1]+"."+lSplit[0];
-        2: ".."+lSplit[1]+" "+lSplit[0];
-        1: ".."+lSplit[0]
-      end;
-      result := result.Replace(".", #10);
-    end;
-
-    method DataChanged;
-    begin
-      Sort();
-      Data.sharedInstance.save();
+      result := newRows.Tolist;
     end;
 
     const /*verb_*/columns : array of String = [

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -71,6 +71,12 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="Jvr-XQ-7gf"/>
+                            <menuItem title="Close Window" keyEquivalent="w" id="9dI-BH-OhS">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="Vab-yS-U4D"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="6ZG-vv-7W8"/>
                             <menuItem title="Export as .html" id="2xO-ee-ZyR">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
@@ -293,7 +299,7 @@
                             <menuItem title="Translation" id="5AV-LD-bIS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="columnsChanged:" target="-1" id="eDk-YI-WWh"/>
+                                    <action selector="columnsChanged:" target="494" id="1G0-NR-cvA"/>
                                     <binding destination="494" name="value" keyPath="self.ShowTranslation" id="TJ7-B4-YpO"/>
                                 </connections>
                             </menuItem>
@@ -301,14 +307,14 @@
                             <menuItem title="Participles" id="2VK-YT-xHp">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="columnsChanged:" target="-1" id="vLg-ca-FkY"/>
+                                    <action selector="columnsChanged:" target="494" id="vLg-ca-FkY"/>
                                     <binding destination="494" name="value" keyPath="self.ShowParticiples" id="yHc-E2-G6J"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Imperatives" id="5PI-wL-B1A">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="columnsChanged:" target="-1" id="07V-QK-9xs"/>
+                                    <action selector="columnsChanged:" target="494" id="07V-QK-9xs"/>
                                     <binding destination="494" name="value" keyPath="self.ShowImperatives" id="djl-dc-Cpu"/>
                                 </connections>
                             </menuItem>
@@ -316,14 +322,14 @@
                             <menuItem title="Indicativo" id="dD5-Kn-alQ">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="columnsChanged:" target="-1" id="c1h-Ds-RpH"/>
+                                    <action selector="columnsChanged:" target="494" id="c1h-Ds-RpH"/>
                                     <binding destination="494" name="value" keyPath="self.ShowIndicativo" id="L2y-V2-2Fv"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Subjunctive" id="XSm-b5-YWv">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="columnsChanged:" target="-1" id="1B9-8Y-r8F"/>
+                                    <action selector="columnsChanged:" target="494" id="1B9-8Y-r8F"/>
                                     <binding destination="494" name="value" keyPath="self.ShowSubjuntivo" id="VlQ-n4-JQg"/>
                                 </connections>
                             </menuItem>
@@ -331,7 +337,7 @@
                             <menuItem title="Present tense" id="Uk2-8S-RNg">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="columnsChanged:" target="-1" id="sjT-QO-Ocp"/>
+                                    <action selector="columnsChanged:" target="494" id="sjT-QO-Ocp"/>
                                     <binding destination="494" name="enabled" keyPath="self.ShowIndicativeOrSubjunctive" id="gJ6-rJ-6Xj"/>
                                     <binding destination="494" name="value" keyPath="self.ShowPresentTense" id="Vsa-Y4-eE0"/>
                                 </connections>
@@ -339,7 +345,7 @@
                             <menuItem title="Preterite Tense" id="Wg8-zl-fKz">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="columnsChanged:" target="-1" id="xlK-QT-Xsx"/>
+                                    <action selector="columnsChanged:" target="494" id="xlK-QT-Xsx"/>
                                     <binding destination="494" name="enabled" keyPath="self.ShowIndicativo" id="RXR-gm-O4S"/>
                                     <binding destination="494" name="value" keyPath="self.ShowPreteriteTense" id="Ecv-VA-Uam"/>
                                 </connections>
@@ -347,7 +353,7 @@
                             <menuItem title="Imperfect Tense" id="MR5-Nh-TTu">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="columnsChanged:" target="-1" id="wJ4-bh-ZnM"/>
+                                    <action selector="columnsChanged:" target="494" id="wJ4-bh-ZnM"/>
                                     <binding destination="494" name="value" keyPath="self.ShowImperfectTense" id="ag7-LU-9QK"/>
                                     <binding destination="494" name="enabled" keyPath="self.ShowIndicativeOrSubjunctive" id="fYh-g1-RSp"/>
                                 </connections>
@@ -355,24 +361,24 @@
                             <menuItem title="Conditional Tense" id="hLO-8O-2fx">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="columnsChanged:" target="-1" id="A96-dj-Bpc"/>
-                                    <binding destination="494" name="enabled" keyPath="self.ShowIndicativo" id="4pe-N6-3ym"/>
+                                    <action selector="columnsChanged:" target="494" id="A96-dj-Bpc"/>
                                     <binding destination="494" name="value" keyPath="self.ShowConditionalTense" id="NpA-md-sff"/>
+                                    <binding destination="494" name="enabled" keyPath="self.ShowIndicativo" id="4pe-N6-3ym"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Future Tense" id="Abe-gn-hKR">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="columnsChanged:" target="-1" id="fIP-RD-qUl"/>
-                                    <binding destination="494" name="enabled" keyPath="self.ShowIndicativeOrSubjunctive" id="puL-GI-lge"/>
+                                    <action selector="columnsChanged:" target="494" id="fIP-RD-qUl"/>
                                     <binding destination="494" name="value" keyPath="self.ShowFutureTense" id="Nrv-6p-VcP"/>
+                                    <binding destination="494" name="enabled" keyPath="self.ShowIndicativeOrSubjunctive" id="puL-GI-lge"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="tcG-tY-3cv"/>
                             <menuItem title="Vos &amp; Vosotros" id="Rr5-d9-JsC">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="columnsChanged:" target="-1" id="55E-m6-tfl"/>
+                                    <action selector="columnsChanged:" target="494" id="55E-m6-tfl"/>
                                     <binding destination="494" name="value" keyPath="self.ShowVosAndVosotros" id="J8b-Pd-peq"/>
                                 </connections>
                             </menuItem>

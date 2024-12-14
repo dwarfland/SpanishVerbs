@@ -82,6 +82,15 @@ type
       save();
     end;
 
+    method updateVerb(aVerb: Verb);
+    begin
+      aVerb.ChangedLocally := true;
+      save();
+      BroadcastManager.submitBroadcast(NOTIFICATION_VERBS_CHANGED) object(nil) data(nil) syncToMainThread(true);
+    end;
+
+    const NOTIFICATION_VERBS_CHANGED = "com.dwarfland.verbs.verbs.changed";
+
   private
 
     constructor;

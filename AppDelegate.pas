@@ -39,6 +39,14 @@ type
 
     property ShowVosAndVosotros: Boolean read boolForKey("ShowVosAndVosotros") withDefault(true) write begin setBool(value) forKey("ShowVosAndVosotros") end;
 
+    const NOTIFICATION_COLUMNS_CHANGED = "com.dwarfland.verbs.columns.changed";
+
+    [IBAction]
+    method columnsChanged(aSender: id); public;
+    begin
+      BroadcastManager.submitBroadcast(NOTIFICATION_COLUMNS_CHANGED) object(nil) data(nil) syncToMainThread(true);
+    end;
+
     [IBAction]
     method showWebsite(aSender: id); public;
     begin
