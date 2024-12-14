@@ -3,12 +3,24 @@
     <Participle.Past>abierto</Participle.Past>
     <Translation.English>to open</Translation.English>
   </Verb>
+  <Verb Infinitive="acabar">
+    <Translation.English>to finish</Translation.English>
+  </Verb>
+  <Verb Infinitive="acordar">
+    <Translation.English>to remember</Translation.English>
+  </Verb>
+  <Verb Infinitive="acostar">
+    <Translation.English>to go to bed</Translation.English>
+  </Verb>
   <Verb Infinitive="almorzar" StemChange="UE">
     <Imperative.Usted>almuerce</Imperative.Usted>
     <Translation.English>to (eat) lunch</Translation.English>
   </Verb>
   <Verb Infinitive="amar">
     <Translation.English>to love</Translation.English>
+  </Verb>
+  <Verb Infinitive="apagar">
+    <Translation.English>to turn off</Translation.English>
   </Verb>
   <Verb Infinitive="aprender">
     <Translation.English>to learn</Translation.English>
@@ -34,11 +46,17 @@
   <Verb Infinitive="cenar">
     <Translation.English>to (eat) dinner</Translation.English>
   </Verb>
+  <Verb Infinitive="cepillar">
+    <Translation.English>to brush</Translation.English>
+  </Verb>
   <Verb Infinitive="cerrar" StemChange="IE">
     <Translation.English>to close</Translation.English>
   </Verb>
   <Verb Infinitive="cocinar">
     <Translation.English>to cook</Translation.English>
+  </Verb>
+  <Verb Infinitive="comenzar">
+    <Translation.English>to start</Translation.English>
   </Verb>
   <Verb Infinitive="comer">
     <Translation.English>to eat</Translation.English>
@@ -53,6 +71,9 @@
   <Verb Infinitive="correr">
     <Translation.English>to run</Translation.English>
   </Verb>
+  <Verb Infinitive="cuidar">
+    <Translation.English>to take care of</Translation.English>
+  </Verb>
   <Verb Infinitive="dar">
     <Indicativo.Present.Singular.1>doy</Indicativo.Present.Singular.1>
     <Indicativo.Preterite.Plural.1>dimos</Indicativo.Preterite.Plural.1>
@@ -63,6 +84,9 @@
     <Indicativo.Preterite.Singular.2>diste</Indicativo.Preterite.Singular.2>
     <Indicativo.Preterite.Singular.3>dio</Indicativo.Preterite.Singular.3>
     <Translation.English>to give</Translation.English>
+  </Verb>
+  <Verb Infinitive="deber">
+    <Translation.English>to owe / should</Translation.English>
   </Verb>
   <Verb Infinitive="decir" StemChange="I">
     <Imperative.Tu>di</Imperative.Tu>
@@ -80,11 +104,20 @@
   <Verb Infinitive="desayunar">
     <Translation.English>to (eat) breakfast</Translation.English>
   </Verb>
+  <Verb Infinitive="descansar">
+    <Translation.English>to rest</Translation.English>
+  </Verb>
+  <Verb Infinitive="despertar" StemChange="IE">
+    <Translation.English>to wake up</Translation.English>
+  </Verb>
   <Verb Infinitive="dibujar">
     <Translation.English>to draw</Translation.English>
   </Verb>
   <Verb Infinitive="dirigir">
     <Translation.English>to direct</Translation.English>
+  </Verb>
+  <Verb Infinitive="doler" StemChange="UE">
+    <Translation.English>to hurt</Translation.English>
   </Verb>
   <Verb Infinitive="dormir">
     <Indicativo.Present.Plural.3>duermen</Indicativo.Present.Plural.3>
@@ -103,6 +136,9 @@
   </Verb>
   <Verb Infinitive="encantar">
     <Translation.English>to enchant</Translation.English>
+  </Verb>
+  <Verb Infinitive="encender">
+    <Translation.English>to turn on</Translation.English>
   </Verb>
   <Verb Infinitive="encontrar">
     <Translation.English>to find</Translation.English>
@@ -142,6 +178,9 @@
   </Verb>
   <Verb Infinitive="estudiar">
     <Translation.English>to study</Translation.English>
+  </Verb>
+  <Verb Infinitive="fumar">
+    <Translation.English>to smoke</Translation.English>
   </Verb>
   <Verb Infinitive="girar">
     <Translation.English>to turn</Translation.English>
@@ -224,8 +263,56 @@
   <Verb Infinitive="jugar" StemChange="UE">
     <Translation.English>to play</Translation.English>
   </Verb>
+  <Verb Infinitive="lavar">
+    <Translation.English>to wash</Translation.English>
+  </Verb>
   <Verb Infinitive="leer">
     <Translation.English>to read</Translation.English>
+  </Verb>
+  <Verb Infinitive="llegar">
+    <Translation.English>to arrive</Translation.English>
+  </Verb>
+  <Verb Infinitive="llevar">
+    <Translation.English>to carry</Translation.English>
+  </Verb>
+  <Verb Infinitive="llover">
+    <Translation.English>to rain</Translation.English>
+  </Verb>
+  <Verb Infinitive="mandar">
+    <Translation.English>to send</Translation.English>
+  </Verb>
+  <Verb Infinitive="manejar">
+    <Translation.English>to drive</Translation.English>
+  </Verb>
+  <Verb Infinitive="mirar">
+    <Translation.English>to watch</Translation.English>
+  </Verb>
+  <Verb Infinitive="montar">
+    <Translation.English>to ride</Translation.English>
+  </Verb>
+  <Verb Infinitive="mover">
+    <Translation.English>to move</Translation.English>
+  </Verb>
+  <Verb Infinitive="nadar">
+    <Translation.English>to swim</Translation.English>
+  </Verb>
+  <Verb Infinitive="nececitar">
+    <Translation.English>to need</Translation.English>
+  </Verb>
+  <Verb Infinitive="nevar">
+    <Translation.English>to rain</Translation.English>
+  </Verb>
+  <Verb Infinitive="oir">
+    <Indicativo.Present.Plural.1>oímos</Indicativo.Present.Plural.1>
+    <Indicativo.Present.Plural.3>oyen</Indicativo.Present.Plural.3>
+    <Indicativo.Present.Singular.1>oigo</Indicativo.Present.Singular.1>
+    <Indicativo.Present.Singular.2>oyes</Indicativo.Present.Singular.2>
+    <Indicativo.Present.Singular.3>oye</Indicativo.Present.Singular.3>
+    <Indicativo.Preterite.Plural.1>oímos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>oísteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>oyeron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.3>oyo</Indicativo.Preterite.Singular.3>
+    <Translation.English>to hear</Translation.English>
   </Verb>
   <Verb Infinitive="oler">
     <Indicativo.Present.Plural.3>huelen</Indicativo.Present.Plural.3>
@@ -235,6 +322,18 @@
     <Subjuntivo.Present.Plural.1>olamos</Subjuntivo.Present.Plural.1>
     <Subjuntivo.Present.Plural.2>oláis</Subjuntivo.Present.Plural.2>
     <Translation.English>to smell</Translation.English>
+  </Verb>
+  <Verb Infinitive="olvidar">
+    <Translation.English>to forget</Translation.English>
+  </Verb>
+  <Verb Infinitive="pedir">
+    <Translation.English>to order</Translation.English>
+  </Verb>
+  <Verb Infinitive="pensar" StemChange="IE">
+    <Translation.English>to think</Translation.English>
+  </Verb>
+  <Verb Infinitive="perder">
+    <Translation.English>to lose</Translation.English>
   </Verb>
   <Verb Infinitive="poder" StemChange="UE">
     <Participle.Present>pudiendo</Participle.Present>
@@ -246,8 +345,29 @@
     <Participle.Past>puesto</Participle.Past>
     <Translation.English>to put (on)</Translation.English>
   </Verb>
+  <Verb Infinitive="preguntar">
+    <Translation.English>to ask</Translation.English>
+  </Verb>
+  <Verb Infinitive="preocupar">
+    <Translation.English>to worry</Translation.English>
+  </Verb>
+  <Verb Infinitive="probar" StemChange="UE">
+    <Translation.English>to try</Translation.English>
+  </Verb>
+  <Verb Infinitive="quedar">
+    <Translation.English>to stay</Translation.English>
+  </Verb>
   <Verb Infinitive="querer" StemChange="IE">
     <Translation.English>to want</Translation.English>
+  </Verb>
+  <Verb Infinitive="recibir">
+    <Translation.English>to receive</Translation.English>
+  </Verb>
+  <Verb Infinitive="recordar" StemChange="UE">
+    <Translation.English>to remember</Translation.English>
+  </Verb>
+  <Verb Infinitive="responder">
+    <Translation.English>to answer</Translation.English>
   </Verb>
   <Verb Infinitive="saber">
     <Indicativo.Present.Singular.3>sé</Indicativo.Present.Singular.3>
@@ -260,6 +380,12 @@
   </Verb>
   <Verb Infinitive="seguir" StemChange="I">
     <Translation.English>to continue</Translation.English>
+  </Verb>
+  <Verb Infinitive="sentar" StemChange="IE">
+    <Translation.English>to sit</Translation.English>
+  </Verb>
+  <Verb Infinitive="sentir" StemChange="IE">
+    <Translation.English>to feel</Translation.English>
   </Verb>
   <Verb Infinitive="ser" Declination="Irregular">
     <Indicativo.Imperfect.Plural.1>éramos</Indicativo.Imperfect.Plural.1>
@@ -284,14 +410,32 @@
     <Participle.Present>sindo</Participle.Present>
     <Translation.English>to be</Translation.English>
   </Verb>
+  <Verb Infinitive="servir">
+    <Translation.English>to serve</Translation.English>
+  </Verb>
+  <Verb Infinitive="soñar">
+    <Translation.English>to dream</Translation.English>
+  </Verb>
   <Verb Infinitive="tener" StemChange="IE">
     <Imperative.Tu>ten</Imperative.Tu>
     <Indicativo.Present.Singular.1>tengo</Indicativo.Present.Singular.1>
     <Translation.English>to have</Translation.English>
   </Verb>
+  <Verb Infinitive="tocar">
+    <Translation.English>to play</Translation.English>
+  </Verb>
+  <Verb Infinitive="tomar">
+    <Translation.English>to take</Translation.English>
+  </Verb>
+  <Verb Infinitive="trabejar">
+    <Translation.English>to work</Translation.English>
+  </Verb>
   <Verb Infinitive="traer">
     <Indicativo.Present.Singular.1>traigo</Indicativo.Present.Singular.1>
     <Translation.English>to bring</Translation.English>
+  </Verb>
+  <Verb Infinitive="usar">
+    <Translation.English>to use/wear</Translation.English>
   </Verb>
   <Verb Infinitive="venir">
     <Imperative.Tu>ven</Imperative.Tu>
@@ -311,128 +455,17 @@
     <Participle.Past>visto</Participle.Past>
     <Translation.English>to see</Translation.English>
   </Verb>
-  <Verb Infinitive="vivir">
-    <Translation.English>to live</Translation.English>
-  </Verb>
-  <Verb Infinitive="volver" StemChange="UE">
-    <Participle.Past>vuelto</Participle.Past>
-    <Translation.English>to return/come (back)</Translation.English>
-  </Verb>
-  <Verb Infinitive="lavar">
-    <Translation.English>to wash</Translation.English>
-  </Verb>
-  <Verb Infinitive="llegar">
-    <Translation.English>to arrive</Translation.English>
-  </Verb>
-  <Verb Infinitive="llevar">
-    <Translation.English>to carry</Translation.English>
-  </Verb>
-  <Verb Infinitive="mandar">
-    <Translation.English>to send</Translation.English>
-  </Verb>
-  <Verb Infinitive="manejar">
-    <Translation.English>to drive</Translation.English>
-  </Verb>
-  <Verb Infinitive="mirar">
-    <Translation.English>to watch</Translation.English>
-  </Verb>
-  <Verb Infinitive="montar">
-    <Translation.English>to ride</Translation.English>
-  </Verb>
-  <Verb Infinitive="nadar">
-    <Translation.English>to swim</Translation.English>
-  </Verb>
-  <Verb Infinitive="nececitar">
-    <Translation.English>to need</Translation.English>
-  </Verb>
-  <Verb Infinitive="pensar" StemChange="IE">
-    <Translation.English>to think</Translation.English>
-  </Verb>
-  <Verb Infinitive="perder">
-    <Translation.English>to lose</Translation.English>
-  </Verb>
-  <Verb Infinitive="preguntar">
-    <Translation.English>to ask</Translation.English>
-  </Verb>
-  <Verb Infinitive="probar" StemChange="UE">
-    <Translation.English>to try</Translation.English>
-  </Verb>
-  <Verb Infinitive="quedar">
-    <Translation.English>to stay</Translation.English>
-  </Verb>
-  <Verb Infinitive="recordar" StemChange="UE">
-    <Translation.English>to remember</Translation.English>
-  </Verb>
-  <Verb Infinitive="sentir" StemChange="IE">
-    <Translation.English>to feel</Translation.English>
-  </Verb>
-  <Verb Infinitive="sentar" StemChange="IE">
-    <Translation.English>to sit</Translation.English>
-  </Verb>
-  <Verb Infinitive="tocar">
-    <Translation.English>to play</Translation.English>
-  </Verb>
-  <Verb Infinitive="tomar">
-    <Translation.English>to take</Translation.English>
-  </Verb>
-  <Verb Infinitive="trabejar">
-    <Translation.English>to work</Translation.English>
-  </Verb>
-  <Verb Infinitive="usar">
-    <Translation.English>to use/wear</Translation.English>
-  </Verb>
   <Verb Infinitive="viajar">
     <Translation.English>to travel</Translation.English>
+  </Verb>
+  <Verb Infinitive="vivir">
+    <Translation.English>to live</Translation.English>
   </Verb>
   <Verb Infinitive="volar">
     <Translation.English>to fly</Translation.English>
   </Verb>
-  <Verb Infinitive="cepillar">
-    <Translation.English>to brush</Translation.English>
-  </Verb>
-  <Verb Infinitive="olvidar">
-    <Translation.English>to forget</Translation.English>
-  </Verb>
-  <Verb Infinitive="llover">
-    <Translation.English>to rain</Translation.English>
-  </Verb>
-  <Verb Infinitive="nevar">
-    <Translation.English>to rain</Translation.English>
-  </Verb>
-  <Verb Infinitive="comenzar">
-    <Translation.English>to start</Translation.English>
-  </Verb>
-  <Verb Infinitive="despertar" StemChange="IE">
-    <Translation.English>to wake up</Translation.English>
-  </Verb>
-  <Verb Infinitive="responder">
-    <Translation.English>to answer</Translation.English>
-  </Verb>
-  <Verb Infinitive="oir">
-    <Indicativo.Present.Plural.1>oímos</Indicativo.Present.Plural.1>
-    <Indicativo.Present.Plural.3>oyen</Indicativo.Present.Plural.3>
-    <Indicativo.Present.Singular.1>oigo</Indicativo.Present.Singular.1>
-    <Indicativo.Present.Singular.2>oyes</Indicativo.Present.Singular.2>
-    <Indicativo.Present.Singular.3>oye</Indicativo.Present.Singular.3>
-    <Indicativo.Preterite.Plural.1>oímos</Indicativo.Preterite.Plural.1>
-    <Indicativo.Preterite.Plural.2>oísteis</Indicativo.Preterite.Plural.2>
-    <Indicativo.Preterite.Plural.3>oyeron</Indicativo.Preterite.Plural.3>
-    <Indicativo.Preterite.Singular.3>oyo</Indicativo.Preterite.Singular.3>
-    <Translation.English>to hear</Translation.English>
-  </Verb>
-  <Verb Infinitive="fumar">
-    <Translation.English>to smoke</Translation.English>
-  </Verb>
-  <Verb Infinitive="acabar">
-    <Translation.English>to finish</Translation.English>
-  </Verb>
-  <Verb Infinitive="acordar">
-    <Translation.English>to remember</Translation.English>
-  </Verb>
-  <Verb Infinitive="preocupar">
-    <Translation.English>to worry</Translation.English>
-  </Verb>
-  <Verb Infinitive="soñar">
-    <Translation.English>to dream</Translation.English>
+  <Verb Infinitive="volver" StemChange="UE">
+    <Participle.Past>vuelto</Participle.Past>
+    <Translation.English>to return/come (back)</Translation.English>
   </Verb>
 </Verbs>
