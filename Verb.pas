@@ -199,9 +199,9 @@ type
         "Ustedes": result := conjugationsByName["Subjuntivo.Present.Plural.3"]; // To form both affirmative and negative ustedes commands, use the third-person plural form of the present subjunctive.
         "Nosotros": result := conjugationsByName["Subjuntivo.Present.Plural.1"];// To form both affirmative and negative nosotros commands, use the nosotros form of the present subjunctive.
         "AffirmativeVosotros": result := Infinitive.Substring(0, length(Infinitive)-1)+"d"; // To form affirmative vosotros commands, replace the ‐r at the end of the infinitive with a ‐d.
-        "NegativeVosotros": result := conjugationsByName["Subjuntivo.Present.Plural.2"]; // To form negative vosotros commands, use the vosotros form of the present subjunctive.
+        "NegativeVosotros": result := "no "+conjugationsByName["Subjuntivo.Present.Plural.2"]; // To form negative vosotros commands, use the vosotros form of the present subjunctive.
         "AffirmativeVos": result := Infinitive.Substring(0, length(Infinitive)-1).AddAccentToLastChar; // To form affirmative vos commands, drop the -r from the end of the infinitive and add an accent on the last vowel.
-        "NegativeVos": result := conjugationsByName["Subjuntivo.Present.Singular.2"]; // To form negative vos commands, use the tú form of the present subjunctive.
+        "NegativeVos": result := "no "+conjugationsByName["Subjuntivo.Present.Singular.2"]; // To form negative vos commands, use the tú form of the present subjunctive.
       end;
     end;
 
