@@ -97,7 +97,19 @@
     <Indicativo.Conditional.Singular.1>diría</Indicativo.Conditional.Singular.1>
     <Indicativo.Conditional.Singular.2>dirías</Indicativo.Conditional.Singular.2>
     <Indicativo.Conditional.Singular.3>diría</Indicativo.Conditional.Singular.3>
+    <Indicativo.Future.Plural.1>diremos</Indicativo.Future.Plural.1>
+    <Indicativo.Future.Plural.2>diréis</Indicativo.Future.Plural.2>
+    <Indicativo.Future.Plural.3>dirán</Indicativo.Future.Plural.3>
+    <Indicativo.Future.Singular.1>diré</Indicativo.Future.Singular.1>
+    <Indicativo.Future.Singular.2>dirás</Indicativo.Future.Singular.2>
+    <Indicativo.Future.Singular.3>dirá</Indicativo.Future.Singular.3>
     <Indicativo.Present.Singular.1>digo</Indicativo.Present.Singular.1>
+    <Indicativo.Preterite.Plural.1>dijimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>dijisteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>dijieron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.1>dije</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>dijiste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>dijo</Indicativo.Preterite.Singular.3>
     <Participle.Past>dicho</Participle.Past>
     <Translation.English>to say</Translation.English>
   </Verb>
@@ -418,7 +430,31 @@
   </Verb>
   <Verb Infinitive="tener" StemChange="IE">
     <Imperative.Tu>ten</Imperative.Tu>
+    <Indicativo.Future.Plural.1>tendremos</Indicativo.Future.Plural.1>
+    <Indicativo.Future.Plural.2>tendréis</Indicativo.Future.Plural.2>
+    <Indicativo.Future.Plural.3>tendrán</Indicativo.Future.Plural.3>
+    <Indicativo.Future.Singular.1>tendré</Indicativo.Future.Singular.1>
+    <Indicativo.Future.Singular.2>tendrás</Indicativo.Future.Singular.2>
+    <Indicativo.Future.Singular.3>tendrá</Indicativo.Future.Singular.3>
     <Indicativo.Present.Singular.1>tengo</Indicativo.Present.Singular.1>
+    <Indicativo.Preterite.Plural.1>tuvimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>tuvisteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>tuvierion</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.1>tuve</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>tuviste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>tuvo</Indicativo.Preterite.Singular.3>
+    <Subjuntivo.Imperfect.Plural.1>tuviéramos</Subjuntivo.Imperfect.Plural.1>
+    <Subjuntivo.Imperfect.Plural.2>tuvierais</Subjuntivo.Imperfect.Plural.2>
+    <Subjuntivo.Imperfect.Plural.3>tuvieran</Subjuntivo.Imperfect.Plural.3>
+    <Subjuntivo.Imperfect.Singular.1>tuviera</Subjuntivo.Imperfect.Singular.1>
+    <Subjuntivo.Imperfect.Singular.2>tuvieras</Subjuntivo.Imperfect.Singular.2>
+    <Subjuntivo.Imperfect.Singular.3>tuviera</Subjuntivo.Imperfect.Singular.3>
+    <Subjuntivo.Present.Plural.1>tengamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>tengáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>tengan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>tenga</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>tengas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>tenga</Subjuntivo.Present.Singular.3>
     <Translation.English>to have</Translation.English>
   </Verb>
   <Verb Infinitive="tocar">
