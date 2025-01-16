@@ -279,6 +279,11 @@
     <Translation.English>to wash</Translation.English>
   </Verb>
   <Verb Infinitive="leer">
+    <Indicativo.Preterite.Plural.1>leímos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>leísteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>leyeron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.2>leíste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>leyo</Indicativo.Preterite.Singular.3>
     <Translation.English>to read</Translation.English>
   </Verb>
   <Verb Infinitive="llegar">
@@ -420,6 +425,13 @@
     <Indicativo.Preterite.Singular.2>fuiste</Indicativo.Preterite.Singular.2>
     <Indicativo.Preterite.Singular.3>fue</Indicativo.Preterite.Singular.3>
     <Participle.Present>sindo</Participle.Present>
+    <Subjuntivo.Future.Plural.2>fuereis</Subjuntivo.Future.Plural.2>
+    <Subjuntivo.Present.Plural.1>seamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>seáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>sean</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>sea</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>seas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>sea</Subjuntivo.Present.Singular.3>
     <Translation.English>to be</Translation.English>
   </Verb>
   <Verb Infinitive="servir">
