@@ -25,6 +25,9 @@
   <Verb Infinitive="aprender">
     <Translation.English>to learn</Translation.English>
   </Verb>
+  <Verb Infinitive="asar">
+    <Translation.English>to grill</Translation.English>
+  </Verb>
   <Verb Infinitive="bailar">
     <Translation.English>to dance</Translation.English>
   </Verb>
@@ -113,6 +116,9 @@
     <Participle.Past>dicho</Participle.Past>
     <Translation.English>to say</Translation.English>
   </Verb>
+  <Verb Infinitive="dejar">
+    <Translation.English>to stop</Translation.English>
+  </Verb>
   <Verb Infinitive="desayunar">
     <Translation.English>to (eat) breakfast</Translation.English>
   </Verb>
@@ -161,6 +167,9 @@
   <Verb Infinitive="entender" StemChange="IE">
     <Translation.English>to understand</Translation.English>
   </Verb>
+  <Verb Infinitive="entrar">
+    <Translation.English>to go into</Translation.English>
+  </Verb>
   <Verb Infinitive="escribir">
     <Participle.Past>escrito</Participle.Past>
     <Translation.English>to write</Translation.English>
@@ -191,8 +200,14 @@
   <Verb Infinitive="estudiar">
     <Translation.English>to study</Translation.English>
   </Verb>
+  <Verb Infinitive="explicar">
+    <Translation.English>to explain</Translation.English>
+  </Verb>
   <Verb Infinitive="fumar">
     <Translation.English>to smoke</Translation.English>
+  </Verb>
+  <Verb Infinitive="gastar">
+    <Translation.English>to spend</Translation.English>
   </Verb>
   <Verb Infinitive="girar">
     <Translation.English>to turn</Translation.English>
@@ -313,6 +328,9 @@
   <Verb Infinitive="nadar">
     <Translation.English>to swim</Translation.English>
   </Verb>
+  <Verb Infinitive="navegar">
+    <Translation.English>to sail</Translation.English>
+  </Verb>
   <Verb Infinitive="nececitar">
     <Translation.English>to need</Translation.English>
   </Verb>
@@ -343,8 +361,14 @@
   <Verb Infinitive="olvidar">
     <Translation.English>to forget</Translation.English>
   </Verb>
+  <Verb Infinitive="parecer">
+    <Translation.English>to seam</Translation.English>
+  </Verb>
   <Verb Infinitive="pedir">
-    <Translation.English>to order</Translation.English>
+    <Translation.English>to order, to ask for</Translation.English>
+  </Verb>
+  <Verb Infinitive="peinar">
+    <Translation.English>to comb</Translation.English>
   </Verb>
   <Verb Infinitive="pensar" StemChange="IE">
     <Translation.English>to think</Translation.English>
@@ -353,13 +377,39 @@
     <Translation.English>to lose</Translation.English>
   </Verb>
   <Verb Infinitive="poder" StemChange="UE">
+    <Imperative.NegativeVosotros>no podáis</Imperative.NegativeVosotros>
+    <Imperative.Nosotros>podamos</Imperative.Nosotros>
+    <Indicativo.Preterite.Plural.1>pudimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>pudisteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>pudieron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.1>pude</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>pudiste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>pudo</Indicativo.Preterite.Singular.3>
     <Participle.Present>pudiendo</Participle.Present>
     <Translation.English>to be able to</Translation.English>
   </Verb>
   <Verb Infinitive="poner">
     <Imperative.Tu>pon</Imperative.Tu>
+    <Indicativo.Future.Plural.1>pondremos</Indicativo.Future.Plural.1>
+    <Indicativo.Future.Plural.2>pondréis</Indicativo.Future.Plural.2>
+    <Indicativo.Future.Plural.3>pondrán</Indicativo.Future.Plural.3>
+    <Indicativo.Future.Singular.1>pondré</Indicativo.Future.Singular.1>
+    <Indicativo.Future.Singular.2>pondrás</Indicativo.Future.Singular.2>
+    <Indicativo.Future.Singular.3>pondrá</Indicativo.Future.Singular.3>
     <Indicativo.Present.Singular.1>pongo</Indicativo.Present.Singular.1>
+    <Indicativo.Preterite.Plural.1>pusimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>pusisteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>pusieron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.1>puse</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>pusiste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>puso</Indicativo.Preterite.Singular.3>
     <Participle.Past>puesto</Participle.Past>
+    <Subjuntivo.Present.Plural.1>pongamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>pognáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>pongan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>ponga</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>pongas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>ponga</Subjuntivo.Present.Singular.3>
     <Translation.English>to put (on)</Translation.English>
   </Verb>
   <Verb Infinitive="preguntar">
@@ -367,6 +417,9 @@
   </Verb>
   <Verb Infinitive="preocupar">
     <Translation.English>to worry</Translation.English>
+  </Verb>
+  <Verb Infinitive="prestar">
+    <Translation.English>to lend</Translation.English>
   </Verb>
   <Verb Infinitive="probar" StemChange="UE">
     <Translation.English>to try</Translation.English>
@@ -382,6 +435,9 @@
   </Verb>
   <Verb Infinitive="recordar" StemChange="UE">
     <Translation.English>to remember</Translation.English>
+  </Verb>
+  <Verb Infinitive="reparar">
+    <Translation.English>to repair</Translation.English>
   </Verb>
   <Verb Infinitive="responder">
     <Translation.English>to answer</Translation.English>
@@ -502,6 +558,9 @@
     <Indicativo.Preterite.Singular.3>vio</Indicativo.Preterite.Singular.3>
     <Participle.Past>visto</Participle.Past>
     <Translation.English>to see</Translation.English>
+  </Verb>
+  <Verb Infinitive="vestir">
+    <Translation.English>to wear</Translation.English>
   </Verb>
   <Verb Infinitive="viajar">
     <Translation.English>to travel</Translation.English>
