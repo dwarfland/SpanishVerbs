@@ -22,7 +22,6 @@ type
       tableView.target := self;
 
       var (newCount, updatedCount) := Data.sharedInstance.updateFromDefault;
-      Log($"newCount {newCount}");
       if (newCount > 0) or (updatedCount > 0) then begin
         dispatch_async(dispatch_get_main_queue) begin
           var alert := new NSAlert;
@@ -236,7 +235,7 @@ type
 
     method doubleClick(aSender: id); private;
     begin
-      if (tableView.selectedRow < -1) or (tableView.selectedRow > visibleVerbs.Count) then
+      if (tableView.selectedRow < -1) or (tableView.selectedRow ≥ visibleVerbs.Count) then
         exit;
 
       var lVerb := visibleVerbs[tableView.selectedRow];
