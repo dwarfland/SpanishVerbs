@@ -12,12 +12,21 @@
   <Verb Infinitive="acostar">
     <Translation.English>to go to bed</Translation.English>
   </Verb>
+  <Verb Infinitive="ahorrar">
+    <Translation.English>to save</Translation.English>
+  </Verb>
   <Verb Infinitive="almorzar" StemChange="UE">
     <Imperative.Usted>almuerce</Imperative.Usted>
     <Translation.English>to (eat) lunch</Translation.English>
   </Verb>
+  <Verb Infinitive="alquilar">
+    <Translation.English>to rent</Translation.English>
+  </Verb>
   <Verb Infinitive="amar">
     <Translation.English>to love</Translation.English>
+  </Verb>
+  <Verb Infinitive="añadir">
+    <Translation.English>ro add</Translation.English>
   </Verb>
   <Verb Infinitive="apagar">
     <Translation.English>to turn off</Translation.English>
@@ -42,6 +51,9 @@
   </Verb>
   <Verb Infinitive="caminar">
     <Translation.English>to walk</Translation.English>
+  </Verb>
+  <Verb Infinitive="cancelar">
+    <Translation.English>to cancel</Translation.English>
   </Verb>
   <Verb Infinitive="cantar">
     <Translation.English>to sing</Translation.English>
@@ -149,6 +161,9 @@
   <Verb Infinitive="duchar">
     <Translation.English>to shower</Translation.English>
   </Verb>
+  <Verb Infinitive="empacar">
+    <Translation.English>to pack</Translation.English>
+  </Verb>
   <Verb Infinitive="empezar" StemChange="IE">
     <Translation.English>to start</Translation.English>
   </Verb>
@@ -166,6 +181,9 @@
   </Verb>
   <Verb Infinitive="entender" StemChange="IE">
     <Translation.English>to understand</Translation.English>
+  </Verb>
+  <Verb Infinitive="enterar">
+    <Translation.English>to inform</Translation.English>
   </Verb>
   <Verb Infinitive="entrar">
     <Translation.English>to go into</Translation.English>
@@ -211,6 +229,9 @@
   </Verb>
   <Verb Infinitive="girar">
     <Translation.English>to turn</Translation.English>
+  </Verb>
+  <Verb Infinitive="gritar">
+    <Translation.English>to shout</Translation.English>
   </Verb>
   <Verb Infinitive="gustar">
     <Translation.English>'to be liked'</Translation.English>
@@ -361,6 +382,9 @@
   <Verb Infinitive="olvidar">
     <Translation.English>to forget</Translation.English>
   </Verb>
+  <Verb Infinitive="parar">
+    <Translation.English>to stand up</Translation.English>
+  </Verb>
   <Verb Infinitive="parecer">
     <Translation.English>to seam</Translation.English>
   </Verb>
@@ -418,6 +442,9 @@
   <Verb Infinitive="preocupar">
     <Translation.English>to worry</Translation.English>
   </Verb>
+  <Verb Infinitive="preparar">
+    <Translation.English>to prepare</Translation.English>
+  </Verb>
   <Verb Infinitive="prestar">
     <Translation.English>to lend</Translation.English>
   </Verb>
@@ -436,6 +463,21 @@
   <Verb Infinitive="recordar" StemChange="UE">
     <Translation.English>to remember</Translation.English>
   </Verb>
+  <Verb Infinitive="reir">
+    <Imperative.AffirmativeVosotros>reíd</Imperative.AffirmativeVosotros>
+    <Indicativo.Present.Plural.1>reímos</Indicativo.Present.Plural.1>
+    <Indicativo.Present.Plural.3>ríen</Indicativo.Present.Plural.3>
+    <Indicativo.Present.Singular.1>río</Indicativo.Present.Singular.1>
+    <Indicativo.Present.Singular.2>ríed</Indicativo.Present.Singular.2>
+    <Indicativo.Present.Singular.3>ríe</Indicativo.Present.Singular.3>
+    <Indicativo.Preterite.Plural.1>reímos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>reísteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>reíeron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.3>rio</Indicativo.Preterite.Singular.3>
+    <Participle.Past>reído</Participle.Past>
+    <Participle.Present>riendo</Participle.Present>
+    <Translation.English>to laugh</Translation.English>
+  </Verb>
   <Verb Infinitive="reparar">
     <Translation.English>to repair</Translation.English>
   </Verb>
@@ -450,6 +492,9 @@
     <Imperative.Tu>sal</Imperative.Tu>
     <Indicativo.Present.Singular.1>salgo</Indicativo.Present.Singular.1>
     <Translation.English>to leave</Translation.English>
+  </Verb>
+  <Verb Infinitive="secar">
+    <Translation.English>to dry</Translation.English>
   </Verb>
   <Verb Infinitive="seguir" StemChange="I">
     <Translation.English>to continue</Translation.English>
@@ -496,6 +541,9 @@
   <Verb Infinitive="soñar">
     <Translation.English>to dream</Translation.English>
   </Verb>
+  <Verb Infinitive="suceder">
+    <Translation.English>to happen</Translation.English>
+  </Verb>
   <Verb Infinitive="tener" StemChange="IE">
     <Imperative.Tu>ten</Imperative.Tu>
     <Indicativo.Future.Plural.1>tendremos</Indicativo.Future.Plural.1>
@@ -511,6 +559,12 @@
     <Indicativo.Preterite.Singular.1>tuve</Indicativo.Preterite.Singular.1>
     <Indicativo.Preterite.Singular.2>tuviste</Indicativo.Preterite.Singular.2>
     <Indicativo.Preterite.Singular.3>tuvo</Indicativo.Preterite.Singular.3>
+    <Subjuntivo.Future.Plural.1>tuvierémos</Subjuntivo.Future.Plural.1>
+    <Subjuntivo.Future.Plural.2>tuviereis</Subjuntivo.Future.Plural.2>
+    <Subjuntivo.Future.Plural.3>tuvieren</Subjuntivo.Future.Plural.3>
+    <Subjuntivo.Future.Singular.1>tuviere</Subjuntivo.Future.Singular.1>
+    <Subjuntivo.Future.Singular.2>tuvieres</Subjuntivo.Future.Singular.2>
+    <Subjuntivo.Future.Singular.3>tuviere</Subjuntivo.Future.Singular.3>
     <Subjuntivo.Imperfect.Plural.1>tuviéramos</Subjuntivo.Imperfect.Plural.1>
     <Subjuntivo.Imperfect.Plural.2>tuvierais</Subjuntivo.Imperfect.Plural.2>
     <Subjuntivo.Imperfect.Plural.3>tuvieran</Subjuntivo.Imperfect.Plural.3>
@@ -524,6 +578,9 @@
     <Subjuntivo.Present.Singular.2>tengas</Subjuntivo.Present.Singular.2>
     <Subjuntivo.Present.Singular.3>tenga</Subjuntivo.Present.Singular.3>
     <Translation.English>to have</Translation.English>
+  </Verb>
+  <Verb Infinitive="terminar">
+    <Translation.English>to finish</Translation.English>
   </Verb>
   <Verb Infinitive="tocar">
     <Translation.English>to play</Translation.English>
@@ -540,6 +597,9 @@
   </Verb>
   <Verb Infinitive="usar">
     <Translation.English>to use/wear</Translation.English>
+  </Verb>
+  <Verb Infinitive="vender">
+    <Translation.English>to sell</Translation.English>
   </Verb>
   <Verb Infinitive="venir">
     <Imperative.Tu>ven</Imperative.Tu>
