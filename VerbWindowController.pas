@@ -103,7 +103,6 @@ type
     begin
       visibleColumns := MainWindowController.FilterColumns(columns.ToList);
       visibleRows := MainWindowController.FilterRows(rows.ToList);
-      Log($"visibleRows {visibleRows}");
 
       for each c in tableView.tableColumns.copy do
         tableView.removeTableColumn(c);
