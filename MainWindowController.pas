@@ -27,7 +27,16 @@ type
           var alert := new NSAlert;
           alert.messageText := "New verbs!";
           alert.addButtonWithTitle("OK");
-          alert.informativeText := $"{newCount} new {"verb".PluralInvariant(newCount)} new verbs were added to your local list.";
+
+          if newCount > 0 then begin
+            alert.informativeText := $"{newCount} new {"verb".PluralInvariant(newCount)} new verbs were added to your local list.";
+            if updatedCount > 0 then
+              alert.informativeText := alert.informativeText+$"{updatedCount} {"verb".PluralInvariant(updatedCount)} were updated.";
+          end
+          else if updatedCount > 0 then begin
+            alert.informativeText := alert.informativeText+$"{updatedCount} {"verb".PluralInvariant(updatedCount)} were updated in your local list.";
+          end;
+
           alert.beginSheetModalForWindow(window) begin
           end;
         end;

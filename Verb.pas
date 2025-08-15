@@ -86,6 +86,8 @@ type
     property conjugationsByName[aName: not nullable String]: nullable String
       read get_ConjugationsByName write fConjugationsByName[aName];
 
+    property localConjugations: ImmutableList<String> read fConjugationsByName.Keys;
+
     property conjugationsIsStandard[aName: not nullable String]: Boolean
       read not assigned(fConjugationsByName[aName]);
 

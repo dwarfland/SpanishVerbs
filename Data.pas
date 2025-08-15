@@ -63,10 +63,26 @@ type
     begin
       var newCount, updatedCount: Integer;
       for each v in defaultVerbs do begin
-        if not assigned(verbsByInfinitive[v.Infinitive]) then begin
+        var existingVerb := verbsByInfinitive[v.Infinitive];
+        if not assigned(existingVerb) then begin
+
           verbs.Add(v);
           verbsByInfinitive[v.Infinitive] := v;
           inc(newCount);
+
+        end
+        else begin
+
+          var updated := false;
+          for each c in v.localConjugations do begin
+            if not existingVerb.localConjugations.Contains(c) then begin
+              existingVerb.conjugationsByName[c] := v.conjugationsByName[c];
+              if not updated then
+                inc(updatedCount);
+              updated := true;
+            end;
+          end;
+
         end;
       end;
       if (newCount > 0) or (updatedCount > 0) then
