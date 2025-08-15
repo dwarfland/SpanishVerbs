@@ -603,6 +603,32 @@
   </Verb>
   <Verb Infinitive="venir">
     <Imperative.Tu>ven</Imperative.Tu>
+    <Indicativo.Future.Plural.1>venidremos</Indicativo.Future.Plural.1>
+    <Indicativo.Future.Plural.2>vendréis</Indicativo.Future.Plural.2>
+    <Indicativo.Future.Plural.3>vendrán</Indicativo.Future.Plural.3>
+    <Indicativo.Future.Singular.1>vedré</Indicativo.Future.Singular.1>
+    <Indicativo.Future.Singular.2>vedrás</Indicativo.Future.Singular.2>
+    <Indicativo.Future.Singular.3>vendrá</Indicativo.Future.Singular.3>
+    <Indicativo.Present.Plural.3>vienen</Indicativo.Present.Plural.3>
+    <Indicativo.Present.Singular.1>vengo</Indicativo.Present.Singular.1>
+    <Indicativo.Present.Singular.2>vienes</Indicativo.Present.Singular.2>
+    <Indicativo.Present.Singular.3>viene</Indicativo.Present.Singular.3>
+    <Indicativo.Preterite.Plural.2>vinisteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Singular.1>vine</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>viniste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>vino</Indicativo.Preterite.Singular.3>
+    <Subjuntivo.Future.Plural.1>viniéremos</Subjuntivo.Future.Plural.1>
+    <Subjuntivo.Future.Plural.2>vinieeais</Subjuntivo.Future.Plural.2>
+    <Subjuntivo.Future.Plural.3>vinieren</Subjuntivo.Future.Plural.3>
+    <Subjuntivo.Future.Singular.1>viniere</Subjuntivo.Future.Singular.1>
+    <Subjuntivo.Future.Singular.2>vinieres</Subjuntivo.Future.Singular.2>
+    <Subjuntivo.Future.Singular.3>viniere</Subjuntivo.Future.Singular.3>
+    <Subjuntivo.Present.Plural.1>vengamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>vengáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>vengan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>venga</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>vengas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>venga</Subjuntivo.Present.Singular.3>
     <Translation.English>to come</Translation.English>
   </Verb>
   <Verb Infinitive="ver">
