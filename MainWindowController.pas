@@ -29,12 +29,12 @@ type
           alert.addButtonWithTitle("OK");
 
           if newCount > 0 then begin
-            alert.informativeText := $"{newCount} new {"verb".PluralInvariant(newCount)} new verbs were added to your local list.";
+            alert.informativeText := $"{newCount} new {"verb was".PluralInvariant(newCount, "verbs were")} added to your local list.";
             if updatedCount > 0 then
-              alert.informativeText := alert.informativeText+$"{updatedCount} {"verb".PluralInvariant(updatedCount)} were updated.";
+              alert.informativeText := alert.informativeText+$"{updatedCount} {"verb was".PluralInvariant(newCount, "verbs were")} updated.";
           end
           else if updatedCount > 0 then begin
-            alert.informativeText := alert.informativeText+$"{updatedCount} {"verb".PluralInvariant(updatedCount)} were updated in your local list.";
+            alert.informativeText := alert.informativeText+$"{updatedCount} {"verb was".PluralInvariant(newCount, "verbs were")} updated in your local list.";
           end;
 
           alert.beginSheetModalForWindow(window) begin

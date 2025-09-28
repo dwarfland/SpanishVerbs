@@ -15,7 +15,7 @@
     <BundleIdentifier>com.dwarfland.verbs.spanish</BundleIdentifier>
     <DeploymentTargetVersion>12.0</DeploymentTargetVersion>
     <EntitlementsFile>.\Resources\Entitlements.entitlements</EntitlementsFile>
-    <BundleVersion>1.2.6</BundleVersion>
+    <BundleVersion>1.2.7</BundleVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>False</Optimize>
@@ -29,11 +29,13 @@
     <OutputPath>.\Bin\Release</OutputPath>
     <HardenedRuntime>True</HardenedRuntime>
     <CreatePackage>True</CreatePackage>
-    <CodeSignCertificateName>3rd Party Mac Developer Application: RemObjects Software (24G43Y5373)</CodeSignCertificateName>
+    <CodeSignCertificateName>Apple Distribution: Vision Thing B.V. (B9SNLAY3SD)</CodeSignCertificateName>
     <Architecture>x86_64;arm64</Architecture>
-    <ProvisioningProfileName>Spanish Verbs 2022B</ProvisioningProfileName>
-    <ProvisioningProfile>ba680bba-fd64-4e2b-8abe-2438172e3ed0</ProvisioningProfile>
-    <InstallerCertificateName>3rd Party Mac Developer Installer: RemObjects Software (24G43Y5373)</InstallerCertificateName>
+    <InstallerCertificateName>3rd Party Mac Developer Installer: Vision Thing B.V. (B9SNLAY3SD)</InstallerCertificateName>
+    <ProvisioningProfileName>Spanish Verbs (2025 B)</ProvisioningProfileName>
+    <ProvisioningProfile>22bbcc18-68c9-4876-b8a4-58418c053c89</ProvisioningProfile>
+    <ValidateWithAppStoreConnect>True</ValidateWithAppStoreConnect>
+    <AppStoreConnectUsername>mh@visionthing.cw</AppStoreConnectUsername>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'DeveloperID' ">
     <OutputPath>.\Bin\DeveloperID</OutputPath>

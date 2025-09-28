@@ -12,6 +12,22 @@
   <Verb Infinitive="acostar">
     <Translation.English>to go to bed</Translation.English>
   </Verb>
+  <Verb Infinitive="adivinar">
+    <Translation.English>to guess</Translation.English>
+  </Verb>
+  <Verb Infinitive="agradar">
+    <Translation.English>to please</Translation.English>
+  </Verb>
+  <Verb Infinitive="agradecer">
+    <Indicativo.Present.Singular.1>agradezco</Indicativo.Present.Singular.1>
+    <Subjuntivo.Present.Plural.1>agradezcamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>agradezcáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>agradezcan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>agradezca</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>agradezcas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>agradezca</Subjuntivo.Present.Singular.3>
+    <Translation.English>to thank</Translation.English>
+  </Verb>
   <Verb Infinitive="ahorrar">
     <Translation.English>to save</Translation.English>
   </Verb>
@@ -33,6 +49,9 @@
   </Verb>
   <Verb Infinitive="aprender">
     <Translation.English>to learn</Translation.English>
+  </Verb>
+  <Verb Infinitive="apurar">
+    <Translation.English>to finish, to hurry</Translation.English>
   </Verb>
   <Verb Infinitive="asar">
     <Translation.English>to grill</Translation.English>
@@ -70,6 +89,9 @@
   <Verb Infinitive="cocinar">
     <Translation.English>to cook</Translation.English>
   </Verb>
+  <Verb Infinitive="coleccionar">
+    <Translation.English>to collect</Translation.English>
+  </Verb>
   <Verb Infinitive="comenzar">
     <Translation.English>to start</Translation.English>
   </Verb>
@@ -79,12 +101,66 @@
   <Verb Infinitive="comprar">
     <Translation.English>to buy</Translation.English>
   </Verb>
+  <Verb Infinitive="conducir">
+    <Indicativo.Present.Singular.1>conduzco</Indicativo.Present.Singular.1>
+    <Indicativo.Preterite.Plural.1>condujimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>condujisteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>condujieron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.1>conducje</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>condujiste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>condujo</Indicativo.Preterite.Singular.3>
+    <Subjuntivo.Future.Plural.1>condujéremos</Subjuntivo.Future.Plural.1>
+    <Subjuntivo.Future.Plural.2>condujereis</Subjuntivo.Future.Plural.2>
+    <Subjuntivo.Future.Plural.3>condujeren</Subjuntivo.Future.Plural.3>
+    <Subjuntivo.Future.Singular.1>condujere</Subjuntivo.Future.Singular.1>
+    <Subjuntivo.Future.Singular.2>condujeres</Subjuntivo.Future.Singular.2>
+    <Subjuntivo.Future.Singular.3>condujere</Subjuntivo.Future.Singular.3>
+    <Subjuntivo.Imperfect.Plural.1>condujéramos</Subjuntivo.Imperfect.Plural.1>
+    <Subjuntivo.Imperfect.Plural.2>condujerais</Subjuntivo.Imperfect.Plural.2>
+    <Subjuntivo.Imperfect.Plural.3>condujeran</Subjuntivo.Imperfect.Plural.3>
+    <Subjuntivo.Imperfect.Singular.1>condujera</Subjuntivo.Imperfect.Singular.1>
+    <Subjuntivo.Imperfect.Singular.2>condujeras</Subjuntivo.Imperfect.Singular.2>
+    <Subjuntivo.Imperfect.Singular.3>condujera</Subjuntivo.Imperfect.Singular.3>
+    <Subjuntivo.Present.Plural.1>conduzcamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>conduzcáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>conduzcan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>conduzca</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>conduzcas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>conduzca</Subjuntivo.Present.Singular.3>
+    <Translation.English>to drive</Translation.English>
+  </Verb>
   <Verb Infinitive="conocer">
     <Indicativo.Present.Singular.1>conozco</Indicativo.Present.Singular.1>
     <Translation.English>to know/meet</Translation.English>
   </Verb>
+  <Verb Infinitive="contactar">
+    <Translation.English>to contact</Translation.English>
+  </Verb>
   <Verb Infinitive="correr">
     <Translation.English>to run</Translation.English>
+  </Verb>
+  <Verb Infinitive="crecer">
+    <Indicativo.Present.Singular.1>crezco</Indicativo.Present.Singular.1>
+    <Subjuntivo.Present.Plural.1>crezcamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>crezcáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>crezcan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>crezca</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>crezcas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>crezca</Subjuntivo.Present.Singular.3>
+    <Translation.English>to grow (up)</Translation.English>
+  </Verb>
+  <Verb Infinitive="cruzar">
+    <Indicativo.Preterite.Singular.1>crucé</Indicativo.Preterite.Singular.1>
+    <Subjuntivo.Present.Plural.1>crucemos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>crucéis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>crucen</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>cruce</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>cruces</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>cruce</Subjuntivo.Present.Singular.3>
+    <Translation.English>to cross</Translation.English>
+  </Verb>
+  <Verb Infinitive="cubrir">
+    <Translation.English>to cover</Translation.English>
   </Verb>
   <Verb Infinitive="cuidar">
     <Translation.English>to take care of</Translation.English>
@@ -129,7 +205,10 @@
     <Translation.English>to say</Translation.English>
   </Verb>
   <Verb Infinitive="dejar">
-    <Translation.English>to stop</Translation.English>
+    <Translation.English>to leave</Translation.English>
+  </Verb>
+  <Verb Infinitive="deletrear">
+    <Translation.English>to spell</Translation.English>
   </Verb>
   <Verb Infinitive="desayunar">
     <Translation.English>to (eat) breakfast</Translation.English>
@@ -137,8 +216,14 @@
   <Verb Infinitive="descansar">
     <Translation.English>to rest</Translation.English>
   </Verb>
+  <Verb Infinitive="desear">
+    <Translation.English>to wish</Translation.English>
+  </Verb>
   <Verb Infinitive="despertar" StemChange="IE">
     <Translation.English>to wake up</Translation.English>
+  </Verb>
+  <Verb Infinitive="dever">
+    <Translation.English>to owe</Translation.English>
   </Verb>
   <Verb Infinitive="dibujar">
     <Translation.English>to draw</Translation.English>
@@ -164,6 +249,9 @@
   <Verb Infinitive="empacar">
     <Translation.English>to pack</Translation.English>
   </Verb>
+  <Verb Infinitive="empalagar">
+    <Translation.English>to be too sweet</Translation.English>
+  </Verb>
   <Verb Infinitive="empezar" StemChange="IE">
     <Translation.English>to start</Translation.English>
   </Verb>
@@ -187,6 +275,19 @@
   </Verb>
   <Verb Infinitive="entrar">
     <Translation.English>to go into</Translation.English>
+  </Verb>
+  <Verb Infinitive="enviar">
+    <Indicativo.Present.Plural.3>envaían</Indicativo.Present.Plural.3>
+    <Indicativo.Present.Singular.1>envío</Indicativo.Present.Singular.1>
+    <Indicativo.Present.Singular.2>envías</Indicativo.Present.Singular.2>
+    <Indicativo.Present.Singular.3>envía</Indicativo.Present.Singular.3>
+    <Translation.English>to send</Translation.English>
+  </Verb>
+  <Verb Infinitive="escalar">
+    <Translation.English>to climb</Translation.English>
+  </Verb>
+  <Verb Infinitive="escoger">
+    <Translation.English>to choose</Translation.English>
   </Verb>
   <Verb Infinitive="escribir">
     <Participle.Past>escrito</Participle.Past>
@@ -215,6 +316,9 @@
     <Subjuntivo.Present.Singular.3>esté</Subjuntivo.Present.Singular.3>
     <Translation.English>to be</Translation.English>
   </Verb>
+  <Verb Infinitive="estrenar">
+    <Translation.English>to premier, to wear for the first time</Translation.English>
+  </Verb>
   <Verb Infinitive="estudiar">
     <Translation.English>to study</Translation.English>
   </Verb>
@@ -225,13 +329,16 @@
     <Translation.English>to smoke</Translation.English>
   </Verb>
   <Verb Infinitive="gastar">
-    <Translation.English>to spend</Translation.English>
+    <Translation.English>to spend, to use</Translation.English>
   </Verb>
   <Verb Infinitive="girar">
     <Translation.English>to turn</Translation.English>
   </Verb>
   <Verb Infinitive="gritar">
     <Translation.English>to shout</Translation.English>
+  </Verb>
+  <Verb Infinitive="guardar">
+    <Translation.English>to save</Translation.English>
   </Verb>
   <Verb Infinitive="gustar">
     <Translation.English>'to be liked'</Translation.English>
@@ -242,7 +349,7 @@
     <Indicativo.Present.Singular.1>he</Indicativo.Present.Singular.1>
     <Indicativo.Present.Singular.2>has</Indicativo.Present.Singular.2>
     <Indicativo.Present.Singular.3>ha</Indicativo.Present.Singular.3>
-    <Translation.English>to have</Translation.English>
+    <Translation.English>to have (done smth)</Translation.English>
   </Verb>
   <Verb Infinitive="hablar">
     <Translation.English>to talk</Translation.English>
@@ -322,8 +429,14 @@
     <Indicativo.Preterite.Singular.3>leyo</Indicativo.Preterite.Singular.3>
     <Translation.English>to read</Translation.English>
   </Verb>
+  <Verb Infinitive="limpiar">
+    <Translation.English>to clean</Translation.English>
+  </Verb>
   <Verb Infinitive="llegar">
     <Translation.English>to arrive</Translation.English>
+  </Verb>
+  <Verb Infinitive="llenar">
+    <Translation.English>to fill</Translation.English>
   </Verb>
   <Verb Infinitive="llevar">
     <Translation.English>to carry</Translation.English>
@@ -331,11 +444,17 @@
   <Verb Infinitive="llover">
     <Translation.English>to rain</Translation.English>
   </Verb>
+  <Verb Infinitive="madrugar">
+    <Translation.English>to get/wake up early</Translation.English>
+  </Verb>
   <Verb Infinitive="mandar">
     <Translation.English>to send</Translation.English>
   </Verb>
   <Verb Infinitive="manejar">
     <Translation.English>to drive</Translation.English>
+  </Verb>
+  <Verb Infinitive="mejorar">
+    <Translation.English>to improve</Translation.English>
   </Verb>
   <Verb Infinitive="mirar">
     <Translation.English>to watch</Translation.English>
@@ -357,6 +476,16 @@
   </Verb>
   <Verb Infinitive="nevar">
     <Translation.English>to rain</Translation.English>
+  </Verb>
+  <Verb Infinitive="ofrecer">
+    <Indicativo.Present.Singular.1>ofrezco</Indicativo.Present.Singular.1>
+    <Subjuntivo.Present.Plural.1>ofrezcamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>ofrezcáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>ofrezcan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>ofrezca</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>ofrezcas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>ofrezca</Subjuntivo.Present.Singular.3>
+    <Translation.English>to offer</Translation.English>
   </Verb>
   <Verb Infinitive="oir">
     <Indicativo.Present.Plural.1>oímos</Indicativo.Present.Plural.1>
@@ -387,6 +516,9 @@
   </Verb>
   <Verb Infinitive="parecer">
     <Translation.English>to seam</Translation.English>
+  </Verb>
+  <Verb Infinitive="pasar">
+    <Translation.English>to pass, to happen</Translation.English>
   </Verb>
   <Verb Infinitive="pedir">
     <Translation.English>to order, to ask for</Translation.English>
@@ -457,6 +589,9 @@
   <Verb Infinitive="querer" StemChange="IE">
     <Translation.English>to want</Translation.English>
   </Verb>
+  <Verb Infinitive="quitar">
+    <Translation.English>to remove</Translation.English>
+  </Verb>
   <Verb Infinitive="recibir">
     <Translation.English>to receive</Translation.English>
   </Verb>
@@ -481,6 +616,9 @@
   <Verb Infinitive="reparar">
     <Translation.English>to repair</Translation.English>
   </Verb>
+  <Verb Infinitive="repropar" StemChange="UE">
+    <Translation.English>to fail</Translation.English>
+  </Verb>
   <Verb Infinitive="responder">
     <Translation.English>to answer</Translation.English>
   </Verb>
@@ -488,10 +626,23 @@
     <Indicativo.Present.Singular.3>sé</Indicativo.Present.Singular.3>
     <Translation.English>to know (how)</Translation.English>
   </Verb>
+  <Verb Infinitive="sacar">
+    <Indicativo.Preterite.Singular.1>saqué</Indicativo.Preterite.Singular.1>
+    <Subjuntivo.Present.Plural.1>saquemos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>saquéis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>saquen</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>saque</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>saques</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>saque</Subjuntivo.Present.Singular.3>
+    <Translation.English>to take out</Translation.English>
+  </Verb>
   <Verb Infinitive="salir">
     <Imperative.Tu>sal</Imperative.Tu>
     <Indicativo.Present.Singular.1>salgo</Indicativo.Present.Singular.1>
     <Translation.English>to leave</Translation.English>
+  </Verb>
+  <Verb Infinitive="saltar">
+    <Translation.English>to jump</Translation.English>
   </Verb>
   <Verb Infinitive="secar">
     <Translation.English>to dry</Translation.English>
@@ -541,8 +692,14 @@
   <Verb Infinitive="soñar">
     <Translation.English>to dream</Translation.English>
   </Verb>
+  <Verb Infinitive="subir">
+    <Translation.English>to go up</Translation.English>
+  </Verb>
   <Verb Infinitive="suceder">
     <Translation.English>to happen</Translation.English>
+  </Verb>
+  <Verb Infinitive="surfear">
+    <Translation.English>to surf</Translation.English>
   </Verb>
   <Verb Infinitive="tener" StemChange="IE">
     <Imperative.Tu>ten</Imperative.Tu>
@@ -583,6 +740,13 @@
     <Translation.English>to finish</Translation.English>
   </Verb>
   <Verb Infinitive="tocar">
+    <Indicativo.Preterite.Singular.1>toqué</Indicativo.Preterite.Singular.1>
+    <Subjuntivo.Present.Plural.1>toquemos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>toquéis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>toquen</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>toque</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>toques</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>toque</Subjuntivo.Present.Singular.3>
     <Translation.English>to play</Translation.English>
   </Verb>
   <Verb Infinitive="tomar">
@@ -594,6 +758,12 @@
   <Verb Infinitive="traer">
     <Indicativo.Present.Singular.1>traigo</Indicativo.Present.Singular.1>
     <Translation.English>to bring</Translation.English>
+  </Verb>
+  <Verb Infinitive="trasnochar">
+    <Translation.English>to stay up all nihgt</Translation.English>
+  </Verb>
+  <Verb Infinitive="tratar">
+    <Translation.English>to treat</Translation.English>
   </Verb>
   <Verb Infinitive="usar">
     <Translation.English>to use/wear</Translation.English>
