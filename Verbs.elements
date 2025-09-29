@@ -15,7 +15,7 @@
     <BundleIdentifier>com.dwarfland.verbs.spanish</BundleIdentifier>
     <DeploymentTargetVersion>12.0</DeploymentTargetVersion>
     <EntitlementsFile>.\Resources\Entitlements.entitlements</EntitlementsFile>
-    <BundleVersion>1.2.7</BundleVersion>
+    <BundleVersion>1.2.8</BundleVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>False</Optimize>
@@ -36,6 +36,7 @@
     <ProvisioningProfile>22bbcc18-68c9-4876-b8a4-58418c053c89</ProvisioningProfile>
     <ValidateWithAppStoreConnect>True</ValidateWithAppStoreConnect>
     <AppStoreConnectUsername>mh@visionthing.cw</AppStoreConnectUsername>
+    <PublishToAppStoreConnect>False</PublishToAppStoreConnect>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'DeveloperID' ">
     <OutputPath>.\Bin\DeveloperID</OutputPath>
