@@ -124,6 +124,15 @@ type
 
     method get_ConjugationsByName(aName: String): String;
     begin
+      if Infinitive.Contains("*") and (not aName.StartsWith("Translation.")) then begin
+        var lSplit := Infinitive.SplitAtFirstOccurrenceOf("*");
+        var lVerb := Data.sharedInstance.verbsByInfinitive[lSplit[1]];
+        if assigned(lVerb) then
+          exit lSplit[0]+lVerb.conjugationsByName[aName]
+        else
+          exit #"[{Infinitive}]";
+      end;
+
       if aName = "Infinitive" then
         exit Infinitive;
 

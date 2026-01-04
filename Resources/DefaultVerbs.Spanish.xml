@@ -225,6 +225,9 @@
   <Verb Infinitive="dever">
     <Translation.English>to owe</Translation.English>
   </Verb>
+  <Verb Infinitive="devolver" StemChange="UE">
+    <Translation.English>to return</Translation.English>
+  </Verb>
   <Verb Infinitive="dibujar">
     <Translation.English>to draw</Translation.English>
   </Verb>
@@ -446,6 +449,9 @@
   </Verb>
   <Verb Infinitive="madrugar">
     <Translation.English>to get/wake up early</Translation.English>
+  </Verb>
+  <Verb Infinitive="man*tener">
+    <Translation.English>to maintain</Translation.English>
   </Verb>
   <Verb Infinitive="mandar">
     <Translation.English>to send</Translation.English>
