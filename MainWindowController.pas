@@ -228,11 +228,43 @@ type
         if verb.StemChange = VerbStemChange.None then
           lStemChangesMenu.itemArray[0].state := NSOnState;
 
+        var llIrSpillMenu := new NSMenu;
+        llIrSpillMenu.addItemWithTitle("None") action(selector(setIrSpill:)) keyEquivalent("");
+        llIrSpillMenu.addItemWithTitle("e -> i") action(selector(setIrSpill:)) keyEquivalent("");
+        llIrSpillMenu.addItemWithTitle("o -> u") action(selector(setIrSpill:)) keyEquivalent("");
+        for each i in llIrSpillMenu.itemArray do begin
+          i.representedObject := verb;
+          if (verb.IrSpill ≠ VerbIrSpill.None) and (i.title.hasSuffix(IrSpillToString(verb.IrSpill))) then
+            i.state := NSOnState;
+        end;
+        if verb.IrSpill = VerbIrSpill.None then
+          llIrSpillMenu.itemArray[0].state := NSOnState;
+
+        var lZCMenu := new NSMenu;
+        lZCMenu.addItemWithTitle("None") action(selector(setZC:)) keyEquivalent("");
+        lZCMenu.addItemWithTitle("c -> zc") action(selector(setZC:)) keyEquivalent("");
+        for each i in lZCMenu.itemArray do begin
+          i.representedObject := verb;
+        end;
+        if verb.AdjustCZ then
+          lZCMenu.itemArray[1].state := NSOnState
+        else
+          lZCMenu.itemArray[0].state := NSOnState;
 
         //var lStemChangesItem := new NSMenuItem withTitle() action("Stem Change") keyEquivalent("");
         var lStemChangesItem := new NSMenuItem withTitle("Stem Change") action(nil) keyEquivalent("");
         lStemChangesItem.submenu := lStemChangesMenu;
         result.addItem(lStemChangesItem);
+
+        var lIrSpillItem := new NSMenuItem withTitle("-ir Spill") action(nil) keyEquivalent("");
+        lIrSpillItem.submenu := llIrSpillMenu;
+        result.addItem(lIrSpillItem);
+
+        if verb.Infinitive.EndsWith("cer") or verb.Infinitive.EndsWith("cir") then begin
+          var lZCItem := new NSMenuItem withTitle("c -> cz") action(nil) keyEquivalent("");
+          lZCItem.submenu := lZCMenu;
+          result.addItem(lZCItem);
+        end;
 
         result.addItem(NSMenuItem.separatorItem);
         result.addItemWithTitle($"Remove '{verb.Infinitive}'") action(selector(setDeleteVerb:)) keyEquivalent("");
@@ -265,8 +297,27 @@ type
         "-> ue": (aSender.representedObject as Verb).StemChange := VerbStemChange.UE;
         else (aSender.representedObject as Verb).StemChange := VerbStemChange.None;
       end;
+      DataChanged;
+    end;
 
+    [IBAction]
+    method setIrSpill(aSender: id); public;
+    begin
+      case aSender.title of
+        "e -> i": (aSender.representedObject as Verb).IrSpill := VerbIrSpill.EToI;
+        "o -> u": (aSender.representedObject as Verb).IrSpill := VerbIrSpill.OToU;
+        else (aSender.representedObject as Verb).IrSpill := VerbIrSpill.None;
+      end;
+      DataChanged;
+    end;
 
+    [IBAction]
+    method setZC(aSender: id); public;
+    begin
+      case aSender.title of
+        "c -> zc": (aSender.representedObject as Verb).AdjustCZ := true;
+        else (aSender.representedObject as Verb).AdjustCZ := false;
+      end;
       DataChanged;
     end;
 
@@ -356,11 +407,11 @@ type
               if c = "Infinitive" then
                 sb.AppendLine($'      <td class="verb {lCssClassName}"><nobr>{conjugation}</nobr></td>')
               else if c.StartsWith("Translation.") then
-                sb.AppendLine($'      <td class="verb translation {conjugation}">{conjugation}</td>')
+                sb.AppendLine($'      <td class="verb translation {conjugation}"><nobr>{conjugation}</nobr></td>')
               else if v.conjugationsIsStandard[c] then
-                sb.AppendLine($'      <td class="verb regular {conjugation}">{conjugation}</td>')
+                sb.AppendLine($'      <td class="verb regular {conjugation}"><nobr>{conjugation}</nobr></td>')
               else
-                sb.AppendLine($'      <td class="verb irregular {conjugation}">{conjugation}</td>');
+                sb.AppendLine($'      <td class="verb irregular {conjugation}"><nobr>{conjugation}</nobr></td>');
             end;
             sb.AppendLine('    </tr>');
           end;

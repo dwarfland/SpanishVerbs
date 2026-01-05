@@ -32,7 +32,6 @@
     <Translation.English>to save</Translation.English>
   </Verb>
   <Verb Infinitive="almorzar" StemChange="UE">
-    <Imperative.Usted>almuerce</Imperative.Usted>
     <Translation.English>to (eat) lunch</Translation.English>
   </Verb>
   <Verb Infinitive="alquilar">
@@ -42,7 +41,7 @@
     <Translation.English>to love</Translation.English>
   </Verb>
   <Verb Infinitive="añadir">
-    <Translation.English>ro add</Translation.English>
+    <Translation.English>to add</Translation.English>
   </Verb>
   <Verb Infinitive="apagar">
     <Translation.English>to turn off</Translation.English>
@@ -101,37 +100,15 @@
   <Verb Infinitive="comprar">
     <Translation.English>to buy</Translation.English>
   </Verb>
-  <Verb Infinitive="conducir">
-    <Indicativo.Present.Singular.1>conduzco</Indicativo.Present.Singular.1>
-    <Indicativo.Preterite.Plural.1>condujimos</Indicativo.Preterite.Plural.1>
-    <Indicativo.Preterite.Plural.2>condujisteis</Indicativo.Preterite.Plural.2>
-    <Indicativo.Preterite.Plural.3>condujieron</Indicativo.Preterite.Plural.3>
-    <Indicativo.Preterite.Singular.1>conducje</Indicativo.Preterite.Singular.1>
-    <Indicativo.Preterite.Singular.2>condujiste</Indicativo.Preterite.Singular.2>
-    <Indicativo.Preterite.Singular.3>condujo</Indicativo.Preterite.Singular.3>
-    <Subjuntivo.Future.Plural.1>condujéremos</Subjuntivo.Future.Plural.1>
-    <Subjuntivo.Future.Plural.2>condujereis</Subjuntivo.Future.Plural.2>
-    <Subjuntivo.Future.Plural.3>condujeren</Subjuntivo.Future.Plural.3>
-    <Subjuntivo.Future.Singular.1>condujere</Subjuntivo.Future.Singular.1>
-    <Subjuntivo.Future.Singular.2>condujeres</Subjuntivo.Future.Singular.2>
-    <Subjuntivo.Future.Singular.3>condujere</Subjuntivo.Future.Singular.3>
-    <Subjuntivo.Imperfect.Plural.1>condujéramos</Subjuntivo.Imperfect.Plural.1>
-    <Subjuntivo.Imperfect.Plural.2>condujerais</Subjuntivo.Imperfect.Plural.2>
-    <Subjuntivo.Imperfect.Plural.3>condujeran</Subjuntivo.Imperfect.Plural.3>
-    <Subjuntivo.Imperfect.Singular.1>condujera</Subjuntivo.Imperfect.Singular.1>
-    <Subjuntivo.Imperfect.Singular.2>condujeras</Subjuntivo.Imperfect.Singular.2>
-    <Subjuntivo.Imperfect.Singular.3>condujera</Subjuntivo.Imperfect.Singular.3>
-    <Subjuntivo.Present.Plural.1>conduzcamos</Subjuntivo.Present.Plural.1>
-    <Subjuntivo.Present.Plural.2>conduzcáis</Subjuntivo.Present.Plural.2>
-    <Subjuntivo.Present.Plural.3>conduzcan</Subjuntivo.Present.Plural.3>
-    <Subjuntivo.Present.Singular.1>conduzca</Subjuntivo.Present.Singular.1>
-    <Subjuntivo.Present.Singular.2>conduzcas</Subjuntivo.Present.Singular.2>
-    <Subjuntivo.Present.Singular.3>conduzca</Subjuntivo.Present.Singular.3>
+  <Verb Infinitive="conducir" AdjustZC="True">
     <Translation.English>to drive</Translation.English>
   </Verb>
-  <Verb Infinitive="conocer">
+  <Verb Infinitive="conocer" AdjustZC="True">
     <Indicativo.Present.Singular.1>conozco</Indicativo.Present.Singular.1>
     <Translation.English>to know/meet</Translation.English>
+  </Verb>
+  <Verb Infinitive="construir">
+    <Translation.English>to build</Translation.English>
   </Verb>
   <Verb Infinitive="contactar">
     <Translation.English>to contact</Translation.English>
@@ -139,24 +116,10 @@
   <Verb Infinitive="correr">
     <Translation.English>to run</Translation.English>
   </Verb>
-  <Verb Infinitive="crecer">
-    <Indicativo.Present.Singular.1>crezco</Indicativo.Present.Singular.1>
-    <Subjuntivo.Present.Plural.1>crezcamos</Subjuntivo.Present.Plural.1>
-    <Subjuntivo.Present.Plural.2>crezcáis</Subjuntivo.Present.Plural.2>
-    <Subjuntivo.Present.Plural.3>crezcan</Subjuntivo.Present.Plural.3>
-    <Subjuntivo.Present.Singular.1>crezca</Subjuntivo.Present.Singular.1>
-    <Subjuntivo.Present.Singular.2>crezcas</Subjuntivo.Present.Singular.2>
-    <Subjuntivo.Present.Singular.3>crezca</Subjuntivo.Present.Singular.3>
+  <Verb Infinitive="crecer" AdjustZC="True">
     <Translation.English>to grow (up)</Translation.English>
   </Verb>
   <Verb Infinitive="cruzar">
-    <Indicativo.Preterite.Singular.1>crucé</Indicativo.Preterite.Singular.1>
-    <Subjuntivo.Present.Plural.1>crucemos</Subjuntivo.Present.Plural.1>
-    <Subjuntivo.Present.Plural.2>crucéis</Subjuntivo.Present.Plural.2>
-    <Subjuntivo.Present.Plural.3>crucen</Subjuntivo.Present.Plural.3>
-    <Subjuntivo.Present.Singular.1>cruce</Subjuntivo.Present.Singular.1>
-    <Subjuntivo.Present.Singular.2>cruces</Subjuntivo.Present.Singular.2>
-    <Subjuntivo.Present.Singular.3>cruce</Subjuntivo.Present.Singular.3>
     <Translation.English>to cross</Translation.English>
   </Verb>
   <Verb Infinitive="cubrir">
@@ -181,7 +144,6 @@
   </Verb>
   <Verb Infinitive="decir" StemChange="I">
     <Imperative.Tu>di</Imperative.Tu>
-    <Imperative.Usted>diga</Imperative.Usted>
     <Indicativo.Conditional.Plural.1>diríamos</Indicativo.Conditional.Plural.1>
     <Indicativo.Conditional.Plural.2>diríais</Indicativo.Conditional.Plural.2>
     <Indicativo.Conditional.Plural.3>dirían</Indicativo.Conditional.Plural.3>
@@ -202,6 +164,25 @@
     <Indicativo.Preterite.Singular.2>dijiste</Indicativo.Preterite.Singular.2>
     <Indicativo.Preterite.Singular.3>dijo</Indicativo.Preterite.Singular.3>
     <Participle.Past>dicho</Participle.Past>
+    <Participle.Present>diciendo</Participle.Present>
+    <Subjuntivo.Future.Plural.1>dijéremos</Subjuntivo.Future.Plural.1>
+    <Subjuntivo.Future.Plural.2>dijereis</Subjuntivo.Future.Plural.2>
+    <Subjuntivo.Future.Plural.3>dijeren</Subjuntivo.Future.Plural.3>
+    <Subjuntivo.Future.Singular.1>dijere</Subjuntivo.Future.Singular.1>
+    <Subjuntivo.Future.Singular.2>dijeres</Subjuntivo.Future.Singular.2>
+    <Subjuntivo.Future.Singular.3>dijere</Subjuntivo.Future.Singular.3>
+    <Subjuntivo.Imperfect.Plural.1>dijéramos</Subjuntivo.Imperfect.Plural.1>
+    <Subjuntivo.Imperfect.Plural.2>dijerais</Subjuntivo.Imperfect.Plural.2>
+    <Subjuntivo.Imperfect.Plural.3>deijran</Subjuntivo.Imperfect.Plural.3>
+    <Subjuntivo.Imperfect.Singular.1>dijera</Subjuntivo.Imperfect.Singular.1>
+    <Subjuntivo.Imperfect.Singular.2>dijeras</Subjuntivo.Imperfect.Singular.2>
+    <Subjuntivo.Imperfect.Singular.3>dijera</Subjuntivo.Imperfect.Singular.3>
+    <Subjuntivo.Present.Plural.1>digamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>digáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>digan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>diga</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>digas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>diga</Subjuntivo.Present.Singular.3>
     <Translation.English>to say</Translation.English>
   </Verb>
   <Verb Infinitive="dejar">
@@ -217,10 +198,13 @@
     <Translation.English>to rest</Translation.English>
   </Verb>
   <Verb Infinitive="desear">
-    <Translation.English>to wish</Translation.English>
+    <Translation.English>to wish, to desire</Translation.English>
   </Verb>
   <Verb Infinitive="despertar" StemChange="IE">
     <Translation.English>to wake up</Translation.English>
+  </Verb>
+  <Verb Infinitive="destruir">
+    <Translation.English>to destroy</Translation.English>
   </Verb>
   <Verb Infinitive="dever">
     <Translation.English>to owe</Translation.English>
@@ -234,15 +218,13 @@
   <Verb Infinitive="dirigir">
     <Translation.English>to direct</Translation.English>
   </Verb>
+  <Verb Infinitive="doblar">
+    <Translation.English>to turn</Translation.English>
+  </Verb>
   <Verb Infinitive="doler" StemChange="UE">
     <Translation.English>to hurt</Translation.English>
   </Verb>
-  <Verb Infinitive="dormir">
-    <Indicativo.Present.Plural.3>duermen</Indicativo.Present.Plural.3>
-    <Indicativo.Present.Singular.1>duermo</Indicativo.Present.Singular.1>
-    <Indicativo.Present.Singular.2>duermes</Indicativo.Present.Singular.2>
-    <Indicativo.Present.Singular.3>duerme</Indicativo.Present.Singular.3>
-    <Indicativo.Preterite.Singular.3>durmió</Indicativo.Preterite.Singular.3>
+  <Verb Infinitive="dormir" StemChange="UE" IrSpill="o -&gt; u">
     <Participle.Present>durmiendo</Participle.Present>
     <Translation.English>to sleep</Translation.English>
   </Verb>
@@ -257,6 +239,9 @@
   </Verb>
   <Verb Infinitive="empezar" StemChange="IE">
     <Translation.English>to start</Translation.English>
+  </Verb>
+  <Verb Infinitive="empujar">
+    <Translation.English>to push</Translation.English>
   </Verb>
   <Verb Infinitive="encantar">
     <Translation.English>to enchant</Translation.English>
@@ -302,6 +287,9 @@
   <Verb Infinitive="esperar">
     <Translation.English>to start</Translation.English>
   </Verb>
+  <Verb Infinitive="estacionar">
+    <Translation.English>to park</Translation.English>
+  </Verb>
   <Verb Infinitive="estar">
     <Indicativo.Present.Plural.3>están</Indicativo.Present.Plural.3>
     <Indicativo.Present.Singular.1>estoy</Indicativo.Present.Singular.1>
@@ -337,6 +325,12 @@
   <Verb Infinitive="girar">
     <Translation.English>to turn</Translation.English>
   </Verb>
+  <Verb Infinitive="golpear">
+    <Translation.English>to hit</Translation.English>
+  </Verb>
+  <Verb Infinitive="grabar">
+    <Translation.English>to record</Translation.English>
+  </Verb>
   <Verb Infinitive="gritar">
     <Translation.English>to shout</Translation.English>
   </Verb>
@@ -347,11 +341,42 @@
     <Translation.English>'to be liked'</Translation.English>
   </Verb>
   <Verb Infinitive="haber">
+    <Imperative.Tu>he</Imperative.Tu>
+    <Indicativo.Future.Plural.1>habremos</Indicativo.Future.Plural.1>
+    <Indicativo.Future.Plural.2>habréis</Indicativo.Future.Plural.2>
+    <Indicativo.Future.Plural.3>habrán</Indicativo.Future.Plural.3>
+    <Indicativo.Future.Singular.1>habré</Indicativo.Future.Singular.1>
+    <Indicativo.Future.Singular.2>habrás</Indicativo.Future.Singular.2>
+    <Indicativo.Future.Singular.3>habrá</Indicativo.Future.Singular.3>
     <Indicativo.Present.Plural.1>hemos</Indicativo.Present.Plural.1>
     <Indicativo.Present.Plural.3>han</Indicativo.Present.Plural.3>
     <Indicativo.Present.Singular.1>he</Indicativo.Present.Singular.1>
     <Indicativo.Present.Singular.2>has</Indicativo.Present.Singular.2>
     <Indicativo.Present.Singular.3>ha</Indicativo.Present.Singular.3>
+    <Indicativo.Preterite.Plural.1>hubimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>hubisteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>hubieron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.1>hube</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>hubiste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>hubo</Indicativo.Preterite.Singular.3>
+    <Subjuntivo.Future.Plural.1>hubiéremos</Subjuntivo.Future.Plural.1>
+    <Subjuntivo.Future.Plural.2>hubiereis</Subjuntivo.Future.Plural.2>
+    <Subjuntivo.Future.Plural.3>hubieren</Subjuntivo.Future.Plural.3>
+    <Subjuntivo.Future.Singular.1>hubiere</Subjuntivo.Future.Singular.1>
+    <Subjuntivo.Future.Singular.2>hubieres</Subjuntivo.Future.Singular.2>
+    <Subjuntivo.Future.Singular.3>hubiere</Subjuntivo.Future.Singular.3>
+    <Subjuntivo.Imperfect.Plural.1>hubiéramos</Subjuntivo.Imperfect.Plural.1>
+    <Subjuntivo.Imperfect.Plural.2>hubierais</Subjuntivo.Imperfect.Plural.2>
+    <Subjuntivo.Imperfect.Plural.3>hubieran</Subjuntivo.Imperfect.Plural.3>
+    <Subjuntivo.Imperfect.Singular.1>hubiera</Subjuntivo.Imperfect.Singular.1>
+    <Subjuntivo.Imperfect.Singular.2>hubieras</Subjuntivo.Imperfect.Singular.2>
+    <Subjuntivo.Imperfect.Singular.3>hubiera</Subjuntivo.Imperfect.Singular.3>
+    <Subjuntivo.Present.Plural.1>hayamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>hayáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>hayan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>haya</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>hayas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>haya</Subjuntivo.Present.Singular.3>
     <Translation.English>to have (done smth)</Translation.English>
   </Verb>
   <Verb Infinitive="hablar">
@@ -379,7 +404,28 @@
     <Indicativo.Preterite.Singular.2>hiciste</Indicativo.Preterite.Singular.2>
     <Indicativo.Preterite.Singular.3>hizo</Indicativo.Preterite.Singular.3>
     <Participle.Past>hecho</Participle.Past>
+    <Subjuntivo.Future.Plural.1>hiciéremos</Subjuntivo.Future.Plural.1>
+    <Subjuntivo.Future.Plural.2>hiciereis</Subjuntivo.Future.Plural.2>
+    <Subjuntivo.Future.Plural.3>hicieren</Subjuntivo.Future.Plural.3>
+    <Subjuntivo.Future.Singular.1>hiciere</Subjuntivo.Future.Singular.1>
+    <Subjuntivo.Future.Singular.2>hicieres</Subjuntivo.Future.Singular.2>
+    <Subjuntivo.Future.Singular.3>hiciere</Subjuntivo.Future.Singular.3>
+    <Subjuntivo.Imperfect.Plural.1>hiciéramos</Subjuntivo.Imperfect.Plural.1>
+    <Subjuntivo.Imperfect.Plural.2>hicierais</Subjuntivo.Imperfect.Plural.2>
+    <Subjuntivo.Imperfect.Plural.3>hicieran</Subjuntivo.Imperfect.Plural.3>
+    <Subjuntivo.Imperfect.Singular.1>hiciera</Subjuntivo.Imperfect.Singular.1>
+    <Subjuntivo.Imperfect.Singular.2>hicieras</Subjuntivo.Imperfect.Singular.2>
+    <Subjuntivo.Imperfect.Singular.3>hiciera</Subjuntivo.Imperfect.Singular.3>
+    <Subjuntivo.Present.Plural.1>hagamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>hagáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>hagan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>haga</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>hagas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>haga</Subjuntivo.Present.Singular.3>
     <Translation.English>to do</Translation.English>
+  </Verb>
+  <Verb Infinitive="halar">
+    <Translation.English>to pull</Translation.English>
   </Verb>
   <Verb Infinitive="interesar">
     <Translation.English>to interest</Translation.English>
@@ -388,6 +434,7 @@
     <Translation.English>to invite</Translation.English>
   </Verb>
   <Verb Infinitive="ir" Declination="Irregular">
+    <Imperative.AffirmativeVos>andá</Imperative.AffirmativeVos>
     <Imperative.Tu>ve</Imperative.Tu>
     <Indicativo.Imperfect.Plural.1>íbamos</Indicativo.Imperfect.Plural.1>
     <Indicativo.Imperfect.Plural.2>ibais</Indicativo.Imperfect.Plural.2>
@@ -410,6 +457,18 @@
     <Indicativo.Preterite.Singular.3>fue</Indicativo.Preterite.Singular.3>
     <Participle.Past>ido</Participle.Past>
     <Participle.Present>yendo</Participle.Present>
+    <Subjuntivo.Future.Plural.1>fuéremos</Subjuntivo.Future.Plural.1>
+    <Subjuntivo.Future.Plural.2>fuereis</Subjuntivo.Future.Plural.2>
+    <Subjuntivo.Future.Plural.3>fueren</Subjuntivo.Future.Plural.3>
+    <Subjuntivo.Future.Singular.1>fuere</Subjuntivo.Future.Singular.1>
+    <Subjuntivo.Future.Singular.2>fueres</Subjuntivo.Future.Singular.2>
+    <Subjuntivo.Future.Singular.3>fuere</Subjuntivo.Future.Singular.3>
+    <Subjuntivo.Imperfect.Plural.1>fuéramos</Subjuntivo.Imperfect.Plural.1>
+    <Subjuntivo.Imperfect.Plural.2>fuerais</Subjuntivo.Imperfect.Plural.2>
+    <Subjuntivo.Imperfect.Plural.3>fueran</Subjuntivo.Imperfect.Plural.3>
+    <Subjuntivo.Imperfect.Singular.1>fuera</Subjuntivo.Imperfect.Singular.1>
+    <Subjuntivo.Imperfect.Singular.2>fueras</Subjuntivo.Imperfect.Singular.2>
+    <Subjuntivo.Imperfect.Singular.3>fuera</Subjuntivo.Imperfect.Singular.3>
     <Subjuntivo.Present.Plural.1>vayamos</Subjuntivo.Present.Plural.1>
     <Subjuntivo.Present.Plural.2>vayáis</Subjuntivo.Present.Plural.2>
     <Subjuntivo.Present.Plural.3>vayan</Subjuntivo.Present.Plural.3>
@@ -451,7 +510,7 @@
     <Translation.English>to get/wake up early</Translation.English>
   </Verb>
   <Verb Infinitive="man*tener">
-    <Translation.English>to maintain</Translation.English>
+    <Translation.English>to hold</Translation.English>
   </Verb>
   <Verb Infinitive="mandar">
     <Translation.English>to send</Translation.English>
@@ -464,6 +523,9 @@
   </Verb>
   <Verb Infinitive="mirar">
     <Translation.English>to watch</Translation.English>
+  </Verb>
+  <Verb Infinitive="molestar">
+    <Translation.English>to bother</Translation.English>
   </Verb>
   <Verb Infinitive="montar">
     <Translation.English>to ride</Translation.English>
@@ -483,14 +545,7 @@
   <Verb Infinitive="nevar">
     <Translation.English>to rain</Translation.English>
   </Verb>
-  <Verb Infinitive="ofrecer">
-    <Indicativo.Present.Singular.1>ofrezco</Indicativo.Present.Singular.1>
-    <Subjuntivo.Present.Plural.1>ofrezcamos</Subjuntivo.Present.Plural.1>
-    <Subjuntivo.Present.Plural.2>ofrezcáis</Subjuntivo.Present.Plural.2>
-    <Subjuntivo.Present.Plural.3>ofrezcan</Subjuntivo.Present.Plural.3>
-    <Subjuntivo.Present.Singular.1>ofrezca</Subjuntivo.Present.Singular.1>
-    <Subjuntivo.Present.Singular.2>ofrezcas</Subjuntivo.Present.Singular.2>
-    <Subjuntivo.Present.Singular.3>ofrezca</Subjuntivo.Present.Singular.3>
+  <Verb Infinitive="ofrecer" AdjustZC="True">
     <Translation.English>to offer</Translation.English>
   </Verb>
   <Verb Infinitive="oir">
@@ -510,8 +565,6 @@
     <Indicativo.Present.Singular.1>huelo</Indicativo.Present.Singular.1>
     <Indicativo.Present.Singular.2>hueles</Indicativo.Present.Singular.2>
     <Indicativo.Present.Singular.3>huele</Indicativo.Present.Singular.3>
-    <Subjuntivo.Present.Plural.1>olamos</Subjuntivo.Present.Plural.1>
-    <Subjuntivo.Present.Plural.2>oláis</Subjuntivo.Present.Plural.2>
     <Translation.English>to smell</Translation.English>
   </Verb>
   <Verb Infinitive="olvidar">
@@ -526,7 +579,7 @@
   <Verb Infinitive="pasar">
     <Translation.English>to pass, to happen</Translation.English>
   </Verb>
-  <Verb Infinitive="pedir">
+  <Verb Infinitive="pedir" IrSpill="e -&gt; i">
     <Translation.English>to order, to ask for</Translation.English>
   </Verb>
   <Verb Infinitive="peinar">
@@ -539,8 +592,6 @@
     <Translation.English>to lose</Translation.English>
   </Verb>
   <Verb Infinitive="poder" StemChange="UE">
-    <Imperative.NegativeVosotros>no podáis</Imperative.NegativeVosotros>
-    <Imperative.Nosotros>podamos</Imperative.Nosotros>
     <Indicativo.Preterite.Plural.1>pudimos</Indicativo.Preterite.Plural.1>
     <Indicativo.Preterite.Plural.2>pudisteis</Indicativo.Preterite.Plural.2>
     <Indicativo.Preterite.Plural.3>pudieron</Indicativo.Preterite.Plural.3>
@@ -629,22 +680,51 @@
     <Translation.English>to answer</Translation.English>
   </Verb>
   <Verb Infinitive="saber">
-    <Indicativo.Present.Singular.3>sé</Indicativo.Present.Singular.3>
+    <Indicativo.Future.Plural.1>sabríamos</Indicativo.Future.Plural.1>
+    <Indicativo.Future.Plural.2>sabríais</Indicativo.Future.Plural.2>
+    <Indicativo.Future.Plural.3>sabrían</Indicativo.Future.Plural.3>
+    <Indicativo.Future.Singular.1>sabré</Indicativo.Future.Singular.1>
+    <Indicativo.Future.Singular.2>sabrías</Indicativo.Future.Singular.2>
+    <Indicativo.Future.Singular.3>sabría</Indicativo.Future.Singular.3>
+    <Indicativo.Present.Singular.1>sé</Indicativo.Present.Singular.1>
+    <Indicativo.Preterite.Plural.1>supimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>supisteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>supieron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.1>supe</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>supiste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>supo</Indicativo.Preterite.Singular.3>
+    <Subjuntivo.Future.Plural.1>supiéremos</Subjuntivo.Future.Plural.1>
+    <Subjuntivo.Future.Plural.2>supiereis</Subjuntivo.Future.Plural.2>
+    <Subjuntivo.Future.Plural.3>supieren</Subjuntivo.Future.Plural.3>
+    <Subjuntivo.Future.Singular.1>supiere</Subjuntivo.Future.Singular.1>
+    <Subjuntivo.Future.Singular.2>supieres</Subjuntivo.Future.Singular.2>
+    <Subjuntivo.Future.Singular.3>supiere</Subjuntivo.Future.Singular.3>
+    <Subjuntivo.Imperfect.Plural.1>supiéramos</Subjuntivo.Imperfect.Plural.1>
+    <Subjuntivo.Imperfect.Plural.2>supierais</Subjuntivo.Imperfect.Plural.2>
+    <Subjuntivo.Imperfect.Plural.3>supieran</Subjuntivo.Imperfect.Plural.3>
+    <Subjuntivo.Imperfect.Singular.1>supiera</Subjuntivo.Imperfect.Singular.1>
+    <Subjuntivo.Imperfect.Singular.2>supieras</Subjuntivo.Imperfect.Singular.2>
+    <Subjuntivo.Imperfect.Singular.3>supiera</Subjuntivo.Imperfect.Singular.3>
+    <Subjuntivo.Present.Plural.1>sepamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>sepáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>sepan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>sepa</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>sepas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>sepa</Subjuntivo.Present.Singular.3>
     <Translation.English>to know (how)</Translation.English>
   </Verb>
   <Verb Infinitive="sacar">
-    <Indicativo.Preterite.Singular.1>saqué</Indicativo.Preterite.Singular.1>
-    <Subjuntivo.Present.Plural.1>saquemos</Subjuntivo.Present.Plural.1>
-    <Subjuntivo.Present.Plural.2>saquéis</Subjuntivo.Present.Plural.2>
-    <Subjuntivo.Present.Plural.3>saquen</Subjuntivo.Present.Plural.3>
-    <Subjuntivo.Present.Singular.1>saque</Subjuntivo.Present.Singular.1>
-    <Subjuntivo.Present.Singular.2>saques</Subjuntivo.Present.Singular.2>
-    <Subjuntivo.Present.Singular.3>saque</Subjuntivo.Present.Singular.3>
     <Translation.English>to take out</Translation.English>
   </Verb>
   <Verb Infinitive="salir">
     <Imperative.Tu>sal</Imperative.Tu>
     <Indicativo.Present.Singular.1>salgo</Indicativo.Present.Singular.1>
+    <Subjuntivo.Present.Plural.1>salgamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>salgáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>salgan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>salga</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>salgas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>salga</Subjuntivo.Present.Singular.3>
     <Translation.English>to leave</Translation.English>
   </Verb>
   <Verb Infinitive="saltar">
@@ -663,18 +743,19 @@
     <Translation.English>to feel</Translation.English>
   </Verb>
   <Verb Infinitive="ser" Declination="Irregular">
+    <Imperative.Tu>sé</Imperative.Tu>
     <Indicativo.Imperfect.Plural.1>éramos</Indicativo.Imperfect.Plural.1>
     <Indicativo.Imperfect.Plural.2>erais</Indicativo.Imperfect.Plural.2>
     <Indicativo.Imperfect.Plural.3>eran</Indicativo.Imperfect.Plural.3>
     <Indicativo.Imperfect.Singular.1>era</Indicativo.Imperfect.Singular.1>
     <Indicativo.Imperfect.Singular.2>eras</Indicativo.Imperfect.Singular.2>
     <Indicativo.Imperfect.Singular.3>era</Indicativo.Imperfect.Singular.3>
-    <Indicativo.Present.Plural.1>sabemos</Indicativo.Present.Plural.1>
+    <Indicativo.Present.Plural.1>somos</Indicativo.Present.Plural.1>
     <Indicativo.Present.Plural.2>sois</Indicativo.Present.Plural.2>
     <Indicativo.Present.Plural.3>son</Indicativo.Present.Plural.3>
-    <Indicativo.Present.Singular.1>se</Indicativo.Present.Singular.1>
-    <Indicativo.Present.Singular.2>sabes</Indicativo.Present.Singular.2>
-    <Indicativo.Present.Singular.3>sabe</Indicativo.Present.Singular.3>
+    <Indicativo.Present.Singular.1>soy</Indicativo.Present.Singular.1>
+    <Indicativo.Present.Singular.2>eres</Indicativo.Present.Singular.2>
+    <Indicativo.Present.Singular.3>es</Indicativo.Present.Singular.3>
     <Indicativo.Preterite.Plural.1>fuimos</Indicativo.Preterite.Plural.1>
     <Indicativo.Preterite.Plural.2>fuisteis</Indicativo.Preterite.Plural.2>
     <Indicativo.Preterite.Plural.2.V>fuisteis</Indicativo.Preterite.Plural.2.V>
@@ -682,8 +763,20 @@
     <Indicativo.Preterite.Singular.1>fui</Indicativo.Preterite.Singular.1>
     <Indicativo.Preterite.Singular.2>fuiste</Indicativo.Preterite.Singular.2>
     <Indicativo.Preterite.Singular.3>fue</Indicativo.Preterite.Singular.3>
-    <Participle.Present>sindo</Participle.Present>
+    <Participle.Past>sido</Participle.Past>
+    <Participle.Present>siendo</Participle.Present>
+    <Subjuntivo.Future.Plural.1>fuéremos</Subjuntivo.Future.Plural.1>
     <Subjuntivo.Future.Plural.2>fuereis</Subjuntivo.Future.Plural.2>
+    <Subjuntivo.Future.Plural.3>fueren</Subjuntivo.Future.Plural.3>
+    <Subjuntivo.Future.Singular.1>fuere</Subjuntivo.Future.Singular.1>
+    <Subjuntivo.Future.Singular.2>fueres</Subjuntivo.Future.Singular.2>
+    <Subjuntivo.Future.Singular.3>fuere</Subjuntivo.Future.Singular.3>
+    <Subjuntivo.Imperfect.Plural.1>fuéramos</Subjuntivo.Imperfect.Plural.1>
+    <Subjuntivo.Imperfect.Plural.2>fuerais</Subjuntivo.Imperfect.Plural.2>
+    <Subjuntivo.Imperfect.Plural.3>fueran</Subjuntivo.Imperfect.Plural.3>
+    <Subjuntivo.Imperfect.Singular.1>fuera</Subjuntivo.Imperfect.Singular.1>
+    <Subjuntivo.Imperfect.Singular.2>fueras</Subjuntivo.Imperfect.Singular.2>
+    <Subjuntivo.Imperfect.Singular.3>fuera</Subjuntivo.Imperfect.Singular.3>
     <Subjuntivo.Present.Plural.1>seamos</Subjuntivo.Present.Plural.1>
     <Subjuntivo.Present.Plural.2>seáis</Subjuntivo.Present.Plural.2>
     <Subjuntivo.Present.Plural.3>sean</Subjuntivo.Present.Plural.3>
@@ -694,6 +787,9 @@
   </Verb>
   <Verb Infinitive="servir">
     <Translation.English>to serve</Translation.English>
+  </Verb>
+  <Verb Infinitive="sonar" StemChange="UE">
+    <Translation.English>to ring</Translation.English>
   </Verb>
   <Verb Infinitive="soñar">
     <Translation.English>to dream</Translation.English>
@@ -718,11 +814,11 @@
     <Indicativo.Present.Singular.1>tengo</Indicativo.Present.Singular.1>
     <Indicativo.Preterite.Plural.1>tuvimos</Indicativo.Preterite.Plural.1>
     <Indicativo.Preterite.Plural.2>tuvisteis</Indicativo.Preterite.Plural.2>
-    <Indicativo.Preterite.Plural.3>tuvierion</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Plural.3>tuvieron</Indicativo.Preterite.Plural.3>
     <Indicativo.Preterite.Singular.1>tuve</Indicativo.Preterite.Singular.1>
     <Indicativo.Preterite.Singular.2>tuviste</Indicativo.Preterite.Singular.2>
     <Indicativo.Preterite.Singular.3>tuvo</Indicativo.Preterite.Singular.3>
-    <Subjuntivo.Future.Plural.1>tuvierémos</Subjuntivo.Future.Plural.1>
+    <Subjuntivo.Future.Plural.1>tuviéremos</Subjuntivo.Future.Plural.1>
     <Subjuntivo.Future.Plural.2>tuviereis</Subjuntivo.Future.Plural.2>
     <Subjuntivo.Future.Plural.3>tuvieren</Subjuntivo.Future.Plural.3>
     <Subjuntivo.Future.Singular.1>tuviere</Subjuntivo.Future.Singular.1>
@@ -746,13 +842,6 @@
     <Translation.English>to finish</Translation.English>
   </Verb>
   <Verb Infinitive="tocar">
-    <Indicativo.Preterite.Singular.1>toqué</Indicativo.Preterite.Singular.1>
-    <Subjuntivo.Present.Plural.1>toquemos</Subjuntivo.Present.Plural.1>
-    <Subjuntivo.Present.Plural.2>toquéis</Subjuntivo.Present.Plural.2>
-    <Subjuntivo.Present.Plural.3>toquen</Subjuntivo.Present.Plural.3>
-    <Subjuntivo.Present.Singular.1>toque</Subjuntivo.Present.Singular.1>
-    <Subjuntivo.Present.Singular.2>toques</Subjuntivo.Present.Singular.2>
-    <Subjuntivo.Present.Singular.3>toque</Subjuntivo.Present.Singular.3>
     <Translation.English>to play</Translation.English>
   </Verb>
   <Verb Infinitive="tomar">
@@ -761,8 +850,35 @@
   <Verb Infinitive="trabejar">
     <Translation.English>to work</Translation.English>
   </Verb>
+  <Verb Infinitive="traducir" AdjustZC="True">
+    <Translation.English>to translate</Translation.English>
+  </Verb>
   <Verb Infinitive="traer">
     <Indicativo.Present.Singular.1>traigo</Indicativo.Present.Singular.1>
+    <Indicativo.Preterite.Plural.1>trajimos</Indicativo.Preterite.Plural.1>
+    <Indicativo.Preterite.Plural.2>trajisteis</Indicativo.Preterite.Plural.2>
+    <Indicativo.Preterite.Plural.3>trajeron</Indicativo.Preterite.Plural.3>
+    <Indicativo.Preterite.Singular.1>traje</Indicativo.Preterite.Singular.1>
+    <Indicativo.Preterite.Singular.2>trajste</Indicativo.Preterite.Singular.2>
+    <Indicativo.Preterite.Singular.3>trajo</Indicativo.Preterite.Singular.3>
+    <Subjuntivo.Future.Plural.1>trajéremos</Subjuntivo.Future.Plural.1>
+    <Subjuntivo.Future.Plural.2>trajereis</Subjuntivo.Future.Plural.2>
+    <Subjuntivo.Future.Plural.3>trajeren</Subjuntivo.Future.Plural.3>
+    <Subjuntivo.Future.Singular.1>trajere</Subjuntivo.Future.Singular.1>
+    <Subjuntivo.Future.Singular.2>trajeres</Subjuntivo.Future.Singular.2>
+    <Subjuntivo.Future.Singular.3>trajere</Subjuntivo.Future.Singular.3>
+    <Subjuntivo.Imperfect.Plural.1>trajéramos</Subjuntivo.Imperfect.Plural.1>
+    <Subjuntivo.Imperfect.Plural.2>trajerais</Subjuntivo.Imperfect.Plural.2>
+    <Subjuntivo.Imperfect.Plural.3>trajeran</Subjuntivo.Imperfect.Plural.3>
+    <Subjuntivo.Imperfect.Singular.1>trajera</Subjuntivo.Imperfect.Singular.1>
+    <Subjuntivo.Imperfect.Singular.2>trajeras</Subjuntivo.Imperfect.Singular.2>
+    <Subjuntivo.Imperfect.Singular.3>trajera</Subjuntivo.Imperfect.Singular.3>
+    <Subjuntivo.Present.Plural.1>traigamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>traigáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>traigan</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>traiga</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>traigas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>traiga</Subjuntivo.Present.Singular.3>
     <Translation.English>to bring</Translation.English>
   </Verb>
   <Verb Infinitive="trasnochar">
@@ -819,6 +935,12 @@
     <Indicativo.Preterite.Singular.1>vi</Indicativo.Preterite.Singular.1>
     <Indicativo.Preterite.Singular.3>vio</Indicativo.Preterite.Singular.3>
     <Participle.Past>visto</Participle.Past>
+    <Subjuntivo.Present.Plural.1>veamos</Subjuntivo.Present.Plural.1>
+    <Subjuntivo.Present.Plural.2>veáis</Subjuntivo.Present.Plural.2>
+    <Subjuntivo.Present.Plural.3>vean</Subjuntivo.Present.Plural.3>
+    <Subjuntivo.Present.Singular.1>vea</Subjuntivo.Present.Singular.1>
+    <Subjuntivo.Present.Singular.2>veas</Subjuntivo.Present.Singular.2>
+    <Subjuntivo.Present.Singular.3>vea</Subjuntivo.Present.Singular.3>
     <Translation.English>to see</Translation.English>
   </Verb>
   <Verb Infinitive="vestir">
